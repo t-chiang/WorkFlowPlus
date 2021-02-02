@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated wFP_V2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="wFP_V2.presentation.WFP_V2ModelWizardID"
+            name="%_UI_WFP_V2ModelWizard_label"
+            class="wFP_V2.presentation.WFP_V2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WFP_V2ModelFile.gif">
+         <description>%_UI_WFP_V2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated wFP_V2 -->
+      <editor
+            id="wFP_V2.presentation.WFP_V2EditorID"
+            name="%_UI_WFP_V2Editor_label"
+            icon="icons/full/obj16/WFP_V2ModelFile.gif"
+            extensions="wfp_v2"
+            class="wFP_V2.presentation.WFP_V2Editor"
+            contributorClass="wFP_V2.presentation.WFP_V2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
