@@ -13,10 +13,10 @@ package wFP_V2;
  * <ul>
  *   <li>{@link wFP_V2.Association#getMultAtSrc <em>Mult At Src</em>}</li>
  *   <li>{@link wFP_V2.Association#getMultAtTgt <em>Mult At Tgt</em>}</li>
- *   <li>{@link wFP_V2.Association#getTgt <em>Tgt</em>}</li>
- *   <li>{@link wFP_V2.Association#getSrc <em>Src</em>}</li>
  *   <li>{@link wFP_V2.Association#getLabelAtSrc <em>Label At Src</em>}</li>
  *   <li>{@link wFP_V2.Association#getLabelAtTgt <em>Label At Tgt</em>}</li>
+ *   <li>{@link wFP_V2.Association#getSrc <em>Src</em>}</li>
+ *   <li>{@link wFP_V2.Association#getTgt <em>Tgt</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getAssociation()
@@ -70,12 +70,14 @@ public interface Association extends Reference {
 
 	/**
 	 * Returns the value of the '<em><b>Tgt</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Node#getAssociation_src <em>Association src</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tgt</em>' reference.
 	 * @see #setTgt(Node)
 	 * @see wFP_V2.WFP_V2Package#getAssociation_Tgt()
-	 * @model required="true"
+	 * @see wFP_V2.Node#getAssociation_src
+	 * @model opposite="association_src" required="true"
 	 * @generated
 	 */
 	Node getTgt();
@@ -92,12 +94,14 @@ public interface Association extends Reference {
 
 	/**
 	 * Returns the value of the '<em><b>Src</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Node#getAssociation_tgt <em>Association tgt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' reference.
 	 * @see #setSrc(Node)
 	 * @see wFP_V2.WFP_V2Package#getAssociation_Src()
-	 * @model required="true"
+	 * @see wFP_V2.Node#getAssociation_tgt
+	 * @model opposite="association_tgt" required="true"
 	 * @generated
 	 */
 	Node getSrc();

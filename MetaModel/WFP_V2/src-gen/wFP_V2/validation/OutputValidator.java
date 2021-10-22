@@ -22,4 +22,8 @@ public interface OutputValidator {
 	boolean validateMultAtSrc(String value);
 
 	boolean validateMultAtTgt(String value);
+
+	boolean validateTgt(Data value);
+
+	boolean validateSrc(wFP_V2.Process value);
 }

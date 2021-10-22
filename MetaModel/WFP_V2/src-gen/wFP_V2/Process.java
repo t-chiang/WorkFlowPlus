@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link wFP_V2.Process#getName <em>Name</em>}</li>
  *   <li>{@link wFP_V2.Process#getNext <em>Next</em>}</li>
  *   <li>{@link wFP_V2.Process#getPrevious <em>Previous</em>}</li>
+ *   <li>{@link wFP_V2.Process#getInput <em>Input</em>}</li>
+ *   <li>{@link wFP_V2.Process#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getProcess()
@@ -72,5 +74,33 @@ public interface Process extends Node {
 	 * @generated
 	 */
 	EList<Process> getPrevious();
+
+	/**
+	 * Returns the value of the '<em><b>Input</b></em>' reference list.
+	 * The list contents are of type {@link wFP_V2.Input}.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Input#getTgt <em>Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input</em>' reference list.
+	 * @see wFP_V2.WFP_V2Package#getProcess_Input()
+	 * @see wFP_V2.Input#getTgt
+	 * @model opposite="tgt"
+	 * @generated
+	 */
+	EList<Input> getInput();
+
+	/**
+	 * Returns the value of the '<em><b>Output</b></em>' reference list.
+	 * The list contents are of type {@link wFP_V2.Output}.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Output#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Output</em>' reference list.
+	 * @see wFP_V2.WFP_V2Package#getProcess_Output()
+	 * @see wFP_V2.Output#getSrc
+	 * @model opposite="src"
+	 * @generated
+	 */
+	EList<Output> getOutput();
 
 } // Process

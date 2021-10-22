@@ -14,14 +14,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//WorkFlowPlus/data"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//WorkFlowPlus/constraint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//WorkFlowPlus/reference"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//WorkFlowPlus/argument"/>
     </genClasses>
     <genClasses image="false" ecoreClass="wFP_V2.ecore#//Process">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Process/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Process/next"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Process/previous"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Process/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Process/output"/>
     </genClasses>
     <genClasses image="false" ecoreClass="wFP_V2.ecore#//Data">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Data/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Data/output"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Data/input"/>
+      <genOperations ecoreOperation="wFP_V2.ecore#//Data/forwardImpactAnalysis"/>
+      <genOperations ecoreOperation="wFP_V2.ecore#//Data/backwardImpactAnalysis"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Data_Definition">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Data_Definition/data"/>
@@ -41,64 +48,88 @@
     <genClasses ecoreClass="wFP_V2.ecore#//Atomic_Process_Definition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Atomic_Process_Definition/isReview"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Atomic_Process_Definition/attribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Atomic_Process_Definition/isQuery"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Attribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Attribute/Description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Attribute/isExecutable"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Constraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Constraint/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Constraint/node"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Constraint/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Constraint/body"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Constraint/syntactic"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Constraint/argument"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Constraint/reference"/>
     </genClasses>
-    <genClasses ecoreClass="wFP_V2.ecore#//Node"/>
-    <genClasses ecoreClass="wFP_V2.ecore#//Reference"/>
+    <genClasses ecoreClass="wFP_V2.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/aggregate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/aggregation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/reify_association"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/child"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/association_tgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/association_src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/composedOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Node/composition"/>
+    </genClasses>
+    <genClasses ecoreClass="wFP_V2.ecore#//Reference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Reference/reify_association"/>
+    </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Association">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Association/MultAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Association/MultAtTgt"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Association/tgt"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Association/src"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Association/LabelAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Association/LabelAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Association/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Association/tgt"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Reify_Association">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Reify_Association/src"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Reify_Association/tgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Reify_Association/LabelAtTgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Reify_Association/MultAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Reify_Association/tgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Reify_Association/src"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Composition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Composition/composes"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Composition/composedOf"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Composition/MultAtTgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Composition/LabelAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Composition/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Composition/tgt"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Inheritance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Inheritance/child"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Inheritance/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Inheritance/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Inheritance/tgt"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Work_Product"/>
     <genClasses ecoreClass="wFP_V2.ecore#//Performance_Data">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Performance_Data/attribute"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Output">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Output/src_process"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Output/tgt_data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Output/MultAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Output/MultAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Output/tgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Output/src"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Input">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Input/src_data"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Input/tgt_process"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Input/MultAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Input/MultAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Input/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Input/tgt"/>
     </genClasses>
     <genClasses ecoreClass="wFP_V2.ecore#//Aggregation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Aggregation/LabelAtTgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Aggregation/MultAtTgt"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Aggregation/consists"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Aggregation/consistedOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Aggregation/src"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Aggregation/tgt"/>
+    </genClasses>
+    <genClasses ecoreClass="wFP_V2.ecore#//Argument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Argument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Argument/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Argument/constraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Argument/constructs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wFP_V2.ecore#//Argument/constructedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wFP_V2.ecore#//Argument/syntactic"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

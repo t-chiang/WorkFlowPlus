@@ -48,6 +48,7 @@ public class Atomic_Process_DefinitionItemProvider extends ProcessItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addIsReviewPropertyDescriptor(object);
+			addIsQueryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -65,6 +66,22 @@ public class Atomic_Process_DefinitionItemProvider extends ProcessItemProvider {
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_Atomic_Process_Definition_isReview_feature", "_UI_Atomic_Process_Definition_type"),
 						WFP_V2Package.Literals.ATOMIC_PROCESS_DEFINITION__IS_REVIEW, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Query feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsQueryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Atomic_Process_Definition_isQuery_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Atomic_Process_Definition_isQuery_feature",
+								"_UI_Atomic_Process_Definition_type"),
+						WFP_V2Package.Literals.ATOMIC_PROCESS_DEFINITION__IS_QUERY, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
@@ -145,6 +162,7 @@ public class Atomic_Process_DefinitionItemProvider extends ProcessItemProvider {
 
 		switch (notification.getFeatureID(Atomic_Process_Definition.class)) {
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_REVIEW:
+		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__ATTRIBUTE:

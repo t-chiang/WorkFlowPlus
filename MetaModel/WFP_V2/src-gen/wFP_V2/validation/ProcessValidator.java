@@ -5,6 +5,8 @@
 package wFP_V2.validation;
 
 import org.eclipse.emf.common.util.EList;
+import wFP_V2.Input;
+import wFP_V2.Output;
 
 /**
  * A sample validator interface for {@link wFP_V2.Process}.
@@ -20,4 +22,8 @@ public interface ProcessValidator {
 	boolean validateNext(EList<wFP_V2.Process> value);
 
 	boolean validatePrevious(EList<wFP_V2.Process> value);
+
+	boolean validateInput(EList<Input> value);
+
+	boolean validateOutput(EList<Output> value);
 }

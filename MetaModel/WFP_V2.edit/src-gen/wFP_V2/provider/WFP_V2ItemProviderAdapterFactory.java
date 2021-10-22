@@ -464,6 +464,29 @@ public class WFP_V2ItemProviderAdapterFactory extends WFP_V2AdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link wFP_V2.Argument} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArgumentItemProvider argumentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link wFP_V2.Argument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArgumentAdapter() {
+		if (argumentItemProvider == null) {
+			argumentItemProvider = new ArgumentItemProvider(this);
+		}
+
+		return argumentItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,6 +625,8 @@ public class WFP_V2ItemProviderAdapterFactory extends WFP_V2AdapterFactory
 			inputItemProvider.dispose();
 		if (aggregationItemProvider != null)
 			aggregationItemProvider.dispose();
+		if (argumentItemProvider != null)
+			argumentItemProvider.dispose();
 	}
 
 }

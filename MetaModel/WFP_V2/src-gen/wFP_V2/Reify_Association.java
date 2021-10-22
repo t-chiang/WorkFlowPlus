@@ -11,10 +11,10 @@ package wFP_V2;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link wFP_V2.Reify_Association#getSrc <em>Src</em>}</li>
- *   <li>{@link wFP_V2.Reify_Association#getTgt <em>Tgt</em>}</li>
  *   <li>{@link wFP_V2.Reify_Association#getLabelAtTgt <em>Label At Tgt</em>}</li>
  *   <li>{@link wFP_V2.Reify_Association#getMultAtTgt <em>Mult At Tgt</em>}</li>
+ *   <li>{@link wFP_V2.Reify_Association#getTgt <em>Tgt</em>}</li>
+ *   <li>{@link wFP_V2.Reify_Association#getSrc <em>Src</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getReify_Association()
@@ -24,12 +24,14 @@ package wFP_V2;
 public interface Reify_Association extends Reference {
 	/**
 	 * Returns the value of the '<em><b>Src</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Reference#getReify_association <em>Reify association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Src</em>' reference.
 	 * @see #setSrc(Reference)
 	 * @see wFP_V2.WFP_V2Package#getReify_Association_Src()
-	 * @model required="true"
+	 * @see wFP_V2.Reference#getReify_association
+	 * @model opposite="reify_association" required="true"
 	 * @generated
 	 */
 	Reference getSrc();
@@ -46,12 +48,14 @@ public interface Reify_Association extends Reference {
 
 	/**
 	 * Returns the value of the '<em><b>Tgt</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Node#getReify_association <em>Reify association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tgt</em>' reference.
 	 * @see #setTgt(Node)
 	 * @see wFP_V2.WFP_V2Package#getReify_Association_Tgt()
-	 * @model required="true"
+	 * @see wFP_V2.Node#getReify_association
+	 * @model opposite="reify_association" required="true"
 	 * @generated
 	 */
 	Node getTgt();

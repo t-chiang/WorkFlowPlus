@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import wFP_V2.Argument;
 import wFP_V2.Constraint;
 import wFP_V2.Data;
 import wFP_V2.Reference;
@@ -34,6 +35,7 @@ import wFP_V2.WorkFlowPlus;
  *   <li>{@link wFP_V2.impl.WorkFlowPlusImpl#getData <em>Data</em>}</li>
  *   <li>{@link wFP_V2.impl.WorkFlowPlusImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link wFP_V2.impl.WorkFlowPlusImpl#getReference <em>Reference</em>}</li>
+ *   <li>{@link wFP_V2.impl.WorkFlowPlusImpl#getArgument <em>Argument</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,6 +80,16 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 	 * @ordered
 	 */
 	protected EList<Reference> reference;
+
+	/**
+	 * The cached value of the '{@link #getArgument() <em>Argument</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArgument()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Argument> argument;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,6 +171,20 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 	 * @generated
 	 */
 	@Override
+	public EList<Argument> getArgument() {
+		if (argument == null) {
+			argument = new EObjectContainmentEList<Argument>(Argument.class, this,
+					WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT);
+		}
+		return argument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WFP_V2Package.WORK_FLOW_PLUS__PROCESS:
@@ -169,6 +195,8 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 			return ((InternalEList<?>) getConstraint()).basicRemove(otherEnd, msgs);
 		case WFP_V2Package.WORK_FLOW_PLUS__REFERENCE:
 			return ((InternalEList<?>) getReference()).basicRemove(otherEnd, msgs);
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
+			return ((InternalEList<?>) getArgument()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -189,6 +217,8 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 			return getConstraint();
 		case WFP_V2Package.WORK_FLOW_PLUS__REFERENCE:
 			return getReference();
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
+			return getArgument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -218,6 +248,10 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 			getReference().clear();
 			getReference().addAll((Collection<? extends Reference>) newValue);
 			return;
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
+			getArgument().clear();
+			getArgument().addAll((Collection<? extends Argument>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -242,6 +276,9 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 		case WFP_V2Package.WORK_FLOW_PLUS__REFERENCE:
 			getReference().clear();
 			return;
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
+			getArgument().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -262,6 +299,8 @@ public class WorkFlowPlusImpl extends MinimalEObjectImpl.Container implements Wo
 			return constraint != null && !constraint.isEmpty();
 		case WFP_V2Package.WORK_FLOW_PLUS__REFERENCE:
 			return reference != null && !reference.isEmpty();
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
+			return argument != null && !argument.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

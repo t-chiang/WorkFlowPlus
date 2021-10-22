@@ -46,6 +46,8 @@ public class ProcessItemProvider extends NodeItemProvider {
 			addNamePropertyDescriptor(object);
 			addNextPropertyDescriptor(object);
 			addPreviousPropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
+			addOutputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,6 +94,36 @@ public class ProcessItemProvider extends NodeItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Process_previous_feature",
 								"_UI_Process_type"),
 						WFP_V2Package.Literals.PROCESS__PREVIOUS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_input_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_input_feature",
+								"_UI_Process_type"),
+						WFP_V2Package.Literals.PROCESS__INPUT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Output feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Process_output_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Process_output_feature",
+								"_UI_Process_type"),
+						WFP_V2Package.Literals.PROCESS__OUTPUT, true, false, true, null, null, null));
 	}
 
 	/**

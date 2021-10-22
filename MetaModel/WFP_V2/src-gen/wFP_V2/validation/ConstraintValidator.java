@@ -6,7 +6,9 @@ package wFP_V2.validation;
 
 import org.eclipse.emf.common.util.EList;
 
+import wFP_V2.Argument;
 import wFP_V2.Node;
+import wFP_V2.Reference;
 
 /**
  * A sample validator interface for {@link wFP_V2.Constraint}.
@@ -21,7 +23,19 @@ public interface ConstraintValidator {
 
 	boolean validateNode(EList<Node> value);
 
+	boolean validateBody(String value);
+
+	boolean validateOCL(String value);
+
+	boolean validateType(String value);
+
 	boolean validateDescription(String value);
 
 	boolean validateSyntactic(boolean value);
+
+	boolean validateArgument(EList<Argument> value);
+
+	boolean validateReference(EList<Reference> value);
+
+	boolean validateReference(Reference value);
 }

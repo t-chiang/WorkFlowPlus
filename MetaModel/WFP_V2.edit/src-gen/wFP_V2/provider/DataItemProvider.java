@@ -45,6 +45,8 @@ public class DataItemProvider extends NodeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addOutputPropertyDescriptor(object);
+			addInputPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +64,34 @@ public class DataItemProvider extends NodeItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_Data_name_feature", "_UI_Data_type"),
 						WFP_V2Package.Literals.DATA__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Output feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_output_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_output_feature", "_UI_Data_type"),
+						WFP_V2Package.Literals.DATA__OUTPUT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_input_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_input_feature", "_UI_Data_type"),
+						WFP_V2Package.Literals.DATA__INPUT, true, false, true, null, null, null));
 	}
 
 	/**

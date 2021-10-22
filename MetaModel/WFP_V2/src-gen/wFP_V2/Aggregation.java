@@ -13,8 +13,8 @@ package wFP_V2;
  * <ul>
  *   <li>{@link wFP_V2.Aggregation#getLabelAtTgt <em>Label At Tgt</em>}</li>
  *   <li>{@link wFP_V2.Aggregation#getMultAtTgt <em>Mult At Tgt</em>}</li>
- *   <li>{@link wFP_V2.Aggregation#getConsists <em>Consists</em>}</li>
- *   <li>{@link wFP_V2.Aggregation#getConsistedOf <em>Consisted Of</em>}</li>
+ *   <li>{@link wFP_V2.Aggregation#getSrc <em>Src</em>}</li>
+ *   <li>{@link wFP_V2.Aggregation#getTgt <em>Tgt</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getAggregation()
@@ -67,47 +67,51 @@ public interface Aggregation extends Reference {
 	void setMultAtTgt(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Consists</b></em>' reference.
+	 * Returns the value of the '<em><b>Src</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Node#getAggregate <em>Aggregate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consists</em>' reference.
-	 * @see #setConsists(Node)
-	 * @see wFP_V2.WFP_V2Package#getAggregation_Consists()
-	 * @model required="true"
+	 * @return the value of the '<em>Src</em>' reference.
+	 * @see #setSrc(Node)
+	 * @see wFP_V2.WFP_V2Package#getAggregation_Src()
+	 * @see wFP_V2.Node#getAggregate
+	 * @model opposite="aggregate" required="true"
 	 * @generated
 	 */
-	Node getConsists();
+	Node getSrc();
 
 	/**
-	 * Sets the value of the '{@link wFP_V2.Aggregation#getConsists <em>Consists</em>}' reference.
+	 * Sets the value of the '{@link wFP_V2.Aggregation#getSrc <em>Src</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Consists</em>' reference.
-	 * @see #getConsists()
+	 * @param value the new value of the '<em>Src</em>' reference.
+	 * @see #getSrc()
 	 * @generated
 	 */
-	void setConsists(Node value);
+	void setSrc(Node value);
 
 	/**
-	 * Returns the value of the '<em><b>Consisted Of</b></em>' reference.
+	 * Returns the value of the '<em><b>Tgt</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Node#getAggregation <em>Aggregation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consisted Of</em>' reference.
-	 * @see #setConsistedOf(Node)
-	 * @see wFP_V2.WFP_V2Package#getAggregation_ConsistedOf()
-	 * @model required="true"
+	 * @return the value of the '<em>Tgt</em>' reference.
+	 * @see #setTgt(Node)
+	 * @see wFP_V2.WFP_V2Package#getAggregation_Tgt()
+	 * @see wFP_V2.Node#getAggregation
+	 * @model opposite="aggregation" required="true"
 	 * @generated
 	 */
-	Node getConsistedOf();
+	Node getTgt();
 
 	/**
-	 * Sets the value of the '{@link wFP_V2.Aggregation#getConsistedOf <em>Consisted Of</em>}' reference.
+	 * Sets the value of the '{@link wFP_V2.Aggregation#getTgt <em>Tgt</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Consisted Of</em>' reference.
-	 * @see #getConsistedOf()
+	 * @param value the new value of the '<em>Tgt</em>' reference.
+	 * @see #getTgt()
 	 * @generated
 	 */
-	void setConsistedOf(Node value);
+	void setTgt(Node value);
 
 } // Aggregation

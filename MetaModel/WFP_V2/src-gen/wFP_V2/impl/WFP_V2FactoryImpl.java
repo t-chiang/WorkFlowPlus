@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import wFP_V2.Aggregation;
+import wFP_V2.Argument;
 import wFP_V2.Association;
 import wFP_V2.Atomic_Process_Definition;
 import wFP_V2.Attribute;
@@ -108,6 +109,8 @@ public class WFP_V2FactoryImpl extends EFactoryImpl implements WFP_V2Factory {
 			return createInput();
 		case WFP_V2Package.AGGREGATION:
 			return createAggregation();
+		case WFP_V2Package.ARGUMENT:
+			return createArgument();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -298,6 +301,17 @@ public class WFP_V2FactoryImpl extends EFactoryImpl implements WFP_V2Factory {
 	public Aggregation createAggregation() {
 		AggregationImpl aggregation = new AggregationImpl();
 		return aggregation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Argument createArgument() {
+		ArgumentImpl argument = new ArgumentImpl();
+		return argument;
 	}
 
 	/**

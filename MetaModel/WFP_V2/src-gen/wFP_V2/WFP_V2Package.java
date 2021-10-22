@@ -4,6 +4,7 @@ package wFP_V2;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -103,13 +104,22 @@ public interface WFP_V2Package extends EPackage {
 	int WORK_FLOW_PLUS__REFERENCE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Argument</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW_PLUS__ARGUMENT = 4;
+
+	/**
 	 * The number of structural features of the '<em>Work Flow Plus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_PLUS_FEATURE_COUNT = 4;
+	int WORK_FLOW_PLUS_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Work Flow Plus</em>' class.
@@ -131,13 +141,94 @@ public interface WFP_V2Package extends EPackage {
 	int NODE = 10;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__AGGREGATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__AGGREGATION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__REIFY_ASSOCIATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__PARENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__CHILD = 4;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ASSOCIATION_TGT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ASSOCIATION_SRC = 6;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__COMPOSED_OF = 7;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__COMPOSITION = 8;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 0;
+	int NODE_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -157,6 +248,87 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	int PROCESS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__AGGREGATE = NODE__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__AGGREGATION = NODE__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__CHILD = NODE__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__COMPOSED_OF = NODE__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__COMPOSITION = NODE__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -186,13 +358,31 @@ public interface WFP_V2Package extends EPackage {
 	int PROCESS__PREVIOUS = NODE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__INPUT = NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__OUTPUT = NODE_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Process</em>' class.
@@ -214,6 +404,87 @@ public interface WFP_V2Package extends EPackage {
 	int DATA = 2;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__AGGREGATE = NODE__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__AGGREGATION = NODE__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__CHILD = NODE__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__COMPOSED_OF = NODE__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__COMPOSITION = NODE__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,13 +494,49 @@ public interface WFP_V2Package extends EPackage {
 	int DATA__NAME = NODE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__OUTPUT = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__INPUT = NODE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+	int DATA_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA___FORWARD_IMPACT_ANALYSIS = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Backward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA___BACKWARD_IMPACT_ANALYSIS = NODE_OPERATION_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Data</em>' class.
@@ -238,7 +545,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int DATA_OPERATION_COUNT = NODE_OPERATION_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link wFP_V2.impl.Data_DefinitionImpl <em>Data Definition</em>}' class.
@@ -251,6 +558,87 @@ public interface WFP_V2Package extends EPackage {
 	int DATA_DEFINITION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__AGGREGATE = DATA__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__AGGREGATION = DATA__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__PARENT = DATA__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__CHILD = DATA__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__ASSOCIATION_TGT = DATA__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__COMPOSED_OF = DATA__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__COMPOSITION = DATA__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -258,6 +646,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_DEFINITION__NAME = DATA__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION__INPUT = DATA__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
@@ -287,6 +693,24 @@ public interface WFP_V2Package extends EPackage {
 	int DATA_DEFINITION_FEATURE_COUNT = DATA_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION___FORWARD_IMPACT_ANALYSIS = DATA___FORWARD_IMPACT_ANALYSIS;
+
+	/**
+	 * The operation id for the '<em>Backward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_DEFINITION___BACKWARD_IMPACT_ANALYSIS = DATA___BACKWARD_IMPACT_ANALYSIS;
+
+	/**
 	 * The number of operations of the '<em>Data Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -306,6 +730,87 @@ public interface WFP_V2Package extends EPackage {
 	int DATA_ELEMENT = 4;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__AGGREGATE = DATA__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__AGGREGATION = DATA__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__PARENT = DATA__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__CHILD = DATA__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__ASSOCIATION_TGT = DATA__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__COMPOSED_OF = DATA__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__COMPOSITION = DATA__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,6 +818,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_ELEMENT__NAME = DATA__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT__INPUT = DATA__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -342,6 +865,24 @@ public interface WFP_V2Package extends EPackage {
 	int DATA_ELEMENT_FEATURE_COUNT = DATA_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT___FORWARD_IMPACT_ANALYSIS = DATA___FORWARD_IMPACT_ANALYSIS;
+
+	/**
+	 * The operation id for the '<em>Backward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ELEMENT___BACKWARD_IMPACT_ANALYSIS = DATA___BACKWARD_IMPACT_ANALYSIS;
+
+	/**
 	 * The number of operations of the '<em>Data Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,6 +900,87 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	int COMPOSED_PROCESS_DEFINITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__AGGREGATE = PROCESS__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__AGGREGATION = PROCESS__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__REIFY_ASSOCIATION = PROCESS__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__PARENT = PROCESS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__CHILD = PROCESS__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__ASSOCIATION_TGT = PROCESS__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__ASSOCIATION_SRC = PROCESS__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__COMPOSED_OF = PROCESS__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__COMPOSITION = PROCESS__COMPOSITION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -386,6 +1008,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSED_PROCESS_DEFINITION__PREVIOUS = PROCESS__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__INPUT = PROCESS__INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSED_PROCESS_DEFINITION__OUTPUT = PROCESS__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Process</b></em>' containment reference list.
@@ -425,6 +1065,87 @@ public interface WFP_V2Package extends EPackage {
 	int AUTOMATIC_PROCESS_DEFINITION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__AGGREGATE = PROCESS__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__AGGREGATION = PROCESS__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__REIFY_ASSOCIATION = PROCESS__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__PARENT = PROCESS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__CHILD = PROCESS__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__ASSOCIATION_TGT = PROCESS__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__ASSOCIATION_SRC = PROCESS__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__COMPOSED_OF = PROCESS__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__COMPOSITION = PROCESS__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -450,6 +1171,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int AUTOMATIC_PROCESS_DEFINITION__PREVIOUS = PROCESS__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__INPUT = PROCESS__INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTOMATIC_PROCESS_DEFINITION__OUTPUT = PROCESS__OUTPUT;
 
 	/**
 	 * The feature id for the '<em><b>Formal Description</b></em>' attribute.
@@ -498,6 +1237,87 @@ public interface WFP_V2Package extends EPackage {
 	int ATOMIC_PROCESS_DEFINITION = 7;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__AGGREGATE = PROCESS__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__AGGREGATION = PROCESS__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__REIFY_ASSOCIATION = PROCESS__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__PARENT = PROCESS__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__CHILD = PROCESS__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__ASSOCIATION_TGT = PROCESS__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__ASSOCIATION_SRC = PROCESS__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__COMPOSED_OF = PROCESS__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__COMPOSITION = PROCESS__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -525,6 +1345,24 @@ public interface WFP_V2Package extends EPackage {
 	int ATOMIC_PROCESS_DEFINITION__PREVIOUS = PROCESS__PREVIOUS;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__INPUT = PROCESS__INPUT;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__OUTPUT = PROCESS__OUTPUT;
+
+	/**
 	 * The feature id for the '<em><b>Is Review</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,13 +1381,22 @@ public interface WFP_V2Package extends EPackage {
 	int ATOMIC_PROCESS_DEFINITION__ATTRIBUTE = PROCESS_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Is Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS_DEFINITION__IS_QUERY = PROCESS_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Atomic Process Definition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATOMIC_PROCESS_DEFINITION_FEATURE_COUNT = PROCESS_FEATURE_COUNT + 2;
+	int ATOMIC_PROCESS_DEFINITION_FEATURE_COUNT = PROCESS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Atomic Process Definition</em>' class.
@@ -577,7 +1424,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__NAME = NODE_FEATURE_COUNT + 0;
+	int ATTRIBUTE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -586,7 +1433,16 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__DESCRIPTION = NODE_FEATURE_COUNT + 1;
+	int ATTRIBUTE__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Executable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__IS_EXECUTABLE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -595,7 +1451,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int ATTRIBUTE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Attribute</em>' class.
@@ -604,7 +1460,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int ATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link wFP_V2.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -635,13 +1491,13 @@ public interface WFP_V2Package extends EPackage {
 	int CONSTRAINT__NODE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * The feature id for the '<em><b>Body</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__DESCRIPTION = 2;
+	int CONSTRAINT__BODY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Syntactic</b></em>' attribute.
@@ -653,13 +1509,31 @@ public interface WFP_V2Package extends EPackage {
 	int CONSTRAINT__SYNTACTIC = 3;
 
 	/**
+	 * The feature id for the '<em><b>Argument</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__ARGUMENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__REFERENCE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_FEATURE_COUNT = 4;
+	int CONSTRAINT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Constraint</em>' class.
@@ -681,13 +1555,22 @@ public interface WFP_V2Package extends EPackage {
 	int REFERENCE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERENCE__REIFY_ASSOCIATION = 0;
+
+	/**
 	 * The number of structural features of the '<em>Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REFERENCE_FEATURE_COUNT = 0;
+	int REFERENCE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Reference</em>' class.
@@ -709,6 +1592,15 @@ public interface WFP_V2Package extends EPackage {
 	int ASSOCIATION = 12;
 
 	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
+
+	/**
 	 * The feature id for the '<em><b>Mult At Src</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -727,31 +1619,13 @@ public interface WFP_V2Package extends EPackage {
 	int ASSOCIATION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Tgt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__TGT = REFERENCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Src</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION__SRC = REFERENCE_FEATURE_COUNT + 3;
-
-	/**
 	 * The feature id for the '<em><b>Label At Src</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__LABEL_AT_SRC = REFERENCE_FEATURE_COUNT + 4;
+	int ASSOCIATION__LABEL_AT_SRC = REFERENCE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Label At Tgt</b></em>' attribute.
@@ -760,7 +1634,25 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSOCIATION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 5;
+	int ASSOCIATION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__SRC = REFERENCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSOCIATION__TGT = REFERENCE_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Association</em>' class.
@@ -791,22 +1683,13 @@ public interface WFP_V2Package extends EPackage {
 	int REIFY_ASSOCIATION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REIFY_ASSOCIATION__SRC = REFERENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tgt</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REIFY_ASSOCIATION__TGT = REFERENCE_FEATURE_COUNT + 1;
+	int REIFY_ASSOCIATION__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Label At Tgt</b></em>' attribute.
@@ -815,7 +1698,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REIFY_ASSOCIATION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 2;
+	int REIFY_ASSOCIATION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Tgt</b></em>' attribute.
@@ -824,7 +1707,25 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REIFY_ASSOCIATION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
+	int REIFY_ASSOCIATION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REIFY_ASSOCIATION__TGT = REFERENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REIFY_ASSOCIATION__SRC = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Reify Association</em>' class.
@@ -855,22 +1756,13 @@ public interface WFP_V2Package extends EPackage {
 	int COMPOSITION = 14;
 
 	/**
-	 * The feature id for the '<em><b>Composes</b></em>' reference.
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION__COMPOSES = REFERENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Composed Of</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITION__COMPOSED_OF = REFERENCE_FEATURE_COUNT + 1;
+	int COMPOSITION__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Tgt</b></em>' attribute.
@@ -879,7 +1771,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 2;
+	int COMPOSITION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Label At Tgt</b></em>' attribute.
@@ -888,7 +1780,25 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
+	int COMPOSITION__LABEL_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITION__SRC = REFERENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITION__TGT = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Composition</em>' class.
@@ -919,22 +1829,31 @@ public interface WFP_V2Package extends EPackage {
 	int INHERITANCE = 15;
 
 	/**
-	 * The feature id for the '<em><b>Child</b></em>' reference.
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INHERITANCE__CHILD = REFERENCE_FEATURE_COUNT + 0;
+	int INHERITANCE__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Src</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INHERITANCE__PARENT = REFERENCE_FEATURE_COUNT + 1;
+	int INHERITANCE__SRC = REFERENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INHERITANCE__TGT = REFERENCE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Inheritance</em>' class.
@@ -965,6 +1884,87 @@ public interface WFP_V2Package extends EPackage {
 	int WORK_PRODUCT = 16;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__AGGREGATE = DATA__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__AGGREGATION = DATA__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__PARENT = DATA__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__CHILD = DATA__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__ASSOCIATION_TGT = DATA__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__COMPOSED_OF = DATA__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__COMPOSITION = DATA__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -974,6 +1974,24 @@ public interface WFP_V2Package extends EPackage {
 	int WORK_PRODUCT__NAME = DATA__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__INPUT = DATA__INPUT;
+
+	/**
 	 * The number of structural features of the '<em>Work Product</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -981,6 +1999,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int WORK_PRODUCT_FEATURE_COUNT = DATA_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT___FORWARD_IMPACT_ANALYSIS = DATA___FORWARD_IMPACT_ANALYSIS;
+
+	/**
+	 * The operation id for the '<em>Backward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT___BACKWARD_IMPACT_ANALYSIS = DATA___BACKWARD_IMPACT_ANALYSIS;
 
 	/**
 	 * The number of operations of the '<em>Work Product</em>' class.
@@ -1002,6 +2038,87 @@ public interface WFP_V2Package extends EPackage {
 	int PERFORMANCE_DATA = 17;
 
 	/**
+	 * The feature id for the '<em><b>Aggregate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__AGGREGATE = DATA__AGGREGATE;
+
+	/**
+	 * The feature id for the '<em><b>Aggregation</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__AGGREGATION = DATA__AGGREGATION;
+
+	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__PARENT = DATA__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__CHILD = DATA__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Association tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__ASSOCIATION_TGT = DATA__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__COMPOSED_OF = DATA__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__COMPOSITION = DATA__COMPOSITION;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,6 +2126,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int PERFORMANCE_DATA__NAME = DATA__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Output</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA__INPUT = DATA__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -1027,6 +2162,24 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int PERFORMANCE_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA___FORWARD_IMPACT_ANALYSIS = DATA___FORWARD_IMPACT_ANALYSIS;
+
+	/**
+	 * The operation id for the '<em>Backward Impact Analysis</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERFORMANCE_DATA___BACKWARD_IMPACT_ANALYSIS = DATA___BACKWARD_IMPACT_ANALYSIS;
 
 	/**
 	 * The number of operations of the '<em>Performance Data</em>' class.
@@ -1048,22 +2201,13 @@ public interface WFP_V2Package extends EPackage {
 	int OUTPUT = 18;
 
 	/**
-	 * The feature id for the '<em><b>Src process</b></em>' reference.
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__SRC_PROCESS = REFERENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tgt data</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUTPUT__TGT_DATA = REFERENCE_FEATURE_COUNT + 1;
+	int OUTPUT__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Src</b></em>' attribute.
@@ -1072,7 +2216,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__MULT_AT_SRC = REFERENCE_FEATURE_COUNT + 2;
+	int OUTPUT__MULT_AT_SRC = REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Tgt</b></em>' attribute.
@@ -1081,7 +2225,25 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
+	int OUTPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__TGT = REFERENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__SRC = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Output</em>' class.
@@ -1112,22 +2274,13 @@ public interface WFP_V2Package extends EPackage {
 	int INPUT = 19;
 
 	/**
-	 * The feature id for the '<em><b>Src data</b></em>' reference.
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__SRC_DATA = REFERENCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Tgt process</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__TGT_PROCESS = REFERENCE_FEATURE_COUNT + 1;
+	int INPUT__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Src</b></em>' attribute.
@@ -1136,7 +2289,7 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__MULT_AT_SRC = REFERENCE_FEATURE_COUNT + 2;
+	int INPUT__MULT_AT_SRC = REFERENCE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Mult At Tgt</b></em>' attribute.
@@ -1145,7 +2298,25 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
+	int INPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__SRC = REFERENCE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__TGT = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -1176,6 +2347,15 @@ public interface WFP_V2Package extends EPackage {
 	int AGGREGATION = 20;
 
 	/**
+	 * The feature id for the '<em><b>Reify association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AGGREGATION__REIFY_ASSOCIATION = REFERENCE__REIFY_ASSOCIATION;
+
+	/**
 	 * The feature id for the '<em><b>Label At Tgt</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1194,22 +2374,22 @@ public interface WFP_V2Package extends EPackage {
 	int AGGREGATION__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Consists</b></em>' reference.
+	 * The feature id for the '<em><b>Src</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATION__CONSISTS = REFERENCE_FEATURE_COUNT + 2;
+	int AGGREGATION__SRC = REFERENCE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Consisted Of</b></em>' reference.
+	 * The feature id for the '<em><b>Tgt</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGGREGATION__CONSISTED_OF = REFERENCE_FEATURE_COUNT + 3;
+	int AGGREGATION__TGT = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Aggregation</em>' class.
@@ -1228,6 +2408,88 @@ public interface WFP_V2Package extends EPackage {
 	 * @ordered
 	 */
 	int AGGREGATION_OPERATION_COUNT = REFERENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link wFP_V2.impl.ArgumentImpl <em>Argument</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see wFP_V2.impl.ArgumentImpl
+	 * @see wFP_V2.impl.WFP_V2PackageImpl#getArgument()
+	 * @generated
+	 */
+	int ARGUMENT = 21;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Constraint</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__CONSTRAINT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Constructs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__CONSTRUCTS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Constructed By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__CONSTRUCTED_BY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Syntactic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__SYNTACTIC = 5;
+
+	/**
+	 * The number of structural features of the '<em>Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Argument</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.WorkFlowPlus <em>Work Flow Plus</em>}'.
@@ -1284,6 +2546,17 @@ public interface WFP_V2Package extends EPackage {
 	EReference getWorkFlowPlus_Reference();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link wFP_V2.WorkFlowPlus#getArgument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Argument</em>'.
+	 * @see wFP_V2.WorkFlowPlus#getArgument()
+	 * @see #getWorkFlowPlus()
+	 * @generated
+	 */
+	EReference getWorkFlowPlus_Argument();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Process <em>Process</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1327,6 +2600,28 @@ public interface WFP_V2Package extends EPackage {
 	EReference getProcess_Previous();
 
 	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Process#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Input</em>'.
+	 * @see wFP_V2.Process#getInput()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_Input();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Process#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Output</em>'.
+	 * @see wFP_V2.Process#getOutput()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_Output();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1346,6 +2641,48 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getData_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Data#getOutput <em>Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Output</em>'.
+	 * @see wFP_V2.Data#getOutput()
+	 * @see #getData()
+	 * @generated
+	 */
+	EReference getData_Output();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Data#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Input</em>'.
+	 * @see wFP_V2.Data#getInput()
+	 * @see #getData()
+	 * @generated
+	 */
+	EReference getData_Input();
+
+	/**
+	 * Returns the meta object for the '{@link wFP_V2.Data#forwardImpactAnalysis() <em>Forward Impact Analysis</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Forward Impact Analysis</em>' operation.
+	 * @see wFP_V2.Data#forwardImpactAnalysis()
+	 * @generated
+	 */
+	EOperation getData__ForwardImpactAnalysis();
+
+	/**
+	 * Returns the meta object for the '{@link wFP_V2.Data#backwardImpactAnalysis() <em>Backward Impact Analysis</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Backward Impact Analysis</em>' operation.
+	 * @see wFP_V2.Data#backwardImpactAnalysis()
+	 * @generated
+	 */
+	EOperation getData__BackwardImpactAnalysis();
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.Data_Definition <em>Data Definition</em>}'.
@@ -1497,6 +2834,17 @@ public interface WFP_V2Package extends EPackage {
 	EReference getAtomic_Process_Definition_Attribute();
 
 	/**
+	 * Returns the meta object for the attribute '{@link wFP_V2.Atomic_Process_Definition#isIsQuery <em>Is Query</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Query</em>'.
+	 * @see wFP_V2.Atomic_Process_Definition#isIsQuery()
+	 * @see #getAtomic_Process_Definition()
+	 * @generated
+	 */
+	EAttribute getAtomic_Process_Definition_IsQuery();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1527,6 +2875,17 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAttribute_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wFP_V2.Attribute#isIsExecutable <em>Is Executable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Executable</em>'.
+	 * @see wFP_V2.Attribute#isIsExecutable()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EAttribute getAttribute_IsExecutable();
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.Constraint <em>Constraint</em>}'.
@@ -1561,15 +2920,15 @@ public interface WFP_V2Package extends EPackage {
 	EReference getConstraint_Node();
 
 	/**
-	 * Returns the meta object for the attribute '{@link wFP_V2.Constraint#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link wFP_V2.Constraint#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see wFP_V2.Constraint#getDescription()
+	 * @return the meta object for the attribute '<em>Body</em>'.
+	 * @see wFP_V2.Constraint#getBody()
 	 * @see #getConstraint()
 	 * @generated
 	 */
-	EAttribute getConstraint_Description();
+	EAttribute getConstraint_Body();
 
 	/**
 	 * Returns the meta object for the attribute '{@link wFP_V2.Constraint#isSyntactic <em>Syntactic</em>}'.
@@ -1583,6 +2942,28 @@ public interface WFP_V2Package extends EPackage {
 	EAttribute getConstraint_Syntactic();
 
 	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Constraint#getArgument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Argument</em>'.
+	 * @see wFP_V2.Constraint#getArgument()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EReference getConstraint_Argument();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Constraint#getReference <em>Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Reference</em>'.
+	 * @see wFP_V2.Constraint#getReference()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EReference getConstraint_Reference();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1593,6 +2974,105 @@ public interface WFP_V2Package extends EPackage {
 	EClass getNode();
 
 	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getAggregate <em>Aggregate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Aggregate</em>'.
+	 * @see wFP_V2.Node#getAggregate()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Aggregate();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getAggregation <em>Aggregation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Aggregation</em>'.
+	 * @see wFP_V2.Node#getAggregation()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Aggregation();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Node#getReify_association <em>Reify association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reify association</em>'.
+	 * @see wFP_V2.Node#getReify_association()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Reify_association();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getChild <em>Child</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Child</em>'.
+	 * @see wFP_V2.Node#getChild()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Child();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Node#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see wFP_V2.Node#getParent()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getAssociation_src <em>Association src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Association src</em>'.
+	 * @see wFP_V2.Node#getAssociation_src()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Association_src();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getComposedOf <em>Composed Of</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Composed Of</em>'.
+	 * @see wFP_V2.Node#getComposedOf()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_ComposedOf();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Node#getAssociation_tgt <em>Association tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Association tgt</em>'.
+	 * @see wFP_V2.Node#getAssociation_tgt()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Association_tgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Node#getComposition <em>Composition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Composition</em>'.
+	 * @see wFP_V2.Node#getComposition()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Composition();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Reference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1601,6 +3081,17 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Reference#getReify_association <em>Reify association</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Reify association</em>'.
+	 * @see wFP_V2.Reference#getReify_association()
+	 * @see #getReference()
+	 * @generated
+	 */
+	EReference getReference_Reify_association();
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.Association <em>Association</em>}'.
@@ -1743,28 +3234,6 @@ public interface WFP_V2Package extends EPackage {
 	EClass getComposition();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Composition#getComposes <em>Composes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Composes</em>'.
-	 * @see wFP_V2.Composition#getComposes()
-	 * @see #getComposition()
-	 * @generated
-	 */
-	EReference getComposition_Composes();
-
-	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Composition#getComposedOf <em>Composed Of</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Composed Of</em>'.
-	 * @see wFP_V2.Composition#getComposedOf()
-	 * @see #getComposition()
-	 * @generated
-	 */
-	EReference getComposition_ComposedOf();
-
-	/**
 	 * Returns the meta object for the attribute '{@link wFP_V2.Composition#getMultAtTgt <em>Mult At Tgt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1787,6 +3256,28 @@ public interface WFP_V2Package extends EPackage {
 	EAttribute getComposition_LabelAtTgt();
 
 	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Composition#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see wFP_V2.Composition#getSrc()
+	 * @see #getComposition()
+	 * @generated
+	 */
+	EReference getComposition_Src();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Composition#getTgt <em>Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tgt</em>'.
+	 * @see wFP_V2.Composition#getTgt()
+	 * @see #getComposition()
+	 * @generated
+	 */
+	EReference getComposition_Tgt();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Inheritance <em>Inheritance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1797,26 +3288,26 @@ public interface WFP_V2Package extends EPackage {
 	EClass getInheritance();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Inheritance#getChild <em>Child</em>}'.
+	 * Returns the meta object for the reference '{@link wFP_V2.Inheritance#getSrc <em>Src</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Child</em>'.
-	 * @see wFP_V2.Inheritance#getChild()
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see wFP_V2.Inheritance#getSrc()
 	 * @see #getInheritance()
 	 * @generated
 	 */
-	EReference getInheritance_Child();
+	EReference getInheritance_Src();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Inheritance#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference '{@link wFP_V2.Inheritance#getTgt <em>Tgt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see wFP_V2.Inheritance#getParent()
+	 * @return the meta object for the reference '<em>Tgt</em>'.
+	 * @see wFP_V2.Inheritance#getTgt()
 	 * @see #getInheritance()
 	 * @generated
 	 */
-	EReference getInheritance_Parent();
+	EReference getInheritance_Tgt();
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.Work_Product <em>Work Product</em>}'.
@@ -1860,28 +3351,6 @@ public interface WFP_V2Package extends EPackage {
 	EClass getOutput();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Output#getSrc_process <em>Src process</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Src process</em>'.
-	 * @see wFP_V2.Output#getSrc_process()
-	 * @see #getOutput()
-	 * @generated
-	 */
-	EReference getOutput_Src_process();
-
-	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Output#getTgt_data <em>Tgt data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tgt data</em>'.
-	 * @see wFP_V2.Output#getTgt_data()
-	 * @see #getOutput()
-	 * @generated
-	 */
-	EReference getOutput_Tgt_data();
-
-	/**
 	 * Returns the meta object for the attribute '{@link wFP_V2.Output#getMultAtSrc <em>Mult At Src</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1904,6 +3373,28 @@ public interface WFP_V2Package extends EPackage {
 	EAttribute getOutput_MultAtTgt();
 
 	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Output#getTgt <em>Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tgt</em>'.
+	 * @see wFP_V2.Output#getTgt()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_Tgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Output#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see wFP_V2.Output#getSrc()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_Src();
+
+	/**
 	 * Returns the meta object for class '{@link wFP_V2.Input <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1912,28 +3403,6 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	EClass getInput();
-
-	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Input#getSrc_data <em>Src data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Src data</em>'.
-	 * @see wFP_V2.Input#getSrc_data()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EReference getInput_Src_data();
-
-	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Input#getTgt_process <em>Tgt process</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tgt process</em>'.
-	 * @see wFP_V2.Input#getTgt_process()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EReference getInput_Tgt_process();
 
 	/**
 	 * Returns the meta object for the attribute '{@link wFP_V2.Input#getMultAtSrc <em>Mult At Src</em>}'.
@@ -1956,6 +3425,28 @@ public interface WFP_V2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getInput_MultAtTgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Input#getSrc <em>Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see wFP_V2.Input#getSrc()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_Src();
+
+	/**
+	 * Returns the meta object for the reference '{@link wFP_V2.Input#getTgt <em>Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Tgt</em>'.
+	 * @see wFP_V2.Input#getTgt()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_Tgt();
 
 	/**
 	 * Returns the meta object for class '{@link wFP_V2.Aggregation <em>Aggregation</em>}'.
@@ -1990,26 +3481,102 @@ public interface WFP_V2Package extends EPackage {
 	EAttribute getAggregation_MultAtTgt();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Aggregation#getConsists <em>Consists</em>}'.
+	 * Returns the meta object for the reference '{@link wFP_V2.Aggregation#getSrc <em>Src</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Consists</em>'.
-	 * @see wFP_V2.Aggregation#getConsists()
+	 * @return the meta object for the reference '<em>Src</em>'.
+	 * @see wFP_V2.Aggregation#getSrc()
 	 * @see #getAggregation()
 	 * @generated
 	 */
-	EReference getAggregation_Consists();
+	EReference getAggregation_Src();
 
 	/**
-	 * Returns the meta object for the reference '{@link wFP_V2.Aggregation#getConsistedOf <em>Consisted Of</em>}'.
+	 * Returns the meta object for the reference '{@link wFP_V2.Aggregation#getTgt <em>Tgt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Consisted Of</em>'.
-	 * @see wFP_V2.Aggregation#getConsistedOf()
+	 * @return the meta object for the reference '<em>Tgt</em>'.
+	 * @see wFP_V2.Aggregation#getTgt()
 	 * @see #getAggregation()
 	 * @generated
 	 */
-	EReference getAggregation_ConsistedOf();
+	EReference getAggregation_Tgt();
+
+	/**
+	 * Returns the meta object for class '{@link wFP_V2.Argument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Argument</em>'.
+	 * @see wFP_V2.Argument
+	 * @generated
+	 */
+	EClass getArgument();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wFP_V2.Argument#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see wFP_V2.Argument#getName()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wFP_V2.Argument#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see wFP_V2.Argument#getDescription()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Description();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Argument#getConstraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Constraint</em>'.
+	 * @see wFP_V2.Argument#getConstraint()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EReference getArgument_Constraint();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Argument#getConstructs <em>Constructs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Constructs</em>'.
+	 * @see wFP_V2.Argument#getConstructs()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EReference getArgument_Constructs();
+
+	/**
+	 * Returns the meta object for the reference list '{@link wFP_V2.Argument#getConstructedBy <em>Constructed By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Constructed By</em>'.
+	 * @see wFP_V2.Argument#getConstructedBy()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EReference getArgument_ConstructedBy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wFP_V2.Argument#isSyntactic <em>Syntactic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Syntactic</em>'.
+	 * @see wFP_V2.Argument#isSyntactic()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Syntactic();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2077,6 +3644,14 @@ public interface WFP_V2Package extends EPackage {
 		EReference WORK_FLOW_PLUS__REFERENCE = eINSTANCE.getWorkFlowPlus_Reference();
 
 		/**
+		 * The meta object literal for the '<em><b>Argument</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORK_FLOW_PLUS__ARGUMENT = eINSTANCE.getWorkFlowPlus_Argument();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.ProcessImpl <em>Process</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2111,6 +3686,22 @@ public interface WFP_V2Package extends EPackage {
 		EReference PROCESS__PREVIOUS = eINSTANCE.getProcess_Previous();
 
 		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__INPUT = eINSTANCE.getProcess_Input();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__OUTPUT = eINSTANCE.getProcess_Output();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.DataImpl <em>Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2127,6 +3718,38 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATA__NAME = eINSTANCE.getData_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Output</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA__OUTPUT = eINSTANCE.getData_Output();
+
+		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA__INPUT = eINSTANCE.getData_Input();
+
+		/**
+		 * The meta object literal for the '<em><b>Forward Impact Analysis</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DATA___FORWARD_IMPACT_ANALYSIS = eINSTANCE.getData__ForwardImpactAnalysis();
+
+		/**
+		 * The meta object literal for the '<em><b>Backward Impact Analysis</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DATA___BACKWARD_IMPACT_ANALYSIS = eINSTANCE.getData__BackwardImpactAnalysis();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.Data_DefinitionImpl <em>Data Definition</em>}' class.
@@ -2252,6 +3875,14 @@ public interface WFP_V2Package extends EPackage {
 		EReference ATOMIC_PROCESS_DEFINITION__ATTRIBUTE = eINSTANCE.getAtomic_Process_Definition_Attribute();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Query</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATOMIC_PROCESS_DEFINITION__IS_QUERY = eINSTANCE.getAtomic_Process_Definition_IsQuery();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.AttributeImpl <em>Attribute</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2276,6 +3907,14 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute ATTRIBUTE__DESCRIPTION = eINSTANCE.getAttribute_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Executable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTRIBUTE__IS_EXECUTABLE = eINSTANCE.getAttribute_IsExecutable();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -2304,12 +3943,12 @@ public interface WFP_V2Package extends EPackage {
 		EReference CONSTRAINT__NODE = eINSTANCE.getConstraint_Node();
 
 		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Body</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONSTRAINT__DESCRIPTION = eINSTANCE.getConstraint_Description();
+		EAttribute CONSTRAINT__BODY = eINSTANCE.getConstraint_Body();
 
 		/**
 		 * The meta object literal for the '<em><b>Syntactic</b></em>' attribute feature.
@@ -2318,6 +3957,22 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONSTRAINT__SYNTACTIC = eINSTANCE.getConstraint_Syntactic();
+
+		/**
+		 * The meta object literal for the '<em><b>Argument</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAINT__ARGUMENT = eINSTANCE.getConstraint_Argument();
+
+		/**
+		 * The meta object literal for the '<em><b>Reference</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONSTRAINT__REFERENCE = eINSTANCE.getConstraint_Reference();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.NodeImpl <em>Node</em>}' class.
@@ -2330,6 +3985,78 @@ public interface WFP_V2Package extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
+		 * The meta object literal for the '<em><b>Aggregate</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__AGGREGATE = eINSTANCE.getNode_Aggregate();
+
+		/**
+		 * The meta object literal for the '<em><b>Aggregation</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__AGGREGATION = eINSTANCE.getNode_Aggregation();
+
+		/**
+		 * The meta object literal for the '<em><b>Reify association</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__REIFY_ASSOCIATION = eINSTANCE.getNode_Reify_association();
+
+		/**
+		 * The meta object literal for the '<em><b>Child</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__CHILD = eINSTANCE.getNode_Child();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__PARENT = eINSTANCE.getNode_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Association src</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__ASSOCIATION_SRC = eINSTANCE.getNode_Association_src();
+
+		/**
+		 * The meta object literal for the '<em><b>Composed Of</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__COMPOSED_OF = eINSTANCE.getNode_ComposedOf();
+
+		/**
+		 * The meta object literal for the '<em><b>Association tgt</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__ASSOCIATION_TGT = eINSTANCE.getNode_Association_tgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Composition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__COMPOSITION = eINSTANCE.getNode_Composition();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.ReferenceImpl <em>Reference</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2338,6 +4065,14 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EClass REFERENCE = eINSTANCE.getReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Reify association</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REFERENCE__REIFY_ASSOCIATION = eINSTANCE.getReference_Reify_association();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.AssociationImpl <em>Association</em>}' class.
@@ -2450,22 +4185,6 @@ public interface WFP_V2Package extends EPackage {
 		EClass COMPOSITION = eINSTANCE.getComposition();
 
 		/**
-		 * The meta object literal for the '<em><b>Composes</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITION__COMPOSES = eINSTANCE.getComposition_Composes();
-
-		/**
-		 * The meta object literal for the '<em><b>Composed Of</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITION__COMPOSED_OF = eINSTANCE.getComposition_ComposedOf();
-
-		/**
 		 * The meta object literal for the '<em><b>Mult At Tgt</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2482,6 +4201,22 @@ public interface WFP_V2Package extends EPackage {
 		EAttribute COMPOSITION__LABEL_AT_TGT = eINSTANCE.getComposition_LabelAtTgt();
 
 		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITION__SRC = eINSTANCE.getComposition_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITION__TGT = eINSTANCE.getComposition_Tgt();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.InheritanceImpl <em>Inheritance</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2492,20 +4227,20 @@ public interface WFP_V2Package extends EPackage {
 		EClass INHERITANCE = eINSTANCE.getInheritance();
 
 		/**
-		 * The meta object literal for the '<em><b>Child</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INHERITANCE__CHILD = eINSTANCE.getInheritance_Child();
+		EReference INHERITANCE__SRC = eINSTANCE.getInheritance_Src();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tgt</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INHERITANCE__PARENT = eINSTANCE.getInheritance_Parent();
+		EReference INHERITANCE__TGT = eINSTANCE.getInheritance_Tgt();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.Work_ProductImpl <em>Work Product</em>}' class.
@@ -2546,22 +4281,6 @@ public interface WFP_V2Package extends EPackage {
 		EClass OUTPUT = eINSTANCE.getOutput();
 
 		/**
-		 * The meta object literal for the '<em><b>Src process</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OUTPUT__SRC_PROCESS = eINSTANCE.getOutput_Src_process();
-
-		/**
-		 * The meta object literal for the '<em><b>Tgt data</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OUTPUT__TGT_DATA = eINSTANCE.getOutput_Tgt_data();
-
-		/**
 		 * The meta object literal for the '<em><b>Mult At Src</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2578,6 +4297,22 @@ public interface WFP_V2Package extends EPackage {
 		EAttribute OUTPUT__MULT_AT_TGT = eINSTANCE.getOutput_MultAtTgt();
 
 		/**
+		 * The meta object literal for the '<em><b>Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__TGT = eINSTANCE.getOutput_Tgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__SRC = eINSTANCE.getOutput_Src();
+
+		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.InputImpl <em>Input</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2586,22 +4321,6 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT = eINSTANCE.getInput();
-
-		/**
-		 * The meta object literal for the '<em><b>Src data</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT__SRC_DATA = eINSTANCE.getInput_Src_data();
-
-		/**
-		 * The meta object literal for the '<em><b>Tgt process</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT__TGT_PROCESS = eINSTANCE.getInput_Tgt_process();
 
 		/**
 		 * The meta object literal for the '<em><b>Mult At Src</b></em>' attribute feature.
@@ -2618,6 +4337,22 @@ public interface WFP_V2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute INPUT__MULT_AT_TGT = eINSTANCE.getInput_MultAtTgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__SRC = eINSTANCE.getInput_Src();
+
+		/**
+		 * The meta object literal for the '<em><b>Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__TGT = eINSTANCE.getInput_Tgt();
 
 		/**
 		 * The meta object literal for the '{@link wFP_V2.impl.AggregationImpl <em>Aggregation</em>}' class.
@@ -2646,20 +4381,78 @@ public interface WFP_V2Package extends EPackage {
 		EAttribute AGGREGATION__MULT_AT_TGT = eINSTANCE.getAggregation_MultAtTgt();
 
 		/**
-		 * The meta object literal for the '<em><b>Consists</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Src</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AGGREGATION__CONSISTS = eINSTANCE.getAggregation_Consists();
+		EReference AGGREGATION__SRC = eINSTANCE.getAggregation_Src();
 
 		/**
-		 * The meta object literal for the '<em><b>Consisted Of</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tgt</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AGGREGATION__CONSISTED_OF = eINSTANCE.getAggregation_ConsistedOf();
+		EReference AGGREGATION__TGT = eINSTANCE.getAggregation_Tgt();
+
+		/**
+		 * The meta object literal for the '{@link wFP_V2.impl.ArgumentImpl <em>Argument</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see wFP_V2.impl.ArgumentImpl
+		 * @see wFP_V2.impl.WFP_V2PackageImpl#getArgument()
+		 * @generated
+		 */
+		EClass ARGUMENT = eINSTANCE.getArgument();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__DESCRIPTION = eINSTANCE.getArgument_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Constraint</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT__CONSTRAINT = eINSTANCE.getArgument_Constraint();
+
+		/**
+		 * The meta object literal for the '<em><b>Constructs</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT__CONSTRUCTS = eINSTANCE.getArgument_Constructs();
+
+		/**
+		 * The meta object literal for the '<em><b>Constructed By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARGUMENT__CONSTRUCTED_BY = eINSTANCE.getArgument_ConstructedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Syntactic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__SYNTACTIC = eINSTANCE.getArgument_Syntactic();
 
 	}
 

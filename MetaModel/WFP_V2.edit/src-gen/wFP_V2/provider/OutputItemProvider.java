@@ -44,42 +44,12 @@ public class OutputItemProvider extends ReferenceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSrc_processPropertyDescriptor(object);
-			addTgt_dataPropertyDescriptor(object);
 			addMultAtSrcPropertyDescriptor(object);
 			addMultAtTgtPropertyDescriptor(object);
+			addTgtPropertyDescriptor(object);
+			addSrcPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Src process feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSrc_processPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Output_src_process_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Output_src_process_feature",
-								"_UI_Output_type"),
-						WFP_V2Package.Literals.OUTPUT__SRC_PROCESS, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Tgt data feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTgt_dataPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Output_tgt_data_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Output_tgt_data_feature",
-								"_UI_Output_type"),
-						WFP_V2Package.Literals.OUTPUT__TGT_DATA, true, false, true, null, null, null));
 	}
 
 	/**
@@ -112,6 +82,34 @@ public class OutputItemProvider extends ReferenceItemProvider {
 								"_UI_Output_type"),
 						WFP_V2Package.Literals.OUTPUT__MULT_AT_TGT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Tgt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTgtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Output_tgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Output_tgt_feature", "_UI_Output_type"),
+						WFP_V2Package.Literals.OUTPUT__TGT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Src feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Output_src_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Output_src_feature", "_UI_Output_type"),
+						WFP_V2Package.Literals.OUTPUT__SRC, true, false, true, null, null, null));
 	}
 
 	/**

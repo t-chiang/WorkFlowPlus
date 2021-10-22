@@ -4,6 +4,7 @@ package wFP_V2.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -23,8 +24,8 @@ import wFP_V2.WFP_V2Package;
  * <ul>
  *   <li>{@link wFP_V2.impl.AggregationImpl#getLabelAtTgt <em>Label At Tgt</em>}</li>
  *   <li>{@link wFP_V2.impl.AggregationImpl#getMultAtTgt <em>Mult At Tgt</em>}</li>
- *   <li>{@link wFP_V2.impl.AggregationImpl#getConsists <em>Consists</em>}</li>
- *   <li>{@link wFP_V2.impl.AggregationImpl#getConsistedOf <em>Consisted Of</em>}</li>
+ *   <li>{@link wFP_V2.impl.AggregationImpl#getSrc <em>Src</em>}</li>
+ *   <li>{@link wFP_V2.impl.AggregationImpl#getTgt <em>Tgt</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,24 +72,24 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	protected String multAtTgt = MULT_AT_TGT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getConsists() <em>Consists</em>}' reference.
+	 * The cached value of the '{@link #getSrc() <em>Src</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConsists()
+	 * @see #getSrc()
 	 * @generated
 	 * @ordered
 	 */
-	protected Node consists;
+	protected Node src;
 
 	/**
-	 * The cached value of the '{@link #getConsistedOf() <em>Consisted Of</em>}' reference.
+	 * The cached value of the '{@link #getTgt() <em>Tgt</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConsistedOf()
+	 * @see #getTgt()
 	 * @generated
 	 * @ordered
 	 */
-	protected Node consistedOf;
+	protected Node tgt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,17 +164,17 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * @generated
 	 */
 	@Override
-	public Node getConsists() {
-		if (consists != null && consists.eIsProxy()) {
-			InternalEObject oldConsists = (InternalEObject) consists;
-			consists = (Node) eResolveProxy(oldConsists);
-			if (consists != oldConsists) {
+	public Node getSrc() {
+		if (src != null && src.eIsProxy()) {
+			InternalEObject oldSrc = (InternalEObject) src;
+			src = (Node) eResolveProxy(oldSrc);
+			if (src != oldSrc) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WFP_V2Package.AGGREGATION__CONSISTS,
-							oldConsists, consists));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WFP_V2Package.AGGREGATION__SRC, oldSrc,
+							src));
 			}
 		}
-		return consists;
+		return src;
 	}
 
 	/**
@@ -181,8 +182,27 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node basicGetConsists() {
-		return consists;
+	public Node basicGetSrc() {
+		return src;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSrc(Node newSrc, NotificationChain msgs) {
+		Node oldSrc = src;
+		src = newSrc;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WFP_V2Package.AGGREGATION__SRC, oldSrc, newSrc);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -191,12 +211,18 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * @generated
 	 */
 	@Override
-	public void setConsists(Node newConsists) {
-		Node oldConsists = consists;
-		consists = newConsists;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WFP_V2Package.AGGREGATION__CONSISTS, oldConsists,
-					consists));
+	public void setSrc(Node newSrc) {
+		if (newSrc != src) {
+			NotificationChain msgs = null;
+			if (src != null)
+				msgs = ((InternalEObject) src).eInverseRemove(this, WFP_V2Package.NODE__AGGREGATE, Node.class, msgs);
+			if (newSrc != null)
+				msgs = ((InternalEObject) newSrc).eInverseAdd(this, WFP_V2Package.NODE__AGGREGATE, Node.class, msgs);
+			msgs = basicSetSrc(newSrc, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WFP_V2Package.AGGREGATION__SRC, newSrc, newSrc));
 	}
 
 	/**
@@ -205,17 +231,17 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * @generated
 	 */
 	@Override
-	public Node getConsistedOf() {
-		if (consistedOf != null && consistedOf.eIsProxy()) {
-			InternalEObject oldConsistedOf = (InternalEObject) consistedOf;
-			consistedOf = (Node) eResolveProxy(oldConsistedOf);
-			if (consistedOf != oldConsistedOf) {
+	public Node getTgt() {
+		if (tgt != null && tgt.eIsProxy()) {
+			InternalEObject oldTgt = (InternalEObject) tgt;
+			tgt = (Node) eResolveProxy(oldTgt);
+			if (tgt != oldTgt) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WFP_V2Package.AGGREGATION__CONSISTED_OF,
-							oldConsistedOf, consistedOf));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WFP_V2Package.AGGREGATION__TGT, oldTgt,
+							tgt));
 			}
 		}
-		return consistedOf;
+		return tgt;
 	}
 
 	/**
@@ -223,8 +249,27 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node basicGetConsistedOf() {
-		return consistedOf;
+	public Node basicGetTgt() {
+		return tgt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTgt(Node newTgt, NotificationChain msgs) {
+		Node oldTgt = tgt;
+		tgt = newTgt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WFP_V2Package.AGGREGATION__TGT, oldTgt, newTgt);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -233,12 +278,54 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 	 * @generated
 	 */
 	@Override
-	public void setConsistedOf(Node newConsistedOf) {
-		Node oldConsistedOf = consistedOf;
-		consistedOf = newConsistedOf;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WFP_V2Package.AGGREGATION__CONSISTED_OF,
-					oldConsistedOf, consistedOf));
+	public void setTgt(Node newTgt) {
+		if (newTgt != tgt) {
+			NotificationChain msgs = null;
+			if (tgt != null)
+				msgs = ((InternalEObject) tgt).eInverseRemove(this, WFP_V2Package.NODE__AGGREGATION, Node.class, msgs);
+			if (newTgt != null)
+				msgs = ((InternalEObject) newTgt).eInverseAdd(this, WFP_V2Package.NODE__AGGREGATION, Node.class, msgs);
+			msgs = basicSetTgt(newTgt, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WFP_V2Package.AGGREGATION__TGT, newTgt, newTgt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WFP_V2Package.AGGREGATION__SRC:
+			if (src != null)
+				msgs = ((InternalEObject) src).eInverseRemove(this, WFP_V2Package.NODE__AGGREGATE, Node.class, msgs);
+			return basicSetSrc((Node) otherEnd, msgs);
+		case WFP_V2Package.AGGREGATION__TGT:
+			if (tgt != null)
+				msgs = ((InternalEObject) tgt).eInverseRemove(this, WFP_V2Package.NODE__AGGREGATION, Node.class, msgs);
+			return basicSetTgt((Node) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WFP_V2Package.AGGREGATION__SRC:
+			return basicSetSrc(null, msgs);
+		case WFP_V2Package.AGGREGATION__TGT:
+			return basicSetTgt(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -253,14 +340,14 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 			return getLabelAtTgt();
 		case WFP_V2Package.AGGREGATION__MULT_AT_TGT:
 			return getMultAtTgt();
-		case WFP_V2Package.AGGREGATION__CONSISTS:
+		case WFP_V2Package.AGGREGATION__SRC:
 			if (resolve)
-				return getConsists();
-			return basicGetConsists();
-		case WFP_V2Package.AGGREGATION__CONSISTED_OF:
+				return getSrc();
+			return basicGetSrc();
+		case WFP_V2Package.AGGREGATION__TGT:
 			if (resolve)
-				return getConsistedOf();
-			return basicGetConsistedOf();
+				return getTgt();
+			return basicGetTgt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -279,11 +366,11 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 		case WFP_V2Package.AGGREGATION__MULT_AT_TGT:
 			setMultAtTgt((String) newValue);
 			return;
-		case WFP_V2Package.AGGREGATION__CONSISTS:
-			setConsists((Node) newValue);
+		case WFP_V2Package.AGGREGATION__SRC:
+			setSrc((Node) newValue);
 			return;
-		case WFP_V2Package.AGGREGATION__CONSISTED_OF:
-			setConsistedOf((Node) newValue);
+		case WFP_V2Package.AGGREGATION__TGT:
+			setTgt((Node) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,11 +390,11 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 		case WFP_V2Package.AGGREGATION__MULT_AT_TGT:
 			setMultAtTgt(MULT_AT_TGT_EDEFAULT);
 			return;
-		case WFP_V2Package.AGGREGATION__CONSISTS:
-			setConsists((Node) null);
+		case WFP_V2Package.AGGREGATION__SRC:
+			setSrc((Node) null);
 			return;
-		case WFP_V2Package.AGGREGATION__CONSISTED_OF:
-			setConsistedOf((Node) null);
+		case WFP_V2Package.AGGREGATION__TGT:
+			setTgt((Node) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -325,10 +412,10 @@ public class AggregationImpl extends ReferenceImpl implements Aggregation {
 			return LABEL_AT_TGT_EDEFAULT == null ? labelAtTgt != null : !LABEL_AT_TGT_EDEFAULT.equals(labelAtTgt);
 		case WFP_V2Package.AGGREGATION__MULT_AT_TGT:
 			return MULT_AT_TGT_EDEFAULT == null ? multAtTgt != null : !MULT_AT_TGT_EDEFAULT.equals(multAtTgt);
-		case WFP_V2Package.AGGREGATION__CONSISTS:
-			return consists != null;
-		case WFP_V2Package.AGGREGATION__CONSISTED_OF:
-			return consistedOf != null;
+		case WFP_V2Package.AGGREGATION__SRC:
+			return src != null;
+		case WFP_V2Package.AGGREGATION__TGT:
+			return tgt != null;
 		}
 		return super.eIsSet(featureID);
 	}

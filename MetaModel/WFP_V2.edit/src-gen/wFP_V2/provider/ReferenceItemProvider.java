@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -17,6 +18,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import wFP_V2.WFP_V2Package;
 
 /**
  * This is the item provider adapter for a {@link wFP_V2.Reference} object.
@@ -47,8 +50,24 @@ public class ReferenceItemProvider extends ItemProviderAdapter implements IEditi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addReify_associationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Reify association feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReify_associationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Reference_reify_association_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Reference_reify_association_feature",
+								"_UI_Reference_type"),
+						WFP_V2Package.Literals.REFERENCE__REIFY_ASSOCIATION, true, false, true, null, null, null));
 	}
 
 	/**

@@ -15,6 +15,10 @@ import wFP_V2.Node;
 public interface InheritanceValidator {
 	boolean validate();
 
+	boolean validateSrc(Node value);
+
+	boolean validateTgt(Node value);
+
 	boolean validateChild(Node value);
 
 	boolean validateParent(Node value);

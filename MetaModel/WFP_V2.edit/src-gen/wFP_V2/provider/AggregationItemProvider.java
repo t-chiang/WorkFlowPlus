@@ -46,8 +46,8 @@ public class AggregationItemProvider extends ReferenceItemProvider {
 
 			addLabelAtTgtPropertyDescriptor(object);
 			addMultAtTgtPropertyDescriptor(object);
-			addConsistsPropertyDescriptor(object);
-			addConsistedOfPropertyDescriptor(object);
+			addSrcPropertyDescriptor(object);
+			addTgtPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,33 +85,33 @@ public class AggregationItemProvider extends ReferenceItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Consists feature.
+	 * This adds a property descriptor for the Src feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConsistsPropertyDescriptor(Object object) {
+	protected void addSrcPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Aggregation_consists_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Aggregation_consists_feature",
+						getResourceLocator(), getString("_UI_Aggregation_src_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Aggregation_src_feature",
 								"_UI_Aggregation_type"),
-						WFP_V2Package.Literals.AGGREGATION__CONSISTS, true, false, true, null, null, null));
+						WFP_V2Package.Literals.AGGREGATION__SRC, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Consisted Of feature.
+	 * This adds a property descriptor for the Tgt feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConsistedOfPropertyDescriptor(Object object) {
+	protected void addTgtPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Aggregation_consistedOf_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Aggregation_consistedOf_feature",
+						getResourceLocator(), getString("_UI_Aggregation_tgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Aggregation_tgt_feature",
 								"_UI_Aggregation_type"),
-						WFP_V2Package.Literals.AGGREGATION__CONSISTED_OF, true, false, true, null, null, null));
+						WFP_V2Package.Literals.AGGREGATION__TGT, true, false, true, null, null, null));
 	}
 
 	/**

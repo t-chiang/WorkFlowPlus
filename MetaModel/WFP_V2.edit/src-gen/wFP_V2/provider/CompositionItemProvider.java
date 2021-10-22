@@ -44,42 +44,12 @@ public class CompositionItemProvider extends ReferenceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addComposesPropertyDescriptor(object);
-			addComposedOfPropertyDescriptor(object);
 			addMultAtTgtPropertyDescriptor(object);
 			addLabelAtTgtPropertyDescriptor(object);
+			addSrcPropertyDescriptor(object);
+			addTgtPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Composes feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addComposesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Composition_composes_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Composition_composes_feature",
-								"_UI_Composition_type"),
-						WFP_V2Package.Literals.COMPOSITION__COMPOSES, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Composed Of feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addComposedOfPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Composition_composedOf_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Composition_composedOf_feature",
-								"_UI_Composition_type"),
-						WFP_V2Package.Literals.COMPOSITION__COMPOSED_OF, true, false, true, null, null, null));
 	}
 
 	/**
@@ -112,6 +82,36 @@ public class CompositionItemProvider extends ReferenceItemProvider {
 								"_UI_Composition_type"),
 						WFP_V2Package.Literals.COMPOSITION__LABEL_AT_TGT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Src feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Composition_src_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Composition_src_feature",
+								"_UI_Composition_type"),
+						WFP_V2Package.Literals.COMPOSITION__SRC, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Tgt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTgtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Composition_tgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Composition_tgt_feature",
+								"_UI_Composition_type"),
+						WFP_V2Package.Literals.COMPOSITION__TGT, true, false, true, null, null, null));
 	}
 
 	/**

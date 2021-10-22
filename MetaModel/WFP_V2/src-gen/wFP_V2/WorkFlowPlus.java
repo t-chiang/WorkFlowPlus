@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link wFP_V2.WorkFlowPlus#getData <em>Data</em>}</li>
  *   <li>{@link wFP_V2.WorkFlowPlus#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link wFP_V2.WorkFlowPlus#getReference <em>Reference</em>}</li>
+ *   <li>{@link wFP_V2.WorkFlowPlus#getArgument <em>Argument</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getWorkFlowPlus()
@@ -73,5 +74,17 @@ public interface WorkFlowPlus extends EObject {
 	 * @generated
 	 */
 	EList<Reference> getReference();
+
+	/**
+	 * Returns the value of the '<em><b>Argument</b></em>' containment reference list.
+	 * The list contents are of type {@link wFP_V2.Argument}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Argument</em>' containment reference list.
+	 * @see wFP_V2.WFP_V2Package#getWorkFlowPlus_Argument()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Argument> getArgument();
 
 } // WorkFlowPlus

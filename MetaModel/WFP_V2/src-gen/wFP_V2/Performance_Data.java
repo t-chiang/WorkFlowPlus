@@ -28,7 +28,7 @@ public interface Performance_Data extends Data {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Attribute</em>' containment reference list.
 	 * @see wFP_V2.WFP_V2Package#getPerformance_Data_Attribute()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();

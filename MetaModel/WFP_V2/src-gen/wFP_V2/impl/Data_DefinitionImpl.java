@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -54,6 +55,7 @@ public class Data_DefinitionImpl extends DataImpl implements Data_Definition {
 	 * @ordered
 	 */
 	protected static final boolean IS_NORMATIVE_EDEFAULT = false;
+
 	/**
 	 * The cached value of the '{@link #isIsNormative() <em>Is Normative</em>}' attribute.
 	 * <!-- begin-user-doc -->

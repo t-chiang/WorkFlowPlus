@@ -4,6 +4,7 @@
  */
 package wFP_V2.validation;
 
+import org.eclipse.emf.common.util.EList;
 import wFP_V2.Node;
 
 /**
@@ -22,4 +23,12 @@ public interface CompositionValidator {
 	boolean validateMultAtTgt(String value);
 
 	boolean validateLabelAtTgt(String value);
+
+	boolean validateSrc(EList<Node> value);
+
+	boolean validateSrc(Node value);
+
+	boolean validateTgt(EList<Node> value);
+
+	boolean validateTgt(Node value);
 }

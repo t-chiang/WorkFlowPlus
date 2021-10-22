@@ -31,6 +31,7 @@ import wFP_V2.WFP_V2Package;
  * <ul>
  *   <li>{@link wFP_V2.impl.Atomic_Process_DefinitionImpl#isIsReview <em>Is Review</em>}</li>
  *   <li>{@link wFP_V2.impl.Atomic_Process_DefinitionImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link wFP_V2.impl.Atomic_Process_DefinitionImpl#isIsQuery <em>Is Query</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +66,26 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 	 * @ordered
 	 */
 	protected EList<Attribute> attribute;
+
+	/**
+	 * The default value of the '{@link #isIsQuery() <em>Is Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_QUERY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsQuery() <em>Is Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsQuery()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isQuery = IS_QUERY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,6 +150,30 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 	 * @generated
 	 */
 	@Override
+	public boolean isIsQuery() {
+		return isQuery;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setIsQuery(boolean newIsQuery) {
+		boolean oldIsQuery = isQuery;
+		isQuery = newIsQuery;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY,
+					oldIsQuery, isQuery));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__ATTRIBUTE:
@@ -149,6 +194,8 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 			return isIsReview();
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__ATTRIBUTE:
 			return getAttribute();
+		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY:
+			return isIsQuery();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,6 +216,9 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 			getAttribute().clear();
 			getAttribute().addAll((Collection<? extends Attribute>) newValue);
 			return;
+		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY:
+			setIsQuery((Boolean) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -187,6 +237,9 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__ATTRIBUTE:
 			getAttribute().clear();
 			return;
+		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY:
+			setIsQuery(IS_QUERY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +256,8 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 			return isReview != IS_REVIEW_EDEFAULT;
 		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__ATTRIBUTE:
 			return attribute != null && !attribute.isEmpty();
+		case WFP_V2Package.ATOMIC_PROCESS_DEFINITION__IS_QUERY:
+			return isQuery != IS_QUERY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -220,6 +275,8 @@ public class Atomic_Process_DefinitionImpl extends ProcessImpl implements Atomic
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isReview: ");
 		result.append(isReview);
+		result.append(", isQuery: ");
+		result.append(isQuery);
 		result.append(')');
 		return result.toString();
 	}

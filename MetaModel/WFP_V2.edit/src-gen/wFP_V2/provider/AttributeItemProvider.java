@@ -8,9 +8,17 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import wFP_V2.Attribute;
@@ -22,7 +30,8 @@ import wFP_V2.WFP_V2Package;
  * <!-- end-user-doc -->
  * @generated
  */
-public class AttributeItemProvider extends NodeItemProvider {
+public class AttributeItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -46,6 +55,7 @@ public class AttributeItemProvider extends NodeItemProvider {
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addIsExecutablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -80,6 +90,22 @@ public class AttributeItemProvider extends NodeItemProvider {
 								"_UI_Attribute_type"),
 						WFP_V2Package.Literals.ATTRIBUTE__DESCRIPTION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Executable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsExecutablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Attribute_isExecutable_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Attribute_isExecutable_feature",
+								"_UI_Attribute_type"),
+						WFP_V2Package.Literals.ATTRIBUTE__IS_EXECUTABLE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -130,6 +156,7 @@ public class AttributeItemProvider extends NodeItemProvider {
 		switch (notification.getFeatureID(Attribute.class)) {
 		case WFP_V2Package.ATTRIBUTE__NAME:
 		case WFP_V2Package.ATTRIBUTE__DESCRIPTION:
+		case WFP_V2Package.ATTRIBUTE__IS_EXECUTABLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
@@ -146,6 +173,17 @@ public class AttributeItemProvider extends NodeItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return WFP_V2EditPlugin.INSTANCE;
 	}
 
 }

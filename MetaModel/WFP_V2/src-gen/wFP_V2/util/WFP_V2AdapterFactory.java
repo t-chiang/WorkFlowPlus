@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import wFP_V2.Aggregation;
+import wFP_V2.Argument;
 import wFP_V2.Association;
 import wFP_V2.Atomic_Process_Definition;
 import wFP_V2.Attribute;
@@ -189,6 +190,11 @@ public class WFP_V2AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAggregation(Aggregation object) {
 			return createAggregationAdapter();
+		}
+
+		@Override
+		public Adapter caseArgument(Argument object) {
+			return createArgumentAdapter();
 		}
 
 		@Override
@@ -501,6 +507,20 @@ public class WFP_V2AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAggregationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link wFP_V2.Argument <em>Argument</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see wFP_V2.Argument
+	 * @generated
+	 */
+	public Adapter createArgumentAdapter() {
 		return null;
 	}
 

@@ -13,5 +13,24 @@
             class="wFP_V2.WFP_V2Package"
             genModel="model/wFP_V2.genmodel"/>
    </extension>
+   <extension
+         point="org.eclipse.epsilon.evl.emf.validation">
+      <constraintsBinding
+            compose="true"
+            constraints="model/constraints.evl"
+            namespaceURI="http://www.example.org/wFP_V2">
+      </constraintsBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.sirius.diagram.ui.diagnostic">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.emf.ecore.diagnostic">
+      </markerResolutionGenerator>
+   </extension>
 
 </plugin>

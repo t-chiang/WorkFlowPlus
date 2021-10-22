@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import wFP_V2.Aggregation;
+import wFP_V2.Argument;
 import wFP_V2.Association;
 import wFP_V2.Atomic_Process_Definition;
 import wFP_V2.Attribute;
@@ -170,8 +171,6 @@ public class WFP_V2Switch<T> extends Switch<T> {
 			Attribute attribute = (Attribute) theEObject;
 			T result = caseAttribute(attribute);
 			if (result == null)
-				result = caseNode(attribute);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -277,6 +276,13 @@ public class WFP_V2Switch<T> extends Switch<T> {
 			T result = caseAggregation(aggregation);
 			if (result == null)
 				result = caseReference(aggregation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WFP_V2Package.ARGUMENT: {
+			Argument argument = (Argument) theEObject;
+			T result = caseArgument(argument);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -598,6 +604,21 @@ public class WFP_V2Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAggregation(Aggregation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Argument</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArgument(Argument object) {
 		return null;
 	}
 

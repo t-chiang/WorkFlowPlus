@@ -4,6 +4,8 @@
  */
 package wFP_V2.validation;
 
+import wFP_V2.Reify_Association;
+
 /**
  * A sample validator interface for {@link wFP_V2.Reference}.
  * This doesn't really do anything, and it's not a real EMF artifact.
@@ -12,5 +14,7 @@ package wFP_V2.validation;
  */
 public interface ReferenceValidator {
 	boolean validate();
+
+	boolean validateReify_association(Reify_Association value);
 
 }

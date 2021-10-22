@@ -20,4 +20,6 @@ public interface Atomic_Process_DefinitionValidator {
 	boolean validateIsReview(boolean value);
 
 	boolean validateAttribute(EList<Attribute> value);
+
+	boolean validateIsQuery(boolean value);
 }

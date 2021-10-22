@@ -4,6 +4,10 @@
  */
 package wFP_V2.validation;
 
+import org.eclipse.emf.common.util.EList;
+import wFP_V2.Input;
+import wFP_V2.Output;
+
 /**
  * A sample validator interface for {@link wFP_V2.Data}.
  * This doesn't really do anything, and it's not a real EMF artifact.
@@ -14,4 +18,8 @@ public interface DataValidator {
 	boolean validate();
 
 	boolean validateName(String value);
+
+	boolean validateOutput(EList<Output> value);
+
+	boolean validateInput(EList<Input> value);
 }

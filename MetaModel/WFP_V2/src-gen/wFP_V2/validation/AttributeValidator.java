@@ -16,4 +16,6 @@ public interface AttributeValidator {
 	boolean validateName(String value);
 
 	boolean validateDescription(String value);
+
+	boolean validateIsExecutable(boolean value);
 }

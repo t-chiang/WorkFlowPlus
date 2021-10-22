@@ -19,6 +19,10 @@ public interface AggregationValidator {
 
 	boolean validateMultAtTgt(String value);
 
+	boolean validateSrc(Node value);
+
+	boolean validateTgt(Node value);
+
 	boolean validateConsists(Node value);
 
 	boolean validateConsistedOf(Node value);

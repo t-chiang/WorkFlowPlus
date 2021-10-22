@@ -4,12 +4,14 @@ package wFP_V2.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import wFP_V2.Aggregation;
+import wFP_V2.Argument;
 import wFP_V2.Association;
 import wFP_V2.Atomic_Process_Definition;
 import wFP_V2.Attribute;
@@ -187,6 +189,13 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	private EClass aggregationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass argumentEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -306,6 +315,16 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getWorkFlowPlus_Argument() {
+		return (EReference) workFlowPlusEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getProcess() {
 		return processEClass;
 	}
@@ -346,6 +365,26 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getProcess_Input() {
+		return (EReference) processEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getProcess_Output() {
+		return (EReference) processEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getData() {
 		return dataEClass;
 	}
@@ -358,6 +397,46 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	@Override
 	public EAttribute getData_Name() {
 		return (EAttribute) dataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getData_Output() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getData_Input() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getData__ForwardImpactAnalysis() {
+		return dataEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getData__BackwardImpactAnalysis() {
+		return dataEClass.getEOperations().get(1);
 	}
 
 	/**
@@ -506,6 +585,16 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getAtomic_Process_Definition_IsQuery() {
+		return (EAttribute) atomic_Process_DefinitionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -528,6 +617,16 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	@Override
 	public EAttribute getAttribute_Description() {
 		return (EAttribute) attributeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttribute_IsExecutable() {
+		return (EAttribute) attributeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -566,7 +665,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getConstraint_Description() {
+	public EAttribute getConstraint_Body() {
 		return (EAttribute) constraintEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -586,6 +685,26 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getConstraint_Argument() {
+		return (EReference) constraintEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConstraint_Reference() {
+		return (EReference) constraintEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -596,8 +715,108 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
+	public EReference getNode_Aggregate() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Aggregation() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Reify_association() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Child() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Parent() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Association_src() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_ComposedOf() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Association_tgt() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getNode_Composition() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getReference() {
 		return referenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getReference_Reify_association() {
+		return (EReference) referenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -637,7 +856,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EReference getAssociation_Tgt() {
-		return (EReference) associationEClass.getEStructuralFeatures().get(2);
+		return (EReference) associationEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -647,7 +866,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EReference getAssociation_Src() {
-		return (EReference) associationEClass.getEStructuralFeatures().get(3);
+		return (EReference) associationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -657,7 +876,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getAssociation_LabelAtSrc() {
-		return (EAttribute) associationEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) associationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -667,7 +886,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getAssociation_LabelAtTgt() {
-		return (EAttribute) associationEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) associationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -687,7 +906,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EReference getReify_Association_Src() {
-		return (EReference) reify_AssociationEClass.getEStructuralFeatures().get(0);
+		return (EReference) reify_AssociationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -697,7 +916,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EReference getReify_Association_Tgt() {
-		return (EReference) reify_AssociationEClass.getEStructuralFeatures().get(1);
+		return (EReference) reify_AssociationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -707,7 +926,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getReify_Association_LabelAtTgt() {
-		return (EAttribute) reify_AssociationEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) reify_AssociationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -717,7 +936,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getReify_Association_MultAtTgt() {
-		return (EAttribute) reify_AssociationEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) reify_AssociationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -736,28 +955,8 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getComposition_Composes() {
-		return (EReference) compositionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getComposition_ComposedOf() {
-		return (EReference) compositionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getComposition_MultAtTgt() {
-		return (EAttribute) compositionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) compositionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -767,7 +966,27 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getComposition_LabelAtTgt() {
-		return (EAttribute) compositionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) compositionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getComposition_Src() {
+		return (EReference) compositionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getComposition_Tgt() {
+		return (EReference) compositionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -786,7 +1005,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getInheritance_Child() {
+	public EReference getInheritance_Src() {
 		return (EReference) inheritanceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -796,7 +1015,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getInheritance_Parent() {
+	public EReference getInheritance_Tgt() {
 		return (EReference) inheritanceEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -846,28 +1065,8 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getOutput_Src_process() {
-		return (EReference) outputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getOutput_Tgt_data() {
-		return (EReference) outputEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getOutput_MultAtSrc() {
-		return (EAttribute) outputEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) outputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -877,7 +1076,27 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getOutput_MultAtTgt() {
-		return (EAttribute) outputEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) outputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getOutput_Tgt() {
+		return (EReference) outputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getOutput_Src() {
+		return (EReference) outputEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -896,28 +1115,8 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getInput_Src_data() {
-		return (EReference) inputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInput_Tgt_process() {
-		return (EReference) inputEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getInput_MultAtSrc() {
-		return (EAttribute) inputEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) inputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -927,7 +1126,27 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 */
 	@Override
 	public EAttribute getInput_MultAtTgt() {
-		return (EAttribute) inputEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) inputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInput_Src() {
+		return (EReference) inputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInput_Tgt() {
+		return (EReference) inputEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -966,7 +1185,7 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getAggregation_Consists() {
+	public EReference getAggregation_Src() {
 		return (EReference) aggregationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -976,8 +1195,78 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 	 * @generated
 	 */
 	@Override
-	public EReference getAggregation_ConsistedOf() {
+	public EReference getAggregation_Tgt() {
 		return (EReference) aggregationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getArgument() {
+		return argumentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArgument_Name() {
+		return (EAttribute) argumentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArgument_Description() {
+		return (EAttribute) argumentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArgument_Constraint() {
+		return (EReference) argumentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArgument_Constructs() {
+		return (EReference) argumentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getArgument_ConstructedBy() {
+		return (EReference) argumentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArgument_Syntactic() {
+		return (EAttribute) argumentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1015,14 +1304,21 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__DATA);
 		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__CONSTRAINT);
 		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__REFERENCE);
+		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__ARGUMENT);
 
 		processEClass = createEClass(PROCESS);
 		createEAttribute(processEClass, PROCESS__NAME);
 		createEReference(processEClass, PROCESS__NEXT);
 		createEReference(processEClass, PROCESS__PREVIOUS);
+		createEReference(processEClass, PROCESS__INPUT);
+		createEReference(processEClass, PROCESS__OUTPUT);
 
 		dataEClass = createEClass(DATA);
 		createEAttribute(dataEClass, DATA__NAME);
+		createEReference(dataEClass, DATA__OUTPUT);
+		createEReference(dataEClass, DATA__INPUT);
+		createEOperation(dataEClass, DATA___FORWARD_IMPACT_ANALYSIS);
+		createEOperation(dataEClass, DATA___BACKWARD_IMPACT_ANALYSIS);
 
 		data_DefinitionEClass = createEClass(DATA_DEFINITION);
 		createEReference(data_DefinitionEClass, DATA_DEFINITION__DATA);
@@ -1042,44 +1338,58 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		atomic_Process_DefinitionEClass = createEClass(ATOMIC_PROCESS_DEFINITION);
 		createEAttribute(atomic_Process_DefinitionEClass, ATOMIC_PROCESS_DEFINITION__IS_REVIEW);
 		createEReference(atomic_Process_DefinitionEClass, ATOMIC_PROCESS_DEFINITION__ATTRIBUTE);
+		createEAttribute(atomic_Process_DefinitionEClass, ATOMIC_PROCESS_DEFINITION__IS_QUERY);
 
 		attributeEClass = createEClass(ATTRIBUTE);
 		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
 		createEAttribute(attributeEClass, ATTRIBUTE__DESCRIPTION);
+		createEAttribute(attributeEClass, ATTRIBUTE__IS_EXECUTABLE);
 
 		constraintEClass = createEClass(CONSTRAINT);
 		createEAttribute(constraintEClass, CONSTRAINT__NAME);
 		createEReference(constraintEClass, CONSTRAINT__NODE);
-		createEAttribute(constraintEClass, CONSTRAINT__DESCRIPTION);
+		createEAttribute(constraintEClass, CONSTRAINT__BODY);
 		createEAttribute(constraintEClass, CONSTRAINT__SYNTACTIC);
+		createEReference(constraintEClass, CONSTRAINT__ARGUMENT);
+		createEReference(constraintEClass, CONSTRAINT__REFERENCE);
 
 		nodeEClass = createEClass(NODE);
+		createEReference(nodeEClass, NODE__AGGREGATE);
+		createEReference(nodeEClass, NODE__AGGREGATION);
+		createEReference(nodeEClass, NODE__REIFY_ASSOCIATION);
+		createEReference(nodeEClass, NODE__PARENT);
+		createEReference(nodeEClass, NODE__CHILD);
+		createEReference(nodeEClass, NODE__ASSOCIATION_TGT);
+		createEReference(nodeEClass, NODE__ASSOCIATION_SRC);
+		createEReference(nodeEClass, NODE__COMPOSED_OF);
+		createEReference(nodeEClass, NODE__COMPOSITION);
 
 		referenceEClass = createEClass(REFERENCE);
+		createEReference(referenceEClass, REFERENCE__REIFY_ASSOCIATION);
 
 		associationEClass = createEClass(ASSOCIATION);
 		createEAttribute(associationEClass, ASSOCIATION__MULT_AT_SRC);
 		createEAttribute(associationEClass, ASSOCIATION__MULT_AT_TGT);
-		createEReference(associationEClass, ASSOCIATION__TGT);
-		createEReference(associationEClass, ASSOCIATION__SRC);
 		createEAttribute(associationEClass, ASSOCIATION__LABEL_AT_SRC);
 		createEAttribute(associationEClass, ASSOCIATION__LABEL_AT_TGT);
+		createEReference(associationEClass, ASSOCIATION__SRC);
+		createEReference(associationEClass, ASSOCIATION__TGT);
 
 		reify_AssociationEClass = createEClass(REIFY_ASSOCIATION);
-		createEReference(reify_AssociationEClass, REIFY_ASSOCIATION__SRC);
-		createEReference(reify_AssociationEClass, REIFY_ASSOCIATION__TGT);
 		createEAttribute(reify_AssociationEClass, REIFY_ASSOCIATION__LABEL_AT_TGT);
 		createEAttribute(reify_AssociationEClass, REIFY_ASSOCIATION__MULT_AT_TGT);
+		createEReference(reify_AssociationEClass, REIFY_ASSOCIATION__TGT);
+		createEReference(reify_AssociationEClass, REIFY_ASSOCIATION__SRC);
 
 		compositionEClass = createEClass(COMPOSITION);
-		createEReference(compositionEClass, COMPOSITION__COMPOSES);
-		createEReference(compositionEClass, COMPOSITION__COMPOSED_OF);
 		createEAttribute(compositionEClass, COMPOSITION__MULT_AT_TGT);
 		createEAttribute(compositionEClass, COMPOSITION__LABEL_AT_TGT);
+		createEReference(compositionEClass, COMPOSITION__SRC);
+		createEReference(compositionEClass, COMPOSITION__TGT);
 
 		inheritanceEClass = createEClass(INHERITANCE);
-		createEReference(inheritanceEClass, INHERITANCE__CHILD);
-		createEReference(inheritanceEClass, INHERITANCE__PARENT);
+		createEReference(inheritanceEClass, INHERITANCE__SRC);
+		createEReference(inheritanceEClass, INHERITANCE__TGT);
 
 		work_ProductEClass = createEClass(WORK_PRODUCT);
 
@@ -1087,22 +1397,30 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		createEReference(performance_DataEClass, PERFORMANCE_DATA__ATTRIBUTE);
 
 		outputEClass = createEClass(OUTPUT);
-		createEReference(outputEClass, OUTPUT__SRC_PROCESS);
-		createEReference(outputEClass, OUTPUT__TGT_DATA);
 		createEAttribute(outputEClass, OUTPUT__MULT_AT_SRC);
 		createEAttribute(outputEClass, OUTPUT__MULT_AT_TGT);
+		createEReference(outputEClass, OUTPUT__TGT);
+		createEReference(outputEClass, OUTPUT__SRC);
 
 		inputEClass = createEClass(INPUT);
-		createEReference(inputEClass, INPUT__SRC_DATA);
-		createEReference(inputEClass, INPUT__TGT_PROCESS);
 		createEAttribute(inputEClass, INPUT__MULT_AT_SRC);
 		createEAttribute(inputEClass, INPUT__MULT_AT_TGT);
+		createEReference(inputEClass, INPUT__SRC);
+		createEReference(inputEClass, INPUT__TGT);
 
 		aggregationEClass = createEClass(AGGREGATION);
 		createEAttribute(aggregationEClass, AGGREGATION__LABEL_AT_TGT);
 		createEAttribute(aggregationEClass, AGGREGATION__MULT_AT_TGT);
-		createEReference(aggregationEClass, AGGREGATION__CONSISTS);
-		createEReference(aggregationEClass, AGGREGATION__CONSISTED_OF);
+		createEReference(aggregationEClass, AGGREGATION__SRC);
+		createEReference(aggregationEClass, AGGREGATION__TGT);
+
+		argumentEClass = createEClass(ARGUMENT);
+		createEAttribute(argumentEClass, ARGUMENT__NAME);
+		createEAttribute(argumentEClass, ARGUMENT__DESCRIPTION);
+		createEReference(argumentEClass, ARGUMENT__CONSTRAINT);
+		createEReference(argumentEClass, ARGUMENT__CONSTRUCTS);
+		createEReference(argumentEClass, ARGUMENT__CONSTRUCTED_BY);
+		createEAttribute(argumentEClass, ARGUMENT__SYNTACTIC);
 	}
 
 	/**
@@ -1141,7 +1459,6 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		composed_Process_DefinitionEClass.getESuperTypes().add(this.getProcess());
 		automatic_Process_DefinitionEClass.getESuperTypes().add(this.getProcess());
 		atomic_Process_DefinitionEClass.getESuperTypes().add(this.getProcess());
-		attributeEClass.getESuperTypes().add(this.getNode());
 		associationEClass.getESuperTypes().add(this.getReference());
 		reify_AssociationEClass.getESuperTypes().add(this.getReference());
 		compositionEClass.getESuperTypes().add(this.getReference());
@@ -1167,6 +1484,9 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEReference(getWorkFlowPlus_Reference(), this.getReference(), null, "reference", null, 0, -1,
 				WorkFlowPlus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkFlowPlus_Argument(), this.getArgument(), null, "argument", null, 0, -1,
+				WorkFlowPlus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processEClass, wFP_V2.Process.class, "Process", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1178,10 +1498,26 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEReference(getProcess_Previous(), this.getProcess(), this.getProcess_Next(), "previous", null, 0, -1,
 				wFP_V2.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcess_Input(), this.getInput(), this.getInput_Tgt(), "input", null, 0, -1,
+				wFP_V2.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcess_Output(), this.getOutput(), this.getOutput_Src(), "output", null, 0, -1,
+				wFP_V2.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataEClass, Data.class, "Data", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getData_Name(), ecorePackage.getEString(), "name", null, 1, 1, Data.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getData_Output(), this.getOutput(), this.getOutput_Tgt(), "output", null, 0, -1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getData_Input(), this.getInput(), this.getInput_Src(), "input", null, 0, -1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getData__ForwardImpactAnalysis(), null, "forwardImpactAnalysis", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getData__BackwardImpactAnalysis(), null, "backwardImpactAnalysis", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(data_DefinitionEClass, Data_Definition.class, "Data_Definition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1224,6 +1560,9 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEReference(getAtomic_Process_Definition_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1,
 				Atomic_Process_Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtomic_Process_Definition_IsQuery(), ecorePackage.getEBoolean(), "isQuery", null, 1, 1,
+				Atomic_Process_Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1232,25 +1571,63 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEAttribute(getAttribute_Description(), ecorePackage.getEString(), "Description", null, 1, 1,
 				Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_IsExecutable(), ecorePackage.getEBoolean(), "isExecutable", "false", 1, 1,
+				Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getConstraint_Name(), ecorePackage.getEString(), "name", null, 1, 1, Constraint.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConstraint_Node(), this.getNode(), null, "node", null, 1, -1, Constraint.class, !IS_TRANSIENT,
+		initEReference(getConstraint_Node(), this.getNode(), null, "node", null, 0, -1, Constraint.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEAttribute(getConstraint_Description(), ecorePackage.getEString(), "description", null, 1, 1,
-				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConstraint_Body(), ecorePackage.getEString(), "body", null, 1, 1, Constraint.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getConstraint_Syntactic(), ecorePackage.getEBoolean(), "syntactic", "false", 1, 1,
 				Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getConstraint_Argument(), this.getArgument(), this.getArgument_Constraint(), "argument", null, 1,
+				-1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConstraint_Reference(), this.getReference(), null, "reference", null, 0, -1, Constraint.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNode_Aggregate(), this.getAggregation(), this.getAggregation_Src(), "aggregate", null, 0, -1,
+				Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Aggregation(), this.getAggregation(), this.getAggregation_Tgt(), "aggregation", null, 0,
+				-1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Reify_association(), this.getReify_Association(), this.getReify_Association_Tgt(),
+				"reify_association", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Parent(), this.getInheritance(), this.getInheritance_Src(), "parent", null, 0, 1,
+				Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Child(), this.getInheritance(), this.getInheritance_Tgt(), "child", null, 0, -1,
+				Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Association_tgt(), this.getAssociation(), this.getAssociation_Src(), "association_tgt",
+				null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Association_src(), this.getAssociation(), this.getAssociation_Tgt(), "association_src",
+				null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_ComposedOf(), this.getComposition(), this.getComposition_Src(), "composedOf", null, 0,
+				-1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Composition(), this.getComposition(), this.getComposition_Tgt(), "composition", null, 0,
+				1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(referenceEClass, Reference.class, "Reference", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReference_Reify_association(), this.getReify_Association(), this.getReify_Association_Src(),
+				"reify_association", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1260,55 +1637,55 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEAttribute(getAssociation_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1,
 				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getAssociation_Tgt(), this.getNode(), null, "tgt", null, 1, 1, Association.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAssociation_Src(), this.getNode(), null, "src", null, 1, 1, Association.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEAttribute(getAssociation_LabelAtSrc(), ecorePackage.getEString(), "LabelAtSrc", null, 0, 1,
 				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssociation_LabelAtTgt(), ecorePackage.getEString(), "LabelAtTgt", null, 0, 1,
 				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociation_Src(), this.getNode(), this.getNode_Association_tgt(), "src", null, 1, 1,
+				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociation_Tgt(), this.getNode(), this.getNode_Association_src(), "tgt", null, 1, 1,
+				Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(reify_AssociationEClass, Reify_Association.class, "Reify_Association", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReify_Association_Src(), this.getReference(), null, "src", null, 1, 1,
-				Reify_Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getReify_Association_Tgt(), this.getNode(), null, "tgt", null, 1, 1, Reify_Association.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReify_Association_LabelAtTgt(), ecorePackage.getEString(), "LabelAtTgt", null, 0, 1,
 				Reify_Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReify_Association_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1,
 				Reify_Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getReify_Association_Tgt(), this.getNode(), this.getNode_Reify_association(), "tgt", null, 1, 1,
+				Reify_Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReify_Association_Src(), this.getReference(), this.getReference_Reify_association(), "src",
+				null, 1, 1, Reify_Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositionEClass, Composition.class, "Composition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComposition_Composes(), this.getNode(), null, "composes", null, 1, 1, Composition.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComposition_ComposedOf(), this.getNode(), null, "composedOf", null, 1, 1, Composition.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComposition_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1,
 				Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComposition_LabelAtTgt(), ecorePackage.getEString(), "LabelAtTgt", null, 0, 1,
 				Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getComposition_Src(), this.getNode(), this.getNode_ComposedOf(), "src", null, 1, 1,
+				Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComposition_Tgt(), this.getNode(), this.getNode_Composition(), "tgt", null, 1, 1,
+				Composition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inheritanceEClass, Inheritance.class, "Inheritance", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInheritance_Child(), this.getNode(), null, "child", null, 1, 1, Inheritance.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInheritance_Parent(), this.getNode(), null, "parent", null, 1, 1, Inheritance.class,
+		initEReference(getInheritance_Src(), this.getNode(), this.getNode_Parent(), "src", null, 1, 1,
+				Inheritance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInheritance_Tgt(), this.getNode(), this.getNode_Child(), "tgt", null, 1, 1, Inheritance.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1317,33 +1694,33 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 
 		initEClass(performance_DataEClass, Performance_Data.class, "Performance_Data", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPerformance_Data_Attribute(), this.getAttribute(), null, "attribute", null, 1, -1,
+		initEReference(getPerformance_Data_Attribute(), this.getAttribute(), null, "attribute", null, 0, -1,
 				Performance_Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOutput_Src_process(), this.getProcess(), null, "src_process", null, 1, 1, Output.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutput_Tgt_data(), this.getData(), null, "tgt_data", null, 1, 1, Output.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEAttribute(getOutput_MultAtSrc(), ecorePackage.getEString(), "MultAtSrc", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInput_Src_data(), this.getData(), null, "src_data", null, 1, 1, Input.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getInput_Tgt_process(), this.getProcess(), null, "tgt_process", null, 1, 1, Input.class,
+		initEReference(getOutput_Tgt(), this.getData(), this.getData_Output(), "tgt", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutput_Src(), this.getProcess(), this.getProcess_Output(), "src", null, 1, 1, Output.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_MultAtSrc(), ecorePackage.getEString(), "MultAtSrc", null, 1, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_Src(), this.getData(), this.getData_Input(), "src", null, 1, 1, Input.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_Tgt(), this.getProcess(), this.getProcess_Input(), "tgt", null, 1, 1, Input.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aggregationEClass, Aggregation.class, "Aggregation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1353,12 +1730,30 @@ public class WFP_V2PackageImpl extends EPackageImpl implements WFP_V2Package {
 		initEAttribute(getAggregation_MultAtTgt(), ecorePackage.getEString(), "MultAtTgt", null, 1, 1,
 				Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getAggregation_Consists(), this.getNode(), null, "consists", null, 1, 1, Aggregation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAggregation_ConsistedOf(), this.getNode(), null, "consistedOf", null, 1, 1, Aggregation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAggregation_Src(), this.getNode(), this.getNode_Aggregate(), "src", null, 1, 1,
+				Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAggregation_Tgt(), this.getNode(), this.getNode_Aggregation(), "tgt", null, 1, 1,
+				Aggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArgument_Name(), ecorePackage.getEString(), "name", null, 1, 1, Argument.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArgument_Description(), ecorePackage.getEString(), "description", null, 0, 1, Argument.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArgument_Constraint(), this.getConstraint(), this.getConstraint_Argument(), "constraint",
+				null, 1, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArgument_Constructs(), this.getArgument(), this.getArgument_ConstructedBy(), "constructs",
+				null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArgument_ConstructedBy(), this.getArgument(), this.getArgument_Constructs(), "constructedBy",
+				null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArgument_Syntactic(), ecorePackage.getEBoolean(), "syntactic", "false", 1, 1, Argument.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

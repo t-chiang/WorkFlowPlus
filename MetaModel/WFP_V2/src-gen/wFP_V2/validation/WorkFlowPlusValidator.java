@@ -6,6 +6,7 @@ package wFP_V2.validation;
 
 import org.eclipse.emf.common.util.EList;
 
+import wFP_V2.Argument;
 import wFP_V2.Constraint;
 import wFP_V2.Data;
 import wFP_V2.Reference;
@@ -26,4 +27,6 @@ public interface WorkFlowPlusValidator {
 	boolean validateConstraint(EList<Constraint> value);
 
 	boolean validateReference(EList<Reference> value);
+
+	boolean validateArgument(EList<Argument> value);
 }

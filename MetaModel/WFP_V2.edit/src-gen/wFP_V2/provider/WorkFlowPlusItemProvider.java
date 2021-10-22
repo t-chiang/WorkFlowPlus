@@ -74,6 +74,7 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 			childrenFeatures.add(WFP_V2Package.Literals.WORK_FLOW_PLUS__DATA);
 			childrenFeatures.add(WFP_V2Package.Literals.WORK_FLOW_PLUS__CONSTRAINT);
 			childrenFeatures.add(WFP_V2Package.Literals.WORK_FLOW_PLUS__REFERENCE);
+			childrenFeatures.add(WFP_V2Package.Literals.WORK_FLOW_PLUS__ARGUMENT);
 		}
 		return childrenFeatures;
 	}
@@ -139,6 +140,7 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 		case WFP_V2Package.WORK_FLOW_PLUS__DATA:
 		case WFP_V2Package.WORK_FLOW_PLUS__CONSTRAINT:
 		case WFP_V2Package.WORK_FLOW_PLUS__REFERENCE:
+		case WFP_V2Package.WORK_FLOW_PLUS__ARGUMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -200,6 +202,9 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 
 		newChildDescriptors.add(createChildParameter(WFP_V2Package.Literals.WORK_FLOW_PLUS__REFERENCE,
 				WFP_V2Factory.eINSTANCE.createAggregation()));
+
+		newChildDescriptors.add(createChildParameter(WFP_V2Package.Literals.WORK_FLOW_PLUS__ARGUMENT,
+				WFP_V2Factory.eINSTANCE.createArgument()));
 	}
 
 	/**

@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link wFP_V2.Atomic_Process_Definition#isIsReview <em>Is Review</em>}</li>
  *   <li>{@link wFP_V2.Atomic_Process_Definition#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link wFP_V2.Atomic_Process_Definition#isIsQuery <em>Is Query</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getAtomic_Process_Definition()
@@ -56,5 +57,27 @@ public interface Atomic_Process_Definition extends wFP_V2.Process {
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();
+
+	/**
+	 * Returns the value of the '<em><b>Is Query</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Query</em>' attribute.
+	 * @see #setIsQuery(boolean)
+	 * @see wFP_V2.WFP_V2Package#getAtomic_Process_Definition_IsQuery()
+	 * @model required="true"
+	 * @generated
+	 */
+	boolean isIsQuery();
+
+	/**
+	 * Sets the value of the '{@link wFP_V2.Atomic_Process_Definition#isIsQuery <em>Is Query</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Query</em>' attribute.
+	 * @see #isIsQuery()
+	 * @generated
+	 */
+	void setIsQuery(boolean value);
 
 } // Atomic_Process_Definition

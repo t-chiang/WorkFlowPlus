@@ -12,5 +12,13 @@ Export-Package: wFP_V2,
  wFP_V2.impl,
  wFP_V2.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide;bundle-version="3.18.0",
+ org.eclipse.epsilon.evl.emf.validation;bundle-version="2.2.0",
+ org.eclipse.epsilon.eol.tools;bundle-version="2.2.0",
+ org.eclipse.sirius.diagram;bundle-version="6.4.2",
+ org.eclipse.sirius.tests.junit;bundle-version="6.4.2",
+ org.eclipse.sirius,
+ org.eclipse.sirius.ext.base;bundle-version="6.4.2",
+ org.eclipse.sirius.diagram.ui;bundle-version="6.4.2"
 Bundle-ActivationPolicy: lazy

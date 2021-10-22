@@ -3,7 +3,6 @@
 package wFP_V2.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -13,9 +12,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import wFP_V2.Attribute;
 import wFP_V2.Data_Element;
 import wFP_V2.WFP_V2Package;
@@ -54,6 +53,7 @@ public class Data_ElementImpl extends DataImpl implements Data_Element {
 	 * @ordered
 	 */
 	protected static final boolean IS_NORMATIVE_EDEFAULT = false;
+
 	/**
 	 * The cached value of the '{@link #isIsNormative() <em>Is Normative</em>}' attribute.
 	 * <!-- begin-user-doc -->

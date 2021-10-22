@@ -22,4 +22,8 @@ public interface InputValidator {
 	boolean validateMultAtSrc(String value);
 
 	boolean validateMultAtTgt(String value);
+
+	boolean validateSrc(Data value);
+
+	boolean validateTgt(wFP_V2.Process value);
 }

@@ -175,6 +175,15 @@ public interface WFP_V2Factory extends EFactory {
 	Aggregation createAggregation();
 
 	/**
+	 * Returns a new object of class '<em>Argument</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Argument</em>'.
+	 * @generated
+	 */
+	Argument createArgument();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

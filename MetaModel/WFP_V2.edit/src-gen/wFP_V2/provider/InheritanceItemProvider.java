@@ -41,40 +41,40 @@ public class InheritanceItemProvider extends ReferenceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addChildPropertyDescriptor(object);
-			addParentPropertyDescriptor(object);
+			addSrcPropertyDescriptor(object);
+			addTgtPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Child feature.
+	 * This adds a property descriptor for the Src feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addChildPropertyDescriptor(Object object) {
+	protected void addSrcPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Inheritance_child_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Inheritance_child_feature",
+						getResourceLocator(), getString("_UI_Inheritance_src_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Inheritance_src_feature",
 								"_UI_Inheritance_type"),
-						WFP_V2Package.Literals.INHERITANCE__CHILD, true, false, true, null, null, null));
+						WFP_V2Package.Literals.INHERITANCE__SRC, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Parent feature.
+	 * This adds a property descriptor for the Tgt feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addParentPropertyDescriptor(Object object) {
+	protected void addTgtPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Inheritance_parent_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Inheritance_parent_feature",
+						getResourceLocator(), getString("_UI_Inheritance_tgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Inheritance_tgt_feature",
 								"_UI_Inheritance_type"),
-						WFP_V2Package.Literals.INHERITANCE__PARENT, true, false, true, null, null, null));
+						WFP_V2Package.Literals.INHERITANCE__TGT, true, false, true, null, null, null));
 	}
 
 	/**

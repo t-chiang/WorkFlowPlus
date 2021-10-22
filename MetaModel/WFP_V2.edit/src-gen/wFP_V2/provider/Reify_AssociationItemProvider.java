@@ -44,42 +44,12 @@ public class Reify_AssociationItemProvider extends ReferenceItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSrcPropertyDescriptor(object);
-			addTgtPropertyDescriptor(object);
 			addLabelAtTgtPropertyDescriptor(object);
 			addMultAtTgtPropertyDescriptor(object);
+			addTgtPropertyDescriptor(object);
+			addSrcPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Src feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSrcPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Reify_Association_src_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Reify_Association_src_feature",
-								"_UI_Reify_Association_type"),
-						WFP_V2Package.Literals.REIFY_ASSOCIATION__SRC, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Tgt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTgtPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Reify_Association_tgt_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Reify_Association_tgt_feature",
-								"_UI_Reify_Association_type"),
-						WFP_V2Package.Literals.REIFY_ASSOCIATION__TGT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -112,6 +82,36 @@ public class Reify_AssociationItemProvider extends ReferenceItemProvider {
 								"_UI_Reify_Association_type"),
 						WFP_V2Package.Literals.REIFY_ASSOCIATION__MULT_AT_TGT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Tgt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTgtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Reify_Association_tgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Reify_Association_tgt_feature",
+								"_UI_Reify_Association_type"),
+						WFP_V2Package.Literals.REIFY_ASSOCIATION__TGT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Src feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSrcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Reify_Association_src_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Reify_Association_src_feature",
+								"_UI_Reify_Association_type"),
+						WFP_V2Package.Literals.REIFY_ASSOCIATION__SRC, true, false, true, null, null, null));
 	}
 
 	/**

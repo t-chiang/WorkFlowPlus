@@ -17,8 +17,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link wFP_V2.Constraint#getName <em>Name</em>}</li>
  *   <li>{@link wFP_V2.Constraint#getNode <em>Node</em>}</li>
- *   <li>{@link wFP_V2.Constraint#getDescription <em>Description</em>}</li>
+ *   <li>{@link wFP_V2.Constraint#getBody <em>Body</em>}</li>
  *   <li>{@link wFP_V2.Constraint#isSyntactic <em>Syntactic</em>}</li>
+ *   <li>{@link wFP_V2.Constraint#getArgument <em>Argument</em>}</li>
+ *   <li>{@link wFP_V2.Constraint#getReference <em>Reference</em>}</li>
  * </ul>
  *
  * @see wFP_V2.WFP_V2Package#getConstraint()
@@ -55,32 +57,32 @@ public interface Constraint extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Node</em>' reference list.
 	 * @see wFP_V2.WFP_V2Package#getConstraint_Node()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Node> getNode();
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Body</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see wFP_V2.WFP_V2Package#getConstraint_Description()
+	 * @return the value of the '<em>Body</em>' attribute.
+	 * @see #setBody(String)
+	 * @see wFP_V2.WFP_V2Package#getConstraint_Body()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getDescription();
+	String getBody();
 
 	/**
-	 * Sets the value of the '{@link wFP_V2.Constraint#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link wFP_V2.Constraint#getBody <em>Body</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
+	 * @param value the new value of the '<em>Body</em>' attribute.
+	 * @see #getBody()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setBody(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Syntactic</b></em>' attribute.
@@ -104,5 +106,31 @@ public interface Constraint extends EObject {
 	 * @generated
 	 */
 	void setSyntactic(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Argument</b></em>' reference list.
+	 * The list contents are of type {@link wFP_V2.Argument}.
+	 * It is bidirectional and its opposite is '{@link wFP_V2.Argument#getConstraint <em>Constraint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Argument</em>' reference list.
+	 * @see wFP_V2.WFP_V2Package#getConstraint_Argument()
+	 * @see wFP_V2.Argument#getConstraint
+	 * @model opposite="constraint" required="true"
+	 * @generated
+	 */
+	EList<Argument> getArgument();
+
+	/**
+	 * Returns the value of the '<em><b>Reference</b></em>' reference list.
+	 * The list contents are of type {@link wFP_V2.Reference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Reference</em>' reference list.
+	 * @see wFP_V2.WFP_V2Package#getConstraint_Reference()
+	 * @model
+	 * @generated
+	 */
+	EList<Reference> getReference();
 
 } // Constraint

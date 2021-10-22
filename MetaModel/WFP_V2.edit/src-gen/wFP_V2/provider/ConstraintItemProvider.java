@@ -55,8 +55,10 @@ public class ConstraintItemProvider extends ItemProviderAdapter implements IEdit
 
 			addNamePropertyDescriptor(object);
 			addNodePropertyDescriptor(object);
-			addDescriptionPropertyDescriptor(object);
+			addBodyPropertyDescriptor(object);
 			addSyntacticPropertyDescriptor(object);
+			addArgumentPropertyDescriptor(object);
+			addReferencePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,18 +95,18 @@ public class ConstraintItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Description feature.
+	 * This adds a property descriptor for the Body feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptionPropertyDescriptor(Object object) {
+	protected void addBodyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Constraint_description_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Constraint_description_feature",
+						getResourceLocator(), getString("_UI_Constraint_body_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Constraint_body_feature",
 								"_UI_Constraint_type"),
-						WFP_V2Package.Literals.CONSTRAINT__DESCRIPTION, true, false, false,
+						WFP_V2Package.Literals.CONSTRAINT__BODY, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -122,6 +124,36 @@ public class ConstraintItemProvider extends ItemProviderAdapter implements IEdit
 								"_UI_Constraint_type"),
 						WFP_V2Package.Literals.CONSTRAINT__SYNTACTIC, true, false, false,
 						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Argument feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArgumentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Constraint_argument_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Constraint_argument_feature",
+								"_UI_Constraint_type"),
+						WFP_V2Package.Literals.CONSTRAINT__ARGUMENT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Reference feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReferencePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Constraint_reference_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Constraint_reference_feature",
+								"_UI_Constraint_type"),
+						WFP_V2Package.Literals.CONSTRAINT__REFERENCE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -171,7 +203,7 @@ public class ConstraintItemProvider extends ItemProviderAdapter implements IEdit
 
 		switch (notification.getFeatureID(Constraint.class)) {
 		case WFP_V2Package.CONSTRAINT__NAME:
-		case WFP_V2Package.CONSTRAINT__DESCRIPTION:
+		case WFP_V2Package.CONSTRAINT__BODY:
 		case WFP_V2Package.CONSTRAINT__SYNTACTIC:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
