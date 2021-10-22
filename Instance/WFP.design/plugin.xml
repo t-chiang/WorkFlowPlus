@@ -7,4 +7,23 @@
 	       name="WFP">
     </component>
   </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="WFP.design.myAction"
+           id="WFP.design.myAction">
+     </javaActions>
+     <javaActions
+           actionClass="WFP.design.CallForwardImpactAnalysis"
+           id="WFP.design.CallForwardImpactAnalysis">
+     </javaActions>
+     <javaActions
+           actionClass="WFP.design.CallBackwardImpactAnalysis"
+           id="WFP.design.CallBackwardImpactAnalysis">
+     </javaActions>
+     <javaActions
+           actionClass="WFP.design.ClearImpact"
+           id="WFP.design.ClearImpact">
+     </javaActions>
+  </extension>
 </plugin>
