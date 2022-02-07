@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated wfp -->
+      <package
+            uri="http://www.example.org/wfp"
+            class="org.mcmaster.workflowplus.wfp.WfpPackage"
+            genModel="model/wfp.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.epsilon.evl.emf.validation">
+      <constraintsBinding
+            compose="true"
+            constraints="model/constraints.evl"
+            namespaceURI="http://www.example.org/wfp">
+      </constraintsBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.sirius.diagram.ui.diagnostic">
+      </markerResolutionGenerator>
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.emf.ecore.diagnostic">
+      </markerResolutionGenerator>
+   </extension>
+
+</plugin>
