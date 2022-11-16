@@ -23,4 +23,4 @@ WFP is a domain specific modeling language for the purpose of domain workflows a
 As previously stated, WFP is mainly used to define engineering standards (safety, security etc...) for critical systems as general workflows. For this version we have a tool that allows users to define these workflows in a model based environment. We also have syntax for allowing the definition of constraints on these workflows. When the constraints are defined, we can then build arguments that use the constraints as evidence or proof that an argument is true about a system that is developed using the defined workflow.
 
 Upon starting a new model this is what it looks like:
-![test](https://github.com/t-chiang/WorkFlowPlus/tree/master/Documentation/Starting_new_model.png)
+``![test](https://github.com/t-chiang/WorkFlowPlus/tree/master/Documentation/Starting_new_model.png)``
