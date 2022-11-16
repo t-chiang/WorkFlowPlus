@@ -13,3 +13,9 @@ In order to create a new project using the Sirius Modeling Project. Then right c
 If you want to open the project in developer mode, open all of the metamodel files and the instance specification file in the project explorer of eclipse. Then open the wfp.ecore graphical representation. Then right click anywhere in the blank space and navigate to generate and click on all. This will generate all of the files necessary to run the Sirius instance. 
 
 Now create a new eclipse runtime application using the default settings. Once the new eclipse window is open, create a new modeling project. Then to create a new file right-click on the project and navigate to the 'other' tab. After you click on it you will be presented with a new window with many options for a file. Search for the wFP_V2 model and select it. This will create a new modeling file for you to use. In order to start the graphical representation of the model, navigate to the .aird file and enable wFP_V2 as a graphical representation. This will allow you to open the Sirius editor for creating WF+ models and get started on specifying your safety engineering practices.
+
+## What is WFP?
+
+WFP is a domain specific modeling language for the purpose of domain workflows and/or standards to then extract an assurance case on a product. The main goal is to provide direct traceability fron an assurance case to the processes and data that make up the argumentation for the claims and the decomposition, and the evidence that comes from the data that is produced. This allows for assurance cases to be generated with a clear strucutre and decomposition that comes directly from the standards that guide the development and the workflows that implement the standards.
+
+
