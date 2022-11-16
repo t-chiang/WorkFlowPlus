@@ -18,4 +18,9 @@ Now create a new eclipse runtime application using the default settings. Once th
 
 WFP is a domain specific modeling language for the purpose of domain workflows and/or standards to then extract an assurance case on a product. The main goal is to provide direct traceability fron an assurance case to the processes and data that make up the argumentation for the claims and the decomposition, and the evidence that comes from the data that is produced. This allows for assurance cases to be generated with a clear strucutre and decomposition that comes directly from the standards that guide the development and the workflows that implement the standards.
 
+## How to use WFP (Version 1.0.0)?
 
+As previously stated, WFP is mainly used to define engineering standards (safety, security etc...) for critical systems as general workflows. For this version we have a tool that allows users to define these workflows in a model based environment. We also have syntax for allowing the definition of constraints on these workflows. When the constraints are defined, we can then build arguments that use the constraints as evidence or proof that an argument is true about a system that is developed using the defined workflow.
+
+Upon starting a new model this is what it looks like:
+![](**\Documentation\Starting_new_model.png)
