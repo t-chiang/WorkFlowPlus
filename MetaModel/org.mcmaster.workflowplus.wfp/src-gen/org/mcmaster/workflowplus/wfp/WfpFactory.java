@@ -22,13 +22,13 @@ public interface WfpFactory extends EFactory {
 	WfpFactory eINSTANCE = org.mcmaster.workflowplus.wfp.impl.WfpFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Work Flow Plus</em>'.
+	 * Returns a new object of class '<em>Work Flow Plus Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Work Flow Plus</em>'.
+	 * @return a new object of class '<em>Work Flow Plus Root</em>'.
 	 * @generated
 	 */
-	WorkFlowPlus createWorkFlowPlus();
+	WorkFlowPlusRoot createWorkFlowPlusRoot();
 
 	/**
 	 * Returns a new object of class '<em>Atomic Data</em>'.
@@ -137,6 +137,33 @@ public interface WfpFactory extends EFactory {
 	 * @generated
 	 */
 	ReifyAssociation createReifyAssociation();
+
+	/**
+	 * Returns a new object of class '<em>Work Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Work Flow</em>'.
+	 * @generated
+	 */
+	WorkFlow createWorkFlow();
+
+	/**
+	 * Returns a new object of class '<em>In Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>In Port</em>'.
+	 * @generated
+	 */
+	InPort createInPort();
+
+	/**
+	 * Returns a new object of class '<em>Out Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Out Port</em>'.
+	 * @generated
+	 */
+	OutPort createOutPort();
 
 	/**
 	 * Returns the package supported by this factory.

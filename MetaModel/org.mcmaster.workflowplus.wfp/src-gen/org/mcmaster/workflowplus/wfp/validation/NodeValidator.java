@@ -34,5 +34,7 @@ public interface NodeValidator {
 
 	boolean validateAssociationSrc(EList<Association> value);
 
+	boolean validateReifyAssociation(ReifyAssociation value);
+
 	boolean validateReifyassociation(ReifyAssociation value);
 }

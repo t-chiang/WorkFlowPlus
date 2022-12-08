@@ -17,14 +17,17 @@ import org.mcmaster.workflowplus.wfp.Attribute;
 import org.mcmaster.workflowplus.wfp.Composition;
 import org.mcmaster.workflowplus.wfp.Constraint;
 import org.mcmaster.workflowplus.wfp.Data;
+import org.mcmaster.workflowplus.wfp.InPort;
 import org.mcmaster.workflowplus.wfp.Inheritance;
 import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
+import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
-import org.mcmaster.workflowplus.wfp.WorkFlowPlus;
+import org.mcmaster.workflowplus.wfp.WorkFlow;
+import org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot;
 import org.mcmaster.workflowplus.wfp.WorkProduct;
 
 /**
@@ -83,8 +86,8 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected WfpSwitch<Adapter> modelSwitch = new WfpSwitch<Adapter>() {
 		@Override
-		public Adapter caseWorkFlowPlus(WorkFlowPlus object) {
-			return createWorkFlowPlusAdapter();
+		public Adapter caseWorkFlowPlusRoot(WorkFlowPlusRoot object) {
+			return createWorkFlowPlusRootAdapter();
 		}
 
 		@Override
@@ -168,6 +171,21 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseWorkFlow(WorkFlow object) {
+			return createWorkFlowAdapter();
+		}
+
+		@Override
+		public Adapter caseInPort(InPort object) {
+			return createInPortAdapter();
+		}
+
+		@Override
+		public Adapter caseOutPort(OutPort object) {
+			return createOutPortAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -187,16 +205,16 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlus <em>Work Flow Plus</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot <em>Work Flow Plus Root</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlus
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot
 	 * @generated
 	 */
-	public Adapter createWorkFlowPlusAdapter() {
+	public Adapter createWorkFlowPlusRootAdapter() {
 		return null;
 	}
 
@@ -421,6 +439,48 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReifyAssociationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.WorkFlow <em>Work Flow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow
+	 * @generated
+	 */
+	public Adapter createWorkFlowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.InPort <em>In Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mcmaster.workflowplus.wfp.InPort
+	 * @generated
+	 */
+	public Adapter createInPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.OutPort <em>Out Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mcmaster.workflowplus.wfp.OutPort
+	 * @generated
+	 */
+	public Adapter createOutPortAdapter() {
 		return null;
 	}
 

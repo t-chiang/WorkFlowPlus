@@ -49,6 +49,7 @@ public class ArgumentItemProvider extends NodeItemProvider {
 			addConstraintPropertyDescriptor(object);
 			addConstructedByPropertyDescriptor(object);
 			addConstructsPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,6 +132,22 @@ public class ArgumentItemProvider extends NodeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Argument_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Argument_name_feature",
+								"_UI_Argument_type"),
+						WfpPackage.Literals.ARGUMENT__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Argument.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,6 +195,7 @@ public class ArgumentItemProvider extends NodeItemProvider {
 		switch (notification.getFeatureID(Argument.class)) {
 		case WfpPackage.ARGUMENT__DESCRIPTION:
 		case WfpPackage.ARGUMENT__SYNTACTIC:
+		case WfpPackage.ARGUMENT__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -15,14 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getName <em>Name</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getParent <em>Parent</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getChild <em>Child</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getComposedOf <em>Composed Of</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getComposition <em>Composition</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getAssociationTgt <em>Association Tgt</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getAssociationSrc <em>Association Src</em>}</li>
- *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getReifyassociation <em>Reifyassociation</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.Node#getReifyAssociation <em>Reify Association</em>}</li>
  * </ul>
  *
  * @see org.mcmaster.workflowplus.wfp.WfpPackage#getNode()
@@ -30,28 +29,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Node extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getNode_Name()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Node#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.Inheritance#getSrc <em>Src</em>}'.
@@ -157,27 +134,27 @@ public interface Node extends EObject {
 	EList<Association> getAssociationSrc();
 
 	/**
-	 * Returns the value of the '<em><b>Reifyassociation</b></em>' reference.
+	 * Returns the value of the '<em><b>Reify Association</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.ReifyAssociation#getTgt <em>Tgt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reifyassociation</em>' reference.
-	 * @see #setReifyassociation(ReifyAssociation)
-	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getNode_Reifyassociation()
+	 * @return the value of the '<em>Reify Association</em>' reference.
+	 * @see #setReifyAssociation(ReifyAssociation)
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getNode_ReifyAssociation()
 	 * @see org.mcmaster.workflowplus.wfp.ReifyAssociation#getTgt
 	 * @model opposite="tgt"
 	 * @generated
 	 */
-	ReifyAssociation getReifyassociation();
+	ReifyAssociation getReifyAssociation();
 
 	/**
-	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Node#getReifyassociation <em>Reifyassociation</em>}' reference.
+	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Node#getReifyAssociation <em>Reify Association</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reifyassociation</em>' reference.
-	 * @see #getReifyassociation()
+	 * @param value the new value of the '<em>Reify Association</em>' reference.
+	 * @see #getReifyAssociation()
 	 * @generated
 	 */
-	void setReifyassociation(ReifyAssociation value);
+	void setReifyAssociation(ReifyAssociation value);
 
 } // Node

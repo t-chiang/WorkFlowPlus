@@ -21,4 +21,6 @@ public interface ProcessValidator {
 	boolean validateInput(EList<Input> value);
 
 	boolean validateOutput(EList<Output> value);
+
+	boolean validateName(String value);
 }

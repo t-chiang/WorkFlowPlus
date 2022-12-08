@@ -15,14 +15,17 @@ import org.mcmaster.workflowplus.wfp.Attribute;
 import org.mcmaster.workflowplus.wfp.Composition;
 import org.mcmaster.workflowplus.wfp.Constraint;
 import org.mcmaster.workflowplus.wfp.Data;
+import org.mcmaster.workflowplus.wfp.InPort;
 import org.mcmaster.workflowplus.wfp.Inheritance;
 import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
+import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
-import org.mcmaster.workflowplus.wfp.WorkFlowPlus;
+import org.mcmaster.workflowplus.wfp.WorkFlow;
+import org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot;
 import org.mcmaster.workflowplus.wfp.WorkProduct;
 
 /**
@@ -82,9 +85,9 @@ public class WfpSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case WfpPackage.WORK_FLOW_PLUS: {
-			WorkFlowPlus workFlowPlus = (WorkFlowPlus) theEObject;
-			T result = caseWorkFlowPlus(workFlowPlus);
+		case WfpPackage.WORK_FLOW_PLUS_ROOT: {
+			WorkFlowPlusRoot workFlowPlusRoot = (WorkFlowPlusRoot) theEObject;
+			T result = caseWorkFlowPlusRoot(workFlowPlusRoot);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -233,23 +236,50 @@ public class WfpSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WfpPackage.WORK_FLOW: {
+			WorkFlow workFlow = (WorkFlow) theEObject;
+			T result = caseWorkFlow(workFlow);
+			if (result == null)
+				result = caseWorkFlowPlusRoot(workFlow);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WfpPackage.IN_PORT: {
+			InPort inPort = (InPort) theEObject;
+			T result = caseInPort(inPort);
+			if (result == null)
+				result = caseNode(inPort);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WfpPackage.OUT_PORT: {
+			OutPort outPort = (OutPort) theEObject;
+			T result = caseOutPort(outPort);
+			if (result == null)
+				result = caseNode(outPort);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Work Flow Plus</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Work Flow Plus Root</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Work Flow Plus</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Work Flow Plus Root</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWorkFlowPlus(WorkFlowPlus object) {
+	public T caseWorkFlowPlusRoot(WorkFlowPlusRoot object) {
 		return null;
 	}
 
@@ -490,6 +520,51 @@ public class WfpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReifyAssociation(ReifyAssociation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Work Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Work Flow</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWorkFlow(WorkFlow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>In Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>In Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInPort(InPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Out Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Out Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutPort(OutPort object) {
 		return null;
 	}
 

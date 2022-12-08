@@ -73,26 +73,26 @@ public class WfpItemProviderAdapterFactory extends WfpAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mcmaster.workflowplus.wfp.WorkFlowPlus} instances.
+	 * This keeps track of the one adapter used for all {@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WorkFlowPlusItemProvider workFlowPlusItemProvider;
+	protected WorkFlowPlusRootItemProvider workFlowPlusRootItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mcmaster.workflowplus.wfp.WorkFlowPlus}.
+	 * This creates an adapter for a {@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createWorkFlowPlusAdapter() {
-		if (workFlowPlusItemProvider == null) {
-			workFlowPlusItemProvider = new WorkFlowPlusItemProvider(this);
+	public Adapter createWorkFlowPlusRootAdapter() {
+		if (workFlowPlusRootItemProvider == null) {
+			workFlowPlusRootItemProvider = new WorkFlowPlusRootItemProvider(this);
 		}
 
-		return workFlowPlusItemProvider;
+		return workFlowPlusRootItemProvider;
 	}
 
 	/**
@@ -372,6 +372,75 @@ public class WfpItemProviderAdapterFactory extends WfpAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mcmaster.workflowplus.wfp.WorkFlow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorkFlowItemProvider workFlowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mcmaster.workflowplus.wfp.WorkFlow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorkFlowAdapter() {
+		if (workFlowItemProvider == null) {
+			workFlowItemProvider = new WorkFlowItemProvider(this);
+		}
+
+		return workFlowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mcmaster.workflowplus.wfp.InPort} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InPortItemProvider inPortItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mcmaster.workflowplus.wfp.InPort}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInPortAdapter() {
+		if (inPortItemProvider == null) {
+			inPortItemProvider = new InPortItemProvider(this);
+		}
+
+		return inPortItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mcmaster.workflowplus.wfp.OutPort} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OutPortItemProvider outPortItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mcmaster.workflowplus.wfp.OutPort}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOutPortAdapter() {
+		if (outPortItemProvider == null) {
+			outPortItemProvider = new OutPortItemProvider(this);
+		}
+
+		return outPortItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -470,8 +539,8 @@ public class WfpItemProviderAdapterFactory extends WfpAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (workFlowPlusItemProvider != null)
-			workFlowPlusItemProvider.dispose();
+		if (workFlowPlusRootItemProvider != null)
+			workFlowPlusRootItemProvider.dispose();
 		if (atomicDataItemProvider != null)
 			atomicDataItemProvider.dispose();
 		if (atomicProcessItemProvider != null)
@@ -496,6 +565,12 @@ public class WfpItemProviderAdapterFactory extends WfpAdapterFactory
 			associationItemProvider.dispose();
 		if (reifyAssociationItemProvider != null)
 			reifyAssociationItemProvider.dispose();
+		if (workFlowItemProvider != null)
+			workFlowItemProvider.dispose();
+		if (inPortItemProvider != null)
+			inPortItemProvider.dispose();
+		if (outPortItemProvider != null)
+			outPortItemProvider.dispose();
 	}
 
 }

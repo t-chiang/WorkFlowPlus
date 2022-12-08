@@ -24,14 +24,14 @@ package org.mcmaster.workflowplus.wfp;
 public interface ReifyAssociation extends Reference {
 	/**
 	 * Returns the value of the '<em><b>Tgt</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.Node#getReifyassociation <em>Reifyassociation</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.Node#getReifyAssociation <em>Reify Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tgt</em>' reference.
 	 * @see #setTgt(Node)
 	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getReifyAssociation_Tgt()
-	 * @see org.mcmaster.workflowplus.wfp.Node#getReifyassociation
-	 * @model opposite="reifyassociation" required="true"
+	 * @see org.mcmaster.workflowplus.wfp.Node#getReifyAssociation
+	 * @model opposite="reifyAssociation" required="true"
 	 * @generated
 	 */
 	Node getTgt();

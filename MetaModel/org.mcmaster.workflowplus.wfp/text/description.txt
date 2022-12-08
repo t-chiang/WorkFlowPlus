@@ -7,9 +7,10 @@ This can be disabled with -vmargs -Dorg.eclipse.emf.examples.generator.validator
 
 Package wfp <http://www.example.org/wfp>
 
-  Class WorkFlowPlus
+  Class WorkFlowPlusRoot
     Reference node : Node<<0..*>>
     Reference reference : Reference<<0..*>>
+    Reference workflow : WorkFlow<<0..*>>
 
   Class Reference
     Reference reifyassociation : ReifyAssociation
@@ -17,22 +18,23 @@ Package wfp <http://www.example.org/wfp>
   Class Data -> Node
     Reference input : Input<<0..*>>
     Reference output : Output<<0..*>>
+    Attribute name : EString<<1..1>>
     Operation forwardImpactAnalysis() : void
     Operation backwardImpactAnalysis() : void
 
   Class Process -> Node
     Reference input : Input<<0..*>>
     Reference output : Output<<0..*>>
+    Attribute name : EString<<1..1>>
 
   Class Node
-    Attribute name : EString<<1..1>>
     Reference parent : Inheritance
     Reference child : Inheritance<<0..*>>
     Reference composedOf : Composition<<0..*>>
     Reference composition : Composition
     Reference associationTgt : Association<<0..*>>
     Reference associationSrc : Association<<0..*>>
-    Reference reifyassociation : ReifyAssociation
+    Reference reifyAssociation : ReifyAssociation
 
   Class AtomicData -> Data
     Reference attribute : Attribute<<0..*>>
@@ -68,13 +70,15 @@ Package wfp <http://www.example.org/wfp>
     Reference argument : Argument<<1..*>>
     Reference reference : Reference<<0..*>>
     Reference node : Node<<0..*>>
+    Attribute name : EString<<1..1>>
 
   Class Argument -> Node
-    Attribute description : EBoolean
+    Attribute description : EString
     Attribute syntactic : EBoolean<<1..1>>
     Reference constraint : Constraint<<1..*>>
     Reference constructedBy : Argument<<0..*>>
     Reference constructs : Argument<<0..*>>
+    Attribute name : EString<<1..1>>
 
   Class Inheritance -> Reference
     Reference src : Node<<1..1>>
@@ -99,3 +103,12 @@ Package wfp <http://www.example.org/wfp>
     Reference src : Reference<<1..1>>
     Attribute multAtTgt : EString<<1..1>>
     Attribute labelAtTgt : EString
+
+  Class WorkFlow -> WorkFlowPlusRoot
+    Reference inPort : InPort<<0..*>>
+    Reference outPort : OutPort<<1..*>>
+    Attribute name : EString<<1..1>>
+
+  Class InPort -> Node
+
+  Class OutPort -> Node

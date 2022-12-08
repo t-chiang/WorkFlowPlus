@@ -49,6 +49,7 @@ public class ConstraintItemProvider extends NodeItemProvider {
 			addArgumentPropertyDescriptor(object);
 			addReferencePropertyDescriptor(object);
 			addNodePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,6 +132,22 @@ public class ConstraintItemProvider extends NodeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Constraint_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Constraint_name_feature",
+								"_UI_Constraint_type"),
+						WfpPackage.Literals.CONSTRAINT__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Constraint.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -178,6 +195,7 @@ public class ConstraintItemProvider extends NodeItemProvider {
 		switch (notification.getFeatureID(Constraint.class)) {
 		case WfpPackage.CONSTRAINT__BODY:
 		case WfpPackage.CONSTRAINT__SYNTACTIC:
+		case WfpPackage.CONSTRAINT__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

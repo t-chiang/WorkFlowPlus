@@ -17,11 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.mcmaster.workflowplus.wfp.Node;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
 
 /**
@@ -53,31 +49,15 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addParentPropertyDescriptor(object);
 			addChildPropertyDescriptor(object);
 			addComposedOfPropertyDescriptor(object);
 			addCompositionPropertyDescriptor(object);
 			addAssociationTgtPropertyDescriptor(object);
 			addAssociationSrcPropertyDescriptor(object);
-			addReifyassociationPropertyDescriptor(object);
+			addReifyAssociationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Node_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Node_name_feature", "_UI_Node_type"),
-						WfpPackage.Literals.NODE__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
 	}
 
 	/**
@@ -168,18 +148,18 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This adds a property descriptor for the Reifyassociation feature.
+	 * This adds a property descriptor for the Reify Association feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addReifyassociationPropertyDescriptor(Object object) {
+	protected void addReifyAssociationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Node_reifyassociation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Node_reifyassociation_feature",
+						getResourceLocator(), getString("_UI_Node_reifyAssociation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Node_reifyAssociation_feature",
 								"_UI_Node_type"),
-						WfpPackage.Literals.NODE__REIFYASSOCIATION, true, false, true, null, null, null));
+						WfpPackage.Literals.NODE__REIFY_ASSOCIATION, true, false, true, null, null, null));
 	}
 
 	/**
@@ -200,9 +180,7 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Node) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Node_type")
-				: getString("_UI_Node_type") + " " + label;
+		return getString("_UI_Node_type");
 	}
 
 	/**
@@ -215,12 +193,6 @@ public class NodeItemProvider extends ItemProviderAdapter implements IEditingDom
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Node.class)) {
-		case WfpPackage.NODE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

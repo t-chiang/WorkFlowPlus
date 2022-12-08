@@ -8,38 +8,31 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mcmaster.workflowplus.wfp.WfpFactory;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
-import org.mcmaster.workflowplus.wfp.WorkFlowPlus;
+import org.mcmaster.workflowplus.wfp.WorkFlow;
 
 /**
- * This is the item provider adapter for a {@link org.mcmaster.workflowplus.wfp.WorkFlowPlus} object.
+ * This is the item provider adapter for a {@link org.mcmaster.workflowplus.wfp.WorkFlow} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class WorkFlowItemProvider extends WorkFlowPlusRootItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorkFlowPlusItemProvider(AdapterFactory adapterFactory) {
+	public WorkFlowItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,8 +47,25 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_WorkFlow_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_WorkFlow_name_feature",
+								"_UI_WorkFlow_type"),
+						WfpPackage.Literals.WORK_FLOW__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -70,8 +80,8 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW_PLUS__NODE);
-			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE);
+			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW__IN_PORT);
+			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW__OUT_PORT);
 		}
 		return childrenFeatures;
 	}
@@ -90,14 +100,14 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 	}
 
 	/**
-	 * This returns WorkFlowPlus.gif.
+	 * This returns WorkFlow.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/WorkFlowPlus"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/WorkFlow"));
 	}
 
 	/**
@@ -118,7 +128,9 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_WorkFlowPlus_type");
+		String label = ((WorkFlow) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_WorkFlow_type")
+				: getString("_UI_WorkFlow_type") + " " + label;
 	}
 
 	/**
@@ -132,9 +144,12 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(WorkFlowPlus.class)) {
-		case WfpPackage.WORK_FLOW_PLUS__NODE:
-		case WfpPackage.WORK_FLOW_PLUS__REFERENCE:
+		switch (notification.getFeatureID(WorkFlow.class)) {
+		case WfpPackage.WORK_FLOW__NAME:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		case WfpPackage.WORK_FLOW__IN_PORT:
+		case WfpPackage.WORK_FLOW__OUT_PORT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -152,49 +167,33 @@ public class WorkFlowPlusItemProvider extends ItemProviderAdapter implements IEd
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__NODE,
-				WfpFactory.eINSTANCE.createAtomicData()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__NODE,
-				WfpFactory.eINSTANCE.createAtomicProcess()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__NODE,
-				WfpFactory.eINSTANCE.createWorkProduct()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__NODE,
-				WfpFactory.eINSTANCE.createConstraint()));
+		newChildDescriptors
+				.add(createChildParameter(WfpPackage.Literals.WORK_FLOW__IN_PORT, WfpFactory.eINSTANCE.createInPort()));
 
 		newChildDescriptors.add(
-				createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__NODE, WfpFactory.eINSTANCE.createArgument()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createInput()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createOutput()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createInheritance()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createComposition()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createAssociation()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS__REFERENCE,
-				WfpFactory.eINSTANCE.createReifyAssociation()));
+				createChildParameter(WfpPackage.Literals.WORK_FLOW__OUT_PORT, WfpFactory.eINSTANCE.createOutPort()));
 	}
 
 	/**
-	 * Return the resource locator for this item provider's resources.
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
-		return WfpEditPlugin.INSTANCE;
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__NODE
+				|| childFeature == WfpPackage.Literals.WORK_FLOW__IN_PORT
+				|| childFeature == WfpPackage.Literals.WORK_FLOW__OUT_PORT;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

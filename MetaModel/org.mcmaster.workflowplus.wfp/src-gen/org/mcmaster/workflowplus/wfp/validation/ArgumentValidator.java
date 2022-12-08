@@ -18,6 +18,8 @@ import org.mcmaster.workflowplus.wfp.Constraint;
 public interface ArgumentValidator {
 	boolean validate();
 
+	boolean validateDescription(String value);
+
 	boolean validateDescription(boolean value);
 
 	boolean validateSyntactic(boolean value);
@@ -27,4 +29,6 @@ public interface ArgumentValidator {
 	boolean validateConstructedBy(EList<Argument> value);
 
 	boolean validateConstructs(EList<Argument> value);
+
+	boolean validateName(String value);
 }

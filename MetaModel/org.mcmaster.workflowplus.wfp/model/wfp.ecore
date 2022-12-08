@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wfp" nsURI="http://www.example.org/wfp" nsPrefix="wfp">
-  <eClassifiers xsi:type="ecore:EClass" name="WorkFlowPlus">
+  <eClassifiers xsi:type="ecore:EClass" name="WorkFlowPlusRoot">
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" upperBound="-1" eType="#//Node"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" upperBound="-1"
         eType="#//Reference" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workflow" upperBound="-1"
+        eType="#//WorkFlow" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reference" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reifyassociation" eType="#//ReifyAssociation"
@@ -18,15 +20,16 @@
         eType="#//Input" eOpposite="#//Input/src"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
         eType="#//Output" eOpposite="#//Output/tgt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Process" abstract="true" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
         eType="#//Input" eOpposite="#//Input/tgt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
         eType="#//Output" eOpposite="#//Output/src"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Inheritance"
         eOpposite="#//Inheritance/src"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
@@ -39,7 +42,7 @@
         eType="#//Association" eOpposite="#//Association/src"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="associationSrc" upperBound="-1"
         eType="#//Association" eOpposite="#//Association/tgt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reifyassociation" eType="#//ReifyAssociation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reifyAssociation" eType="#//ReifyAssociation"
         eOpposite="#//ReifyAssociation/tgt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtomicData" eSuperTypes="#//Data">
@@ -94,6 +97,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="reference" upperBound="-1"
         eType="#//Reference"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" upperBound="-1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Argument" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -105,6 +109,7 @@
         eType="#//Argument" eOpposite="#//Argument/constructs"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constructs" upperBound="-1"
         eType="#//Argument" eOpposite="#//Argument/constructedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//Reference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//Node"
@@ -135,11 +140,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReifyAssociation" eSuperTypes="#//Reference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" lowerBound="1" eType="#//Node"
-        eOpposite="#//Node/reifyassociation"/>
+        eOpposite="#//Node/reifyAssociation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//Reference"
         eOpposite="#//Reference/reifyassociation"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multAtTgt" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelAtTgt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkFlow" eSuperTypes="#//WorkFlowPlusRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inPort" upperBound="-1"
+        eType="#//InPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outPort" lowerBound="1"
+        upperBound="-1" eType="#//OutPort" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InPort" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OutPort" eSuperTypes="#//Node"/>
 </ecore:EPackage>

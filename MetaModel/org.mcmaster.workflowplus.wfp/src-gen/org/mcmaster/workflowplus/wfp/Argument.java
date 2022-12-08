@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.mcmaster.workflowplus.wfp.Argument#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Argument#getConstructedBy <em>Constructed By</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Argument#getConstructs <em>Constructs</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.Argument#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.mcmaster.workflowplus.wfp.WfpPackage#getArgument()
@@ -110,5 +111,27 @@ public interface Argument extends Node {
 	 * @generated
 	 */
 	EList<Argument> getConstructs();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getArgument_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Argument#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Argument

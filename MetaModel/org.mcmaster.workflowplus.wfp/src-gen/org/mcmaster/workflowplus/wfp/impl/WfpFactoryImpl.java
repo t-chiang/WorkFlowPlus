@@ -17,13 +17,16 @@ import org.mcmaster.workflowplus.wfp.AtomicProcess;
 import org.mcmaster.workflowplus.wfp.Attribute;
 import org.mcmaster.workflowplus.wfp.Composition;
 import org.mcmaster.workflowplus.wfp.Constraint;
+import org.mcmaster.workflowplus.wfp.InPort;
 import org.mcmaster.workflowplus.wfp.Inheritance;
 import org.mcmaster.workflowplus.wfp.Input;
+import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpFactory;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
-import org.mcmaster.workflowplus.wfp.WorkFlowPlus;
+import org.mcmaster.workflowplus.wfp.WorkFlow;
+import org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot;
 import org.mcmaster.workflowplus.wfp.WorkProduct;
 
 /**
@@ -69,8 +72,8 @@ public class WfpFactoryImpl extends EFactoryImpl implements WfpFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case WfpPackage.WORK_FLOW_PLUS:
-			return createWorkFlowPlus();
+		case WfpPackage.WORK_FLOW_PLUS_ROOT:
+			return createWorkFlowPlusRoot();
 		case WfpPackage.ATOMIC_DATA:
 			return createAtomicData();
 		case WfpPackage.ATOMIC_PROCESS:
@@ -95,6 +98,12 @@ public class WfpFactoryImpl extends EFactoryImpl implements WfpFactory {
 			return createAssociation();
 		case WfpPackage.REIFY_ASSOCIATION:
 			return createReifyAssociation();
+		case WfpPackage.WORK_FLOW:
+			return createWorkFlow();
+		case WfpPackage.IN_PORT:
+			return createInPort();
+		case WfpPackage.OUT_PORT:
+			return createOutPort();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -105,9 +114,9 @@ public class WfpFactoryImpl extends EFactoryImpl implements WfpFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorkFlowPlus createWorkFlowPlus() {
-		WorkFlowPlusImpl workFlowPlus = new WorkFlowPlusImpl();
-		return workFlowPlus;
+	public WorkFlowPlusRoot createWorkFlowPlusRoot() {
+		WorkFlowPlusRootImpl workFlowPlusRoot = new WorkFlowPlusRootImpl();
+		return workFlowPlusRoot;
 	}
 
 	/**
@@ -228,6 +237,36 @@ public class WfpFactoryImpl extends EFactoryImpl implements WfpFactory {
 	public ReifyAssociation createReifyAssociation() {
 		ReifyAssociationImpl reifyAssociation = new ReifyAssociationImpl();
 		return reifyAssociation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WorkFlow createWorkFlow() {
+		WorkFlowImpl workFlow = new WorkFlowImpl();
+		return workFlow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InPort createInPort() {
+		InPortImpl inPort = new InPortImpl();
+		return inPort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutPort createOutPort() {
+		OutPortImpl outPort = new OutPortImpl();
+		return outPort;
 	}
 
 	/**

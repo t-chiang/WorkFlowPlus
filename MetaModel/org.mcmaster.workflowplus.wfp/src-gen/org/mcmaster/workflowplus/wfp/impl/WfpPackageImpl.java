@@ -18,15 +18,18 @@ import org.mcmaster.workflowplus.wfp.Attribute;
 import org.mcmaster.workflowplus.wfp.Composition;
 import org.mcmaster.workflowplus.wfp.Constraint;
 import org.mcmaster.workflowplus.wfp.Data;
+import org.mcmaster.workflowplus.wfp.InPort;
 import org.mcmaster.workflowplus.wfp.Inheritance;
 import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
+import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpFactory;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
-import org.mcmaster.workflowplus.wfp.WorkFlowPlus;
+import org.mcmaster.workflowplus.wfp.WorkFlow;
+import org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot;
 import org.mcmaster.workflowplus.wfp.WorkProduct;
 
 /**
@@ -41,7 +44,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass workFlowPlusEClass = null;
+	private EClass workFlowPlusRootEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,6 +159,27 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	private EClass reifyAssociationEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass workFlowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inPortEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass outPortEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -224,8 +248,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWorkFlowPlus() {
-		return workFlowPlusEClass;
+	public EClass getWorkFlowPlusRoot() {
+		return workFlowPlusRootEClass;
 	}
 
 	/**
@@ -233,8 +257,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkFlowPlus_Node() {
-		return (EReference) workFlowPlusEClass.getEStructuralFeatures().get(0);
+	public EReference getWorkFlowPlusRoot_Node() {
+		return (EReference) workFlowPlusRootEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -242,8 +266,17 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkFlowPlus_Reference() {
-		return (EReference) workFlowPlusEClass.getEStructuralFeatures().get(1);
+	public EReference getWorkFlowPlusRoot_Reference() {
+		return (EReference) workFlowPlusRootEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkFlowPlusRoot_Workflow() {
+		return (EReference) workFlowPlusRootEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -296,6 +329,15 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getData_Name() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getData__ForwardImpactAnalysis() {
 		return dataEClass.getEOperations().get(0);
 	}
@@ -341,6 +383,15 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProcess_Name() {
+		return (EAttribute) processEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -350,17 +401,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNode_Name() {
-		return (EAttribute) nodeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getNode_Parent() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(1);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -369,7 +411,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	public EReference getNode_Child() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -378,7 +420,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	public EReference getNode_ComposedOf() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(3);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -387,7 +429,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	public EReference getNode_Composition() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(4);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -396,7 +438,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	public EReference getNode_AssociationTgt() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(5);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -405,7 +447,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	public EReference getNode_AssociationSrc() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(6);
+		return (EReference) nodeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -413,8 +455,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getNode_Reifyassociation() {
-		return (EReference) nodeEClass.getEStructuralFeatures().get(7);
+	public EReference getNode_ReifyAssociation() {
+		return (EReference) nodeEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -674,6 +716,15 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getConstraint_Name() {
+		return (EAttribute) constraintEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArgument() {
 		return argumentEClass;
 	}
@@ -721,6 +772,15 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 */
 	public EReference getArgument_Constructs() {
 		return (EReference) argumentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArgument_Name() {
+		return (EAttribute) argumentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -908,6 +968,60 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getWorkFlow() {
+		return workFlowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkFlow_InPort() {
+		return (EReference) workFlowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkFlow_OutPort() {
+		return (EReference) workFlowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWorkFlow_Name() {
+		return (EAttribute) workFlowEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInPort() {
+		return inPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOutPort() {
+		return outPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public WfpFactory getWfpFactory() {
 		return (WfpFactory) getEFactoryInstance();
 	}
@@ -932,9 +1046,10 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		workFlowPlusEClass = createEClass(WORK_FLOW_PLUS);
-		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__NODE);
-		createEReference(workFlowPlusEClass, WORK_FLOW_PLUS__REFERENCE);
+		workFlowPlusRootEClass = createEClass(WORK_FLOW_PLUS_ROOT);
+		createEReference(workFlowPlusRootEClass, WORK_FLOW_PLUS_ROOT__NODE);
+		createEReference(workFlowPlusRootEClass, WORK_FLOW_PLUS_ROOT__REFERENCE);
+		createEReference(workFlowPlusRootEClass, WORK_FLOW_PLUS_ROOT__WORKFLOW);
 
 		referenceEClass = createEClass(REFERENCE);
 		createEReference(referenceEClass, REFERENCE__REIFYASSOCIATION);
@@ -942,22 +1057,23 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		dataEClass = createEClass(DATA);
 		createEReference(dataEClass, DATA__INPUT);
 		createEReference(dataEClass, DATA__OUTPUT);
+		createEAttribute(dataEClass, DATA__NAME);
 		createEOperation(dataEClass, DATA___FORWARD_IMPACT_ANALYSIS);
 		createEOperation(dataEClass, DATA___BACKWARD_IMPACT_ANALYSIS);
 
 		processEClass = createEClass(PROCESS);
 		createEReference(processEClass, PROCESS__INPUT);
 		createEReference(processEClass, PROCESS__OUTPUT);
+		createEAttribute(processEClass, PROCESS__NAME);
 
 		nodeEClass = createEClass(NODE);
-		createEAttribute(nodeEClass, NODE__NAME);
 		createEReference(nodeEClass, NODE__PARENT);
 		createEReference(nodeEClass, NODE__CHILD);
 		createEReference(nodeEClass, NODE__COMPOSED_OF);
 		createEReference(nodeEClass, NODE__COMPOSITION);
 		createEReference(nodeEClass, NODE__ASSOCIATION_TGT);
 		createEReference(nodeEClass, NODE__ASSOCIATION_SRC);
-		createEReference(nodeEClass, NODE__REIFYASSOCIATION);
+		createEReference(nodeEClass, NODE__REIFY_ASSOCIATION);
 
 		atomicDataEClass = createEClass(ATOMIC_DATA);
 		createEReference(atomicDataEClass, ATOMIC_DATA__ATTRIBUTE);
@@ -993,6 +1109,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		createEReference(constraintEClass, CONSTRAINT__ARGUMENT);
 		createEReference(constraintEClass, CONSTRAINT__REFERENCE);
 		createEReference(constraintEClass, CONSTRAINT__NODE);
+		createEAttribute(constraintEClass, CONSTRAINT__NAME);
 
 		argumentEClass = createEClass(ARGUMENT);
 		createEAttribute(argumentEClass, ARGUMENT__DESCRIPTION);
@@ -1000,6 +1117,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		createEReference(argumentEClass, ARGUMENT__CONSTRAINT);
 		createEReference(argumentEClass, ARGUMENT__CONSTRUCTED_BY);
 		createEReference(argumentEClass, ARGUMENT__CONSTRUCTS);
+		createEAttribute(argumentEClass, ARGUMENT__NAME);
 
 		inheritanceEClass = createEClass(INHERITANCE);
 		createEReference(inheritanceEClass, INHERITANCE__SRC);
@@ -1024,6 +1142,15 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		createEReference(reifyAssociationEClass, REIFY_ASSOCIATION__SRC);
 		createEAttribute(reifyAssociationEClass, REIFY_ASSOCIATION__MULT_AT_TGT);
 		createEAttribute(reifyAssociationEClass, REIFY_ASSOCIATION__LABEL_AT_TGT);
+
+		workFlowEClass = createEClass(WORK_FLOW);
+		createEReference(workFlowEClass, WORK_FLOW__IN_PORT);
+		createEReference(workFlowEClass, WORK_FLOW__OUT_PORT);
+		createEAttribute(workFlowEClass, WORK_FLOW__NAME);
+
+		inPortEClass = createEClass(IN_PORT);
+
+		outPortEClass = createEClass(OUT_PORT);
 	}
 
 	/**
@@ -1068,15 +1195,21 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		compositionEClass.getESuperTypes().add(this.getReference());
 		associationEClass.getESuperTypes().add(this.getReference());
 		reifyAssociationEClass.getESuperTypes().add(this.getReference());
+		workFlowEClass.getESuperTypes().add(this.getWorkFlowPlusRoot());
+		inPortEClass.getESuperTypes().add(this.getNode());
+		outPortEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(workFlowPlusEClass, WorkFlowPlus.class, "WorkFlowPlus", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(workFlowPlusRootEClass, WorkFlowPlusRoot.class, "WorkFlowPlusRoot", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorkFlowPlus_Node(), this.getNode(), null, "node", null, 0, -1, WorkFlowPlus.class,
+		initEReference(getWorkFlowPlusRoot_Node(), this.getNode(), null, "node", null, 0, -1, WorkFlowPlusRoot.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkFlowPlus_Reference(), this.getReference(), null, "reference", null, 0, -1,
-				WorkFlowPlus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getWorkFlowPlusRoot_Reference(), this.getReference(), null, "reference", null, 0, -1,
+				WorkFlowPlusRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkFlowPlusRoot_Workflow(), this.getWorkFlow(), null, "workflow", null, 0, -1,
+				WorkFlowPlusRoot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(referenceEClass, Reference.class, "Reference", IS_ABSTRACT, !IS_INTERFACE,
@@ -1092,6 +1225,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getData_Output(), this.getOutput(), this.getOutput_Tgt(), "output", null, 0, -1, Data.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Name(), ecorePackage.getEString(), "name", null, 1, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getData__ForwardImpactAnalysis(), null, "forwardImpactAnalysis", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1105,10 +1240,11 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getProcess_Output(), this.getOutput(), this.getOutput_Src(), "output", null, 0, -1,
 				org.mcmaster.workflowplus.wfp.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcess_Name(), ecorePackage.getEString(), "name", null, 1, 1,
+				org.mcmaster.workflowplus.wfp.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 1, 1, Node.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Parent(), this.getInheritance(), this.getInheritance_Src(), "parent", null, 0, 1,
 				Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1127,8 +1263,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getNode_AssociationSrc(), this.getAssociation(), this.getAssociation_Tgt(), "associationSrc",
 				null, 0, -1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getNode_Reifyassociation(), this.getReifyAssociation(), this.getReifyAssociation_Tgt(),
-				"reifyassociation", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getNode_ReifyAssociation(), this.getReifyAssociation(), this.getReifyAssociation_Tgt(),
+				"reifyAssociation", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(atomicDataEClass, AtomicData.class, "AtomicData", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1205,6 +1341,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getConstraint_Node(), this.getNode(), null, "node", null, 0, -1, Constraint.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getConstraint_Name(), ecorePackage.getEString(), "name", null, 1, 1, Constraint.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(argumentEClass, Argument.class, "Argument", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1221,6 +1359,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getArgument_Constructs(), this.getArgument(), this.getArgument_ConstructedBy(), "constructs",
 				null, 0, -1, Argument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArgument_Name(), ecorePackage.getEString(), "name", null, 1, 1, Argument.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inheritanceEClass, Inheritance.class, "Inheritance", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1269,7 +1409,7 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 
 		initEClass(reifyAssociationEClass, ReifyAssociation.class, "ReifyAssociation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReifyAssociation_Tgt(), this.getNode(), this.getNode_Reifyassociation(), "tgt", null, 1, 1,
+		initEReference(getReifyAssociation_Tgt(), this.getNode(), this.getNode_ReifyAssociation(), "tgt", null, 1, 1,
 				ReifyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getReifyAssociation_Src(), this.getReference(), this.getReference_Reifyassociation(), "src",
@@ -1281,6 +1421,21 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEAttribute(getReifyAssociation_LabelAtTgt(), ecorePackage.getEString(), "labelAtTgt", null, 0, 1,
 				ReifyAssociation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(workFlowEClass, WorkFlow.class, "WorkFlow", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getWorkFlow_InPort(), this.getInPort(), null, "inPort", null, 0, -1, WorkFlow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkFlow_OutPort(), this.getOutPort(), null, "outPort", null, 1, -1, WorkFlow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWorkFlow_Name(), ecorePackage.getEString(), "name", "", 1, 1, WorkFlow.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inPortEClass, InPort.class, "InPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(outPortEClass, OutPort.class, "OutPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

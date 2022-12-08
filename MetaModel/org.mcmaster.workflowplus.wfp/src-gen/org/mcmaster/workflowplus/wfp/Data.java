@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Data#getInput <em>Input</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Data#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.Data#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.mcmaster.workflowplus.wfp.WfpPackage#getData()
@@ -49,6 +50,28 @@ public interface Data extends Node {
 	 * @generated
 	 */
 	EList<Output> getOutput();
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getData_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Data#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

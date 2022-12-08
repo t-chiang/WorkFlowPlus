@@ -37,6 +37,7 @@ import org.mcmaster.workflowplus.wfp.WfpPackage;
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ConstraintImpl#getArgument <em>Argument</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ConstraintImpl#getReference <em>Reference</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ConstraintImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ConstraintImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +112,26 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 	 * @ordered
 	 */
 	protected EList<Node> node;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -216,6 +237,27 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.CONSTRAINT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -258,6 +300,8 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 			return getReference();
 		case WfpPackage.CONSTRAINT__NODE:
 			return getNode();
+		case WfpPackage.CONSTRAINT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,6 +333,9 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 			getNode().clear();
 			getNode().addAll((Collection<? extends Node>) newValue);
 			return;
+		case WfpPackage.CONSTRAINT__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -316,6 +363,9 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 		case WfpPackage.CONSTRAINT__NODE:
 			getNode().clear();
 			return;
+		case WfpPackage.CONSTRAINT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -338,6 +388,8 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 			return reference != null && !reference.isEmpty();
 		case WfpPackage.CONSTRAINT__NODE:
 			return node != null && !node.isEmpty();
+		case WfpPackage.CONSTRAINT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -357,6 +409,8 @@ public class ConstraintImpl extends NodeImpl implements Constraint {
 		result.append(body);
 		result.append(", syntactic: ");
 		result.append(syntactic);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

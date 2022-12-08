@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.sirius.business.api.query.EObjectQuery;
@@ -40,6 +42,7 @@ import org.mcmaster.workflowplus.wfp.WfpPackage;
  * <ul>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.DataImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.DataImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.DataImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +67,26 @@ public abstract class DataImpl extends NodeImpl implements Data {
 	 * @ordered
 	 */
 	protected EList<Output> output;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,6 +131,27 @@ public abstract class DataImpl extends NodeImpl implements Data {
 					WfpPackage.OUTPUT__TGT);
 		}
 		return output;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.DATA__NAME, oldName, name));
 	}
 
 	/**
@@ -216,6 +260,8 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			return getInput();
 		case WfpPackage.DATA__OUTPUT:
 			return getOutput();
+		case WfpPackage.DATA__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -237,6 +283,9 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			getOutput().clear();
 			getOutput().addAll((Collection<? extends Output>) newValue);
 			return;
+		case WfpPackage.DATA__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -255,6 +304,9 @@ public abstract class DataImpl extends NodeImpl implements Data {
 		case WfpPackage.DATA__OUTPUT:
 			getOutput().clear();
 			return;
+		case WfpPackage.DATA__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -271,6 +323,8 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			return input != null && !input.isEmpty();
 		case WfpPackage.DATA__OUTPUT:
 			return output != null && !output.isEmpty();
+		case WfpPackage.DATA__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -291,6 +345,23 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			return null;
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DataImpl

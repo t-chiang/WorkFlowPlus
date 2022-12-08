@@ -58,14 +58,14 @@ public interface WfpPackage extends EPackage {
 	WfpPackage eINSTANCE = org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusImpl <em>Work Flow Plus</em>}' class.
+	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusRootImpl <em>Work Flow Plus Root</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusImpl
-	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlowPlus()
+	 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusRootImpl
+	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlowPlusRoot()
 	 * @generated
 	 */
-	int WORK_FLOW_PLUS = 0;
+	int WORK_FLOW_PLUS_ROOT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
@@ -74,7 +74,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_PLUS__NODE = 0;
+	int WORK_FLOW_PLUS_ROOT__NODE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Reference</b></em>' containment reference list.
@@ -83,25 +83,34 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_PLUS__REFERENCE = 1;
+	int WORK_FLOW_PLUS_ROOT__REFERENCE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Work Flow Plus</em>' class.
+	 * The feature id for the '<em><b>Workflow</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_PLUS_FEATURE_COUNT = 2;
+	int WORK_FLOW_PLUS_ROOT__WORKFLOW = 2;
 
 	/**
-	 * The number of operations of the '<em>Work Flow Plus</em>' class.
+	 * The number of structural features of the '<em>Work Flow Plus Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_PLUS_OPERATION_COUNT = 0;
+	int WORK_FLOW_PLUS_ROOT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Work Flow Plus Root</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW_PLUS_ROOT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.ReferenceImpl <em>Reference</em>}' class.
@@ -151,22 +160,13 @@ public interface WfpPackage extends EPackage {
 	int NODE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__PARENT = 1;
+	int NODE__PARENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Child</b></em>' reference list.
@@ -175,7 +175,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__CHILD = 2;
+	int NODE__CHILD = 1;
 
 	/**
 	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
@@ -184,7 +184,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__COMPOSED_OF = 3;
+	int NODE__COMPOSED_OF = 2;
 
 	/**
 	 * The feature id for the '<em><b>Composition</b></em>' reference.
@@ -193,7 +193,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__COMPOSITION = 4;
+	int NODE__COMPOSITION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Association Tgt</b></em>' reference list.
@@ -202,7 +202,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__ASSOCIATION_TGT = 5;
+	int NODE__ASSOCIATION_TGT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Association Src</b></em>' reference list.
@@ -211,16 +211,16 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__ASSOCIATION_SRC = 6;
+	int NODE__ASSOCIATION_SRC = 5;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__REIFYASSOCIATION = 7;
+	int NODE__REIFY_ASSOCIATION = 6;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -229,7 +229,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 8;
+	int NODE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -249,15 +249,6 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	int DATA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA__NAME = NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -314,13 +305,13 @@ public interface WfpPackage extends EPackage {
 	int DATA__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__REIFYASSOCIATION = NODE__REIFYASSOCIATION;
+	int DATA__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -341,13 +332,22 @@ public interface WfpPackage extends EPackage {
 	int DATA__OUTPUT = NODE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__NAME = NODE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int DATA_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Forward Impact Analysis</em>' operation.
@@ -385,15 +385,6 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	int PROCESS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS__NAME = NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -450,13 +441,13 @@ public interface WfpPackage extends EPackage {
 	int PROCESS__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__REIFYASSOCIATION = NODE__REIFYASSOCIATION;
+	int PROCESS__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -477,13 +468,22 @@ public interface WfpPackage extends EPackage {
 	int PROCESS__OUTPUT = NODE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__NAME = NODE_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+	int PROCESS_FEATURE_COUNT = NODE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Process</em>' class.
@@ -503,15 +503,6 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	int ATOMIC_DATA = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATOMIC_DATA__NAME = DATA__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -568,13 +559,13 @@ public interface WfpPackage extends EPackage {
 	int ATOMIC_DATA__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATOMIC_DATA__REIFYASSOCIATION = DATA__REIFYASSOCIATION;
+	int ATOMIC_DATA__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -593,6 +584,15 @@ public interface WfpPackage extends EPackage {
 	 * @ordered
 	 */
 	int ATOMIC_DATA__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_DATA__NAME = DATA__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -659,15 +659,6 @@ public interface WfpPackage extends EPackage {
 	int ATOMIC_PROCESS = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATOMIC_PROCESS__NAME = PROCESS__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -722,13 +713,13 @@ public interface WfpPackage extends EPackage {
 	int ATOMIC_PROCESS__ASSOCIATION_SRC = PROCESS__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATOMIC_PROCESS__REIFYASSOCIATION = PROCESS__REIFYASSOCIATION;
+	int ATOMIC_PROCESS__REIFY_ASSOCIATION = PROCESS__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -747,6 +738,15 @@ public interface WfpPackage extends EPackage {
 	 * @ordered
 	 */
 	int ATOMIC_PROCESS__OUTPUT = PROCESS__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATOMIC_PROCESS__NAME = PROCESS__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -950,15 +950,6 @@ public interface WfpPackage extends EPackage {
 	int WORK_PRODUCT = 9;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK_PRODUCT__NAME = DATA__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1013,13 +1004,13 @@ public interface WfpPackage extends EPackage {
 	int WORK_PRODUCT__ASSOCIATION_SRC = DATA__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_PRODUCT__REIFYASSOCIATION = DATA__REIFYASSOCIATION;
+	int WORK_PRODUCT__REIFY_ASSOCIATION = DATA__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Input</b></em>' reference list.
@@ -1038,6 +1029,15 @@ public interface WfpPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORK_PRODUCT__OUTPUT = DATA__OUTPUT;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PRODUCT__NAME = DATA__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Attribute</b></em>' containment reference list.
@@ -1141,15 +1141,6 @@ public interface WfpPackage extends EPackage {
 	int CONSTRAINT = 11;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT__NAME = NODE__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1204,13 +1195,13 @@ public interface WfpPackage extends EPackage {
 	int CONSTRAINT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT__REIFYASSOCIATION = NODE__REIFYASSOCIATION;
+	int CONSTRAINT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' attribute.
@@ -1258,13 +1249,22 @@ public interface WfpPackage extends EPackage {
 	int CONSTRAINT__NODE = NODE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__NAME = NODE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINT_FEATURE_COUNT = NODE_FEATURE_COUNT + 5;
+	int CONSTRAINT_FEATURE_COUNT = NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Constraint</em>' class.
@@ -1284,15 +1284,6 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	int ARGUMENT = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARGUMENT__NAME = NODE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -1349,13 +1340,13 @@ public interface WfpPackage extends EPackage {
 	int ARGUMENT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
 
 	/**
-	 * The feature id for the '<em><b>Reifyassociation</b></em>' reference.
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT__REIFYASSOCIATION = NODE__REIFYASSOCIATION;
+	int ARGUMENT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1403,13 +1394,22 @@ public interface WfpPackage extends EPackage {
 	int ARGUMENT__CONSTRUCTS = NODE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARGUMENT__NAME = NODE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Argument</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 5;
+	int ARGUMENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Argument</em>' class.
@@ -1713,36 +1713,311 @@ public interface WfpPackage extends EPackage {
 	int REIFY_ASSOCIATION_OPERATION_COUNT = REFERENCE_OPERATION_COUNT + 0;
 
 	/**
-	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlus <em>Work Flow Plus</em>}'.
+	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowImpl <em>Work Flow</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Work Flow Plus</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlus
+	 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowImpl
+	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlow()
 	 * @generated
 	 */
-	EClass getWorkFlowPlus();
+	int WORK_FLOW = 17;
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlus#getNode <em>Node</em>}'.
+	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__NODE = WORK_FLOW_PLUS_ROOT__NODE;
+
+	/**
+	 * The feature id for the '<em><b>Reference</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__REFERENCE = WORK_FLOW_PLUS_ROOT__REFERENCE;
+
+	/**
+	 * The feature id for the '<em><b>Workflow</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__WORKFLOW = WORK_FLOW_PLUS_ROOT__WORKFLOW;
+
+	/**
+	 * The feature id for the '<em><b>In Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__IN_PORT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Out Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__OUT_PORT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__NAME = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Work Flow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW_FEATURE_COUNT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Work Flow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW_OPERATION_COUNT = WORK_FLOW_PLUS_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.InPortImpl <em>In Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mcmaster.workflowplus.wfp.impl.InPortImpl
+	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getInPort()
+	 * @generated
+	 */
+	int IN_PORT = 18;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__CHILD = NODE__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__COMPOSED_OF = NODE__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__COMPOSITION = NODE__COMPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>Association Tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association Src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+
+	/**
+	 * The number of structural features of the '<em>In Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>In Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IN_PORT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.OutPortImpl <em>Out Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mcmaster.workflowplus.wfp.impl.OutPortImpl
+	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getOutPort()
+	 * @generated
+	 */
+	int OUT_PORT = 19;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__PARENT = NODE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__CHILD = NODE__CHILD;
+
+	/**
+	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__COMPOSED_OF = NODE__COMPOSED_OF;
+
+	/**
+	 * The feature id for the '<em><b>Composition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__COMPOSITION = NODE__COMPOSITION;
+
+	/**
+	 * The feature id for the '<em><b>Association Tgt</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
+
+	/**
+	 * The feature id for the '<em><b>Association Src</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
+
+	/**
+	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+
+	/**
+	 * The number of structural features of the '<em>Out Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Out Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUT_PORT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot <em>Work Flow Plus Root</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Work Flow Plus Root</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot
+	 * @generated
+	 */
+	EClass getWorkFlowPlusRoot();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getNode <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Node</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlus#getNode()
-	 * @see #getWorkFlowPlus()
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getNode()
+	 * @see #getWorkFlowPlusRoot()
 	 * @generated
 	 */
-	EReference getWorkFlowPlus_Node();
+	EReference getWorkFlowPlusRoot_Node();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlus#getReference <em>Reference</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getReference <em>Reference</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Reference</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlus#getReference()
-	 * @see #getWorkFlowPlus()
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getReference()
+	 * @see #getWorkFlowPlusRoot()
 	 * @generated
 	 */
-	EReference getWorkFlowPlus_Reference();
+	EReference getWorkFlowPlusRoot_Reference();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getWorkflow <em>Workflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Workflow</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot#getWorkflow()
+	 * @see #getWorkFlowPlusRoot()
+	 * @generated
+	 */
+	EReference getWorkFlowPlusRoot_Workflow();
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Reference <em>Reference</em>}'.
@@ -1798,6 +2073,17 @@ public interface WfpPackage extends EPackage {
 	EReference getData_Output();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Data#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Data#getName()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_Name();
+
+	/**
 	 * Returns the meta object for the '{@link org.mcmaster.workflowplus.wfp.Data#forwardImpactAnalysis() <em>Forward Impact Analysis</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1850,6 +2136,17 @@ public interface WfpPackage extends EPackage {
 	EReference getProcess_Output();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Process#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Process#getName()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EAttribute getProcess_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Node <em>Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1858,17 +2155,6 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Node#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.Node#getName()
-	 * @see #getNode()
-	 * @generated
-	 */
-	EAttribute getNode_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Node#getParent <em>Parent</em>}'.
@@ -1937,15 +2223,15 @@ public interface WfpPackage extends EPackage {
 	EReference getNode_AssociationSrc();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Node#getReifyassociation <em>Reifyassociation</em>}'.
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Node#getReifyAssociation <em>Reify Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Reifyassociation</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.Node#getReifyassociation()
+	 * @return the meta object for the reference '<em>Reify Association</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Node#getReifyAssociation()
 	 * @see #getNode()
 	 * @generated
 	 */
-	EReference getNode_Reifyassociation();
+	EReference getNode_ReifyAssociation();
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.AtomicData <em>Atomic Data</em>}'.
@@ -2249,6 +2535,17 @@ public interface WfpPackage extends EPackage {
 	EReference getConstraint_Node();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Constraint#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Constraint#getName()
+	 * @see #getConstraint()
+	 * @generated
+	 */
+	EAttribute getConstraint_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Argument <em>Argument</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2312,6 +2609,17 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getArgument_Constructs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Argument#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Argument#getName()
+	 * @see #getArgument()
+	 * @generated
+	 */
+	EAttribute getArgument_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Inheritance <em>Inheritance</em>}'.
@@ -2530,6 +2838,69 @@ public interface WfpPackage extends EPackage {
 	EAttribute getReifyAssociation_LabelAtTgt();
 
 	/**
+	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.WorkFlow <em>Work Flow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Work Flow</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow
+	 * @generated
+	 */
+	EClass getWorkFlow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getInPort <em>In Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>In Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getInPort()
+	 * @see #getWorkFlow()
+	 * @generated
+	 */
+	EReference getWorkFlow_InPort();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getOutPort <em>Out Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Out Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getOutPort()
+	 * @see #getWorkFlow()
+	 * @generated
+	 */
+	EReference getWorkFlow_OutPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getName()
+	 * @see #getWorkFlow()
+	 * @generated
+	 */
+	EAttribute getWorkFlow_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.InPort <em>In Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>In Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.InPort
+	 * @generated
+	 */
+	EClass getInPort();
+
+	/**
+	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.OutPort <em>Out Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Out Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.OutPort
+	 * @generated
+	 */
+	EClass getOutPort();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2553,14 +2924,14 @@ public interface WfpPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusImpl <em>Work Flow Plus</em>}' class.
+		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusRootImpl <em>Work Flow Plus Root</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusImpl
-		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlowPlus()
+		 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowPlusRootImpl
+		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlowPlusRoot()
 		 * @generated
 		 */
-		EClass WORK_FLOW_PLUS = eINSTANCE.getWorkFlowPlus();
+		EClass WORK_FLOW_PLUS_ROOT = eINSTANCE.getWorkFlowPlusRoot();
 
 		/**
 		 * The meta object literal for the '<em><b>Node</b></em>' containment reference list feature.
@@ -2568,7 +2939,7 @@ public interface WfpPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WORK_FLOW_PLUS__NODE = eINSTANCE.getWorkFlowPlus_Node();
+		EReference WORK_FLOW_PLUS_ROOT__NODE = eINSTANCE.getWorkFlowPlusRoot_Node();
 
 		/**
 		 * The meta object literal for the '<em><b>Reference</b></em>' containment reference list feature.
@@ -2576,7 +2947,15 @@ public interface WfpPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference WORK_FLOW_PLUS__REFERENCE = eINSTANCE.getWorkFlowPlus_Reference();
+		EReference WORK_FLOW_PLUS_ROOT__REFERENCE = eINSTANCE.getWorkFlowPlusRoot_Reference();
+
+		/**
+		 * The meta object literal for the '<em><b>Workflow</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORK_FLOW_PLUS_ROOT__WORKFLOW = eINSTANCE.getWorkFlowPlusRoot_Workflow();
 
 		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.ReferenceImpl <em>Reference</em>}' class.
@@ -2623,6 +3002,14 @@ public interface WfpPackage extends EPackage {
 		EReference DATA__OUTPUT = eINSTANCE.getData_Output();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__NAME = eINSTANCE.getData_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Forward Impact Analysis</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2665,6 +3052,14 @@ public interface WfpPackage extends EPackage {
 		EReference PROCESS__OUTPUT = eINSTANCE.getProcess_Output();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCESS__NAME = eINSTANCE.getProcess_Name();
+
+		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2673,14 +3068,6 @@ public interface WfpPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NODE = eINSTANCE.getNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE__NAME = eINSTANCE.getNode_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
@@ -2731,12 +3118,12 @@ public interface WfpPackage extends EPackage {
 		EReference NODE__ASSOCIATION_SRC = eINSTANCE.getNode_AssociationSrc();
 
 		/**
-		 * The meta object literal for the '<em><b>Reifyassociation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Reify Association</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference NODE__REIFYASSOCIATION = eINSTANCE.getNode_Reifyassociation();
+		EReference NODE__REIFY_ASSOCIATION = eINSTANCE.getNode_ReifyAssociation();
 
 		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.AtomicDataImpl <em>Atomic Data</em>}' class.
@@ -2977,6 +3364,14 @@ public interface WfpPackage extends EPackage {
 		EReference CONSTRAINT__NODE = eINSTANCE.getConstraint_Node();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONSTRAINT__NAME = eINSTANCE.getConstraint_Name();
+
+		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.ArgumentImpl <em>Argument</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3025,6 +3420,14 @@ public interface WfpPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ARGUMENT__CONSTRUCTS = eINSTANCE.getArgument_Constructs();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARGUMENT__NAME = eINSTANCE.getArgument_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.InheritanceImpl <em>Inheritance</em>}' class.
@@ -3193,6 +3596,60 @@ public interface WfpPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REIFY_ASSOCIATION__LABEL_AT_TGT = eINSTANCE.getReifyAssociation_LabelAtTgt();
+
+		/**
+		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkFlowImpl <em>Work Flow</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mcmaster.workflowplus.wfp.impl.WorkFlowImpl
+		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getWorkFlow()
+		 * @generated
+		 */
+		EClass WORK_FLOW = eINSTANCE.getWorkFlow();
+
+		/**
+		 * The meta object literal for the '<em><b>In Port</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORK_FLOW__IN_PORT = eINSTANCE.getWorkFlow_InPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Out Port</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORK_FLOW__OUT_PORT = eINSTANCE.getWorkFlow_OutPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORK_FLOW__NAME = eINSTANCE.getWorkFlow_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.InPortImpl <em>In Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mcmaster.workflowplus.wfp.impl.InPortImpl
+		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getInPort()
+		 * @generated
+		 */
+		EClass IN_PORT = eINSTANCE.getInPort();
+
+		/**
+		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.OutPortImpl <em>Out Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mcmaster.workflowplus.wfp.impl.OutPortImpl
+		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getOutPort()
+		 * @generated
+		 */
+		EClass OUT_PORT = eINSTANCE.getOutPort();
 
 	}
 

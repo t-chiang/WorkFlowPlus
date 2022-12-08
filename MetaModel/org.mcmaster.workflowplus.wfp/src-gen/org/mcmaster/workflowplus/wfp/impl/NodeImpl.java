@@ -33,39 +33,18 @@ import org.mcmaster.workflowplus.wfp.WfpPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getChild <em>Child</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getComposedOf <em>Composed Of</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getComposition <em>Composition</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getAssociationTgt <em>Association Tgt</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getAssociationSrc <em>Association Src</em>}</li>
- *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getReifyassociation <em>Reifyassociation</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.NodeImpl#getReifyAssociation <em>Reify Association</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class NodeImpl extends MinimalEObjectImpl.Container implements Node {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -127,14 +106,14 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	protected EList<Association> associationSrc;
 
 	/**
-	 * The cached value of the '{@link #getReifyassociation() <em>Reifyassociation</em>}' reference.
+	 * The cached value of the '{@link #getReifyAssociation() <em>Reify Association</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReifyassociation()
+	 * @see #getReifyAssociation()
 	 * @generated
 	 * @ordered
 	 */
-	protected ReifyAssociation reifyassociation;
+	protected ReifyAssociation reifyAssociation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,27 +132,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	protected EClass eStaticClass() {
 		return WfpPackage.Literals.NODE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.NODE__NAME, oldName, name));
 	}
 
 	/**
@@ -368,17 +326,17 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReifyAssociation getReifyassociation() {
-		if (reifyassociation != null && reifyassociation.eIsProxy()) {
-			InternalEObject oldReifyassociation = (InternalEObject) reifyassociation;
-			reifyassociation = (ReifyAssociation) eResolveProxy(oldReifyassociation);
-			if (reifyassociation != oldReifyassociation) {
+	public ReifyAssociation getReifyAssociation() {
+		if (reifyAssociation != null && reifyAssociation.eIsProxy()) {
+			InternalEObject oldReifyAssociation = (InternalEObject) reifyAssociation;
+			reifyAssociation = (ReifyAssociation) eResolveProxy(oldReifyAssociation);
+			if (reifyAssociation != oldReifyAssociation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WfpPackage.NODE__REIFYASSOCIATION,
-							oldReifyassociation, reifyassociation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WfpPackage.NODE__REIFY_ASSOCIATION,
+							oldReifyAssociation, reifyAssociation));
 			}
 		}
-		return reifyassociation;
+		return reifyAssociation;
 	}
 
 	/**
@@ -386,8 +344,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReifyAssociation basicGetReifyassociation() {
-		return reifyassociation;
+	public ReifyAssociation basicGetReifyAssociation() {
+		return reifyAssociation;
 	}
 
 	/**
@@ -395,12 +353,12 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReifyassociation(ReifyAssociation newReifyassociation, NotificationChain msgs) {
-		ReifyAssociation oldReifyassociation = reifyassociation;
-		reifyassociation = newReifyassociation;
+	public NotificationChain basicSetReifyAssociation(ReifyAssociation newReifyAssociation, NotificationChain msgs) {
+		ReifyAssociation oldReifyAssociation = reifyAssociation;
+		reifyAssociation = newReifyAssociation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WfpPackage.NODE__REIFYASSOCIATION, oldReifyassociation, newReifyassociation);
+					WfpPackage.NODE__REIFY_ASSOCIATION, oldReifyAssociation, newReifyAssociation);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -414,21 +372,21 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReifyassociation(ReifyAssociation newReifyassociation) {
-		if (newReifyassociation != reifyassociation) {
+	public void setReifyAssociation(ReifyAssociation newReifyAssociation) {
+		if (newReifyAssociation != reifyAssociation) {
 			NotificationChain msgs = null;
-			if (reifyassociation != null)
-				msgs = ((InternalEObject) reifyassociation).eInverseRemove(this, WfpPackage.REIFY_ASSOCIATION__TGT,
+			if (reifyAssociation != null)
+				msgs = ((InternalEObject) reifyAssociation).eInverseRemove(this, WfpPackage.REIFY_ASSOCIATION__TGT,
 						ReifyAssociation.class, msgs);
-			if (newReifyassociation != null)
-				msgs = ((InternalEObject) newReifyassociation).eInverseAdd(this, WfpPackage.REIFY_ASSOCIATION__TGT,
+			if (newReifyAssociation != null)
+				msgs = ((InternalEObject) newReifyAssociation).eInverseAdd(this, WfpPackage.REIFY_ASSOCIATION__TGT,
 						ReifyAssociation.class, msgs);
-			msgs = basicSetReifyassociation(newReifyassociation, msgs);
+			msgs = basicSetReifyAssociation(newReifyAssociation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.NODE__REIFYASSOCIATION,
-					newReifyassociation, newReifyassociation));
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.NODE__REIFY_ASSOCIATION,
+					newReifyAssociation, newReifyAssociation));
 	}
 
 	/**
@@ -458,11 +416,11 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getAssociationTgt()).basicAdd(otherEnd, msgs);
 		case WfpPackage.NODE__ASSOCIATION_SRC:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getAssociationSrc()).basicAdd(otherEnd, msgs);
-		case WfpPackage.NODE__REIFYASSOCIATION:
-			if (reifyassociation != null)
-				msgs = ((InternalEObject) reifyassociation).eInverseRemove(this, WfpPackage.REIFY_ASSOCIATION__TGT,
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
+			if (reifyAssociation != null)
+				msgs = ((InternalEObject) reifyAssociation).eInverseRemove(this, WfpPackage.REIFY_ASSOCIATION__TGT,
 						ReifyAssociation.class, msgs);
-			return basicSetReifyassociation((ReifyAssociation) otherEnd, msgs);
+			return basicSetReifyAssociation((ReifyAssociation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -487,8 +445,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			return ((InternalEList<?>) getAssociationTgt()).basicRemove(otherEnd, msgs);
 		case WfpPackage.NODE__ASSOCIATION_SRC:
 			return ((InternalEList<?>) getAssociationSrc()).basicRemove(otherEnd, msgs);
-		case WfpPackage.NODE__REIFYASSOCIATION:
-			return basicSetReifyassociation(null, msgs);
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
+			return basicSetReifyAssociation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -501,8 +459,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WfpPackage.NODE__NAME:
-			return getName();
 		case WfpPackage.NODE__PARENT:
 			if (resolve)
 				return getParent();
@@ -519,10 +475,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			return getAssociationTgt();
 		case WfpPackage.NODE__ASSOCIATION_SRC:
 			return getAssociationSrc();
-		case WfpPackage.NODE__REIFYASSOCIATION:
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
 			if (resolve)
-				return getReifyassociation();
-			return basicGetReifyassociation();
+				return getReifyAssociation();
+			return basicGetReifyAssociation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -536,9 +492,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WfpPackage.NODE__NAME:
-			setName((String) newValue);
-			return;
 		case WfpPackage.NODE__PARENT:
 			setParent((Inheritance) newValue);
 			return;
@@ -561,8 +514,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			getAssociationSrc().clear();
 			getAssociationSrc().addAll((Collection<? extends Association>) newValue);
 			return;
-		case WfpPackage.NODE__REIFYASSOCIATION:
-			setReifyassociation((ReifyAssociation) newValue);
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
+			setReifyAssociation((ReifyAssociation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -576,9 +529,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WfpPackage.NODE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case WfpPackage.NODE__PARENT:
 			setParent((Inheritance) null);
 			return;
@@ -597,8 +547,8 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 		case WfpPackage.NODE__ASSOCIATION_SRC:
 			getAssociationSrc().clear();
 			return;
-		case WfpPackage.NODE__REIFYASSOCIATION:
-			setReifyassociation((ReifyAssociation) null);
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
+			setReifyAssociation((ReifyAssociation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -612,8 +562,6 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WfpPackage.NODE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case WfpPackage.NODE__PARENT:
 			return parent != null;
 		case WfpPackage.NODE__CHILD:
@@ -626,27 +574,10 @@ public abstract class NodeImpl extends MinimalEObjectImpl.Container implements N
 			return associationTgt != null && !associationTgt.isEmpty();
 		case WfpPackage.NODE__ASSOCIATION_SRC:
 			return associationSrc != null && !associationSrc.isEmpty();
-		case WfpPackage.NODE__REIFYASSOCIATION:
-			return reifyassociation != null;
+		case WfpPackage.NODE__REIFY_ASSOCIATION:
+			return reifyAssociation != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //NodeImpl

@@ -4,6 +4,7 @@ package org.mcmaster.workflowplus.wfp.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -28,6 +30,7 @@ import org.mcmaster.workflowplus.wfp.WfpPackage;
  * <ul>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ProcessImpl#getInput <em>Input</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ProcessImpl#getOutput <em>Output</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.ProcessImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,6 +55,26 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 	 * @ordered
 	 */
 	protected EList<Output> output;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,6 +126,27 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.PROCESS__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -143,6 +187,8 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 			return getInput();
 		case WfpPackage.PROCESS__OUTPUT:
 			return getOutput();
+		case WfpPackage.PROCESS__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,6 +210,9 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 			getOutput().clear();
 			getOutput().addAll((Collection<? extends Output>) newValue);
 			return;
+		case WfpPackage.PROCESS__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -182,6 +231,9 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 		case WfpPackage.PROCESS__OUTPUT:
 			getOutput().clear();
 			return;
+		case WfpPackage.PROCESS__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,8 +250,27 @@ public abstract class ProcessImpl extends NodeImpl implements org.mcmaster.workf
 			return input != null && !input.isEmpty();
 		case WfpPackage.PROCESS__OUTPUT:
 			return output != null && !output.isEmpty();
+		case WfpPackage.PROCESS__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ProcessImpl

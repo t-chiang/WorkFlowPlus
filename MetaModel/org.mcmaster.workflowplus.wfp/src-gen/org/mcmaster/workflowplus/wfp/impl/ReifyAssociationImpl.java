@@ -166,10 +166,10 @@ public class ReifyAssociationImpl extends ReferenceImpl implements ReifyAssociat
 		if (newTgt != tgt) {
 			NotificationChain msgs = null;
 			if (tgt != null)
-				msgs = ((InternalEObject) tgt).eInverseRemove(this, WfpPackage.NODE__REIFYASSOCIATION, Node.class,
+				msgs = ((InternalEObject) tgt).eInverseRemove(this, WfpPackage.NODE__REIFY_ASSOCIATION, Node.class,
 						msgs);
 			if (newTgt != null)
-				msgs = ((InternalEObject) newTgt).eInverseAdd(this, WfpPackage.NODE__REIFYASSOCIATION, Node.class,
+				msgs = ((InternalEObject) newTgt).eInverseAdd(this, WfpPackage.NODE__REIFY_ASSOCIATION, Node.class,
 						msgs);
 			msgs = basicSetTgt(newTgt, msgs);
 			if (msgs != null)
@@ -299,7 +299,7 @@ public class ReifyAssociationImpl extends ReferenceImpl implements ReifyAssociat
 		switch (featureID) {
 		case WfpPackage.REIFY_ASSOCIATION__TGT:
 			if (tgt != null)
-				msgs = ((InternalEObject) tgt).eInverseRemove(this, WfpPackage.NODE__REIFYASSOCIATION, Node.class,
+				msgs = ((InternalEObject) tgt).eInverseRemove(this, WfpPackage.NODE__REIFY_ASSOCIATION, Node.class,
 						msgs);
 			return basicSetTgt((Node) otherEnd, msgs);
 		case WfpPackage.REIFY_ASSOCIATION__SRC:

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="wfp" version="12.0.0.2017041100">
   <ownedViewpoints name="WFP Viewpoint" modelFileExtension="wfp">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Node%20Drops'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Input%2FOutput'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Inheritance']" name="WFP" initialisation="true" showOnStartup="true" domainClass="wfp::WorkFlowPlus" enablePopupBars="true">
-      <metamodel href="http://www.example.org/wfp#/"/>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Node%20Drops'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Input%2FOutput'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@defaultLayer/@toolSections.0/@ownedTools[name='Node%20Drops']" name="Root" titleExpression="Root Model" initialisation="true" showOnStartup="true" domainClass="wfp::WorkFlowPlusRoot" rootExpression="wfp::WorkFlowPlusRoot" enablePopupBars="true">
+      <metamodel href="../../org.mcmaster.workflowplus.wfp/model/wfp.ecore#/"/>
       <defaultLayer name="Empty Defaul Layer">
         <toolSections name="Custom tools">
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Node Drops" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Node Drops" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -13,24 +13,24 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::AtomicData)">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" containerViewExpression="var:newContainerView"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" containerViewExpression="var:newContainerView"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::WorkProduct)">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" containerViewExpression="var:newContainerView"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" containerViewExpression="var:newContainerView"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::AtomicProcess)">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" containerViewExpression="var:newContainerView"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" containerViewExpression="var:newContainerView"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Constraint)">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" containerViewExpression="var:newContainerView"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" containerViewExpression="var:newContainerView"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Argument)">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" containerViewExpression="var:newContainerView"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" containerViewExpression="var:newContainerView"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Input/Output" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Input/Output" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -38,15 +38,15 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Input)">
-                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Output)">
-                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Association" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Association" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -54,45 +54,45 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Association)">
-                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::ReifyAssociation)">
-                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Composition" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Composition" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Inheritance" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Inheritance" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Attributes" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute']" dragSource="BOTH">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Attributes" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -106,15 +106,15 @@
         </toolSections>
       </defaultLayer>
       <additionalLayers name="Data Layer" activeByDefault="true">
-        <nodeMappings name="Work Product" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::WorkProduct">
+        <nodeMappings name="Work Product" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::WorkProduct">
           <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" shape="triangle">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </nodeMappings>
-        <containerMappings name="Atomic Data" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicData" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
-          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+        <containerMappings name="Atomic Data" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicData" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
+          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
             <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -137,7 +137,13 @@
           </conditionnalStyles>
         </containerMappings>
         <toolSections name="Data Creation">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Data" forceRefresh="true" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Data" forceRefresh="true" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@subContainerMappings[name='Atomic%20Data']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -148,7 +154,667 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Work Product" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Work Product" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::WorkProduct" referenceName="node">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'WorkProduct' + container.node ->filter(wfp::WorkProduct) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Process Layer" activeByDefault="true">
+        <containerMappings name="Atomic Process" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicProcess" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
+          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" widthComputationExpression="20" heightComputationExpression="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:isQuery">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="feature:isReview">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections name="Process Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Process" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::AtomicProcess" referenceName="node">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Process' + container.node ->filter(wfp::AtomicProcess) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Reference Layer" activeByDefault="true">
+        <edgeMappings name="Input" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20InPort']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Input" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Output" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20OutPort']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Output" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Association" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc + '   ' + self.labelAtSrc">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt + '   ' + self.labelAtTgt">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Composition" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Composition" useDomainElement="true">
+          <style sourceArrow="FillDiamond" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt + '   ' + self.labelAtTgt">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Inheritance" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Inheritance" useDomainElement="true">
+          <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Reified Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::ReifyAssociation" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt + '   ' + self.labelAtTgt">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Reference Creation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Input" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Input" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtSrc" valueExpression="1..1"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtTgt" valueExpression="1..1"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Output" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Output" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtSrc" valueExpression="1..1"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtTgt" valueExpression="1..1"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Association" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtSrc" valueExpression="1..1"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtTgt" valueExpression="1..1"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Composition" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Composition" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtTgt" valueExpression="1..1"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Inheritance" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Inheritance" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Reified Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlusRoot)/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::ReifyAssociation" referenceName="reference" variableName="reference">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="multAtTgt" valueExpression="1..1"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Constraint &amp; Argument Layer">
+        <nodeMappings name="Constraint" semanticCandidatesExpression="feature:node" domainClass="wfp::Constraint">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:syntactic">
+            <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Argument" semanticCandidatesExpression="feature:node" domainClass="wfp::Argument">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="5" height="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:syntactic">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" width="5" height="5">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <edgeMappings name="Constraint Reference to Data/Process" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:node">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Constraint Reference to Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" targetFinderExpression="feature:reference">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Argument to Constraint Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetFinderExpression="feature:constraint">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Argument Construction Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetFinderExpression="feature:constructedBy">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Constraint &amp; Argument Creation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Constraint" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Constraint" referenceName="node">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Constraint'+container.node->filter(wfp::Constraint)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Argument" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Argument" referenceName="node">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Argument'+container.node->filter(wfp::Argument)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Constraint &amp; Argument Reference Creation">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Constraint Reference to Data/Process" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Data%2FProcess']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="node" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Contraint Reference to Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Reference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="reference" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument to Constraint Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20to%20Constraint%20Reference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="constraint" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument Construction Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20Construction%20Reference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="constructedBy" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Attribute Layer">
+        <toolSections name="Create Attribute">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Attribute" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Attribute" referenceName="attribute">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Attribute'+container.attribute->filter(wfp::Attribute)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Workflow Layer" activeByDefault="true">
+        <nodeMappings name="Workflow Node" semanticCandidatesExpression="feature:workflow" domainClass="wfp::WorkFlow">
+          <borderedNodeMappings name="External OutPort" semanticCandidatesExpression="feature:outPort" domainClass="wfp::OutPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="External InPort" semanticCandidatesExpression="feature:inPort" domainClass="wfp::InPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="7" verticalDiameterComputationExpression="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <containerMappings name="Workflow Conatiner" semanticCandidatesExpression="feature:workflow" domainClass="wfp::WorkFlow" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']">
+          <borderedNodeMappings name="External OutPort" semanticCandidatesExpression="feature:outPort" domainClass="wfp::OutPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="External InPort" semanticCandidatesExpression="feature:inPort" domainClass="wfp::InPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </borderedNodeMappings>
+          <subContainerMappings name="Atomic Data" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicData" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" childrenPresentation="List">
+            <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="60" arcHeight="60" borderSizeComputationExpression="1" labelSize="12" roundedCorner="true" widthComputationExpression="20" heightComputationExpression="7">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+            <conditionnalStyles predicateExpression="feature:isNormative">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <subContainerMappings name="Atomic Process" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicProcess" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" childrenPresentation="List">
+            <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" widthComputationExpression="20" heightComputationExpression="7">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+            <conditionnalStyles predicateExpression="feature:isQuery">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="feature:isReview">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Workflow Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Workflow Container" forceRefresh="true" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::WorkFlow" referenceName="workflow">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'WorkFlow'+container.node->filter(wfp::WorkFlow)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Workflow Node" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::WorkFlow" referenceName="workflow">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'WorkFlow' + container.node ->filter(wfp::WorkFlow) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Border InPort" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20InPort'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']/@borderedNodeMappings[name='External%20InPort']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::InPort" referenceName="inPort"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Border OutPort" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']/@borderedNodeMappings[name='External%20OutPort'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20OutPort']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::OutPort" referenceName="outPort"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@defaultLayer/@toolSections.0/@ownedTools[name='Node%20Drops']" name="Workflow" domainClass="wfp::WorkFlow" enablePopupBars="true">
+      <metamodel href="../../org.mcmaster.workflowplus.wfp/model/wfp.ecore#/"/>
+      <defaultLayer name="Empty Default Layer">
+        <toolSections name="Custom tools">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Node Drops" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::AtomicData)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::WorkProduct)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::AtomicProcess)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Constraint)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Argument)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::OutPort)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Port%20Layer']/@nodeMappings[name='OutPort']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::InPort)">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Port%20Layer']/@nodeMappings[name='InPort']" containerViewExpression="var:newContainerView"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Input/Output" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Input)">
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Output)">
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Association" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::Association)">
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="element.oclIsTypeOf(wfp::ReifyAssociation)">
+                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Composition" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Inheritance" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']" containerViewExpression="var:newContainerView" sourceExpression="feature:src" targetExpression="feature:tgt"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop Attributes" mappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute']" dragSource="BOTH" moveEdges="true">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']" containerViewExpression="var:newContainerView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:PopupMenu" name="Impact Analysis">
+            <menuItemDescription xsi:type="tool_1:GroupMenu" name="Impact Analysis">
+              <itemDescriptions xsi:type="tool_1:ExternalJavaAction" name="Forward Impact Analysis" id="org.mcmaster.workflowplus.wfp.design.CallForwardImpactAnalysis"/>
+              <itemDescriptions xsi:type="tool_1:ExternalJavaAction" name="Backward Impact Analysis" id="org.mcmaster.workflowplus.wfp.design.CallBackwardImpactAnalysis"/>
+              <itemDescriptions xsi:type="tool_1:ExternalJavaAction" name="Clear Impact Analysis" id="org.mcmaster.workflowplus.wfp.design.ClearImpact"/>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Data Layer" activeByDefault="true">
+        <nodeMappings name="Work Product" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::WorkProduct">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" shape="triangle">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <containerMappings name="Atomic Data" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicData" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
+          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="60" arcHeight="60" borderSizeComputationExpression="1" labelSize="12" roundedCorner="true" widthComputationExpression="20" heightComputationExpression="7">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+          <conditionnalStyles predicateExpression="feature:isNormative">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections name="Data Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Data" forceRefresh="true" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::AtomicData" referenceName="node">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Data'+container.node->filter(wfp::AtomicData)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Work Product" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -168,8 +834,8 @@
         </toolSections>
       </additionalLayers>
       <additionalLayers name="Process Layer" activeByDefault="true">
-        <containerMappings name="Atomic Process" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicProcess" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
-          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+        <containerMappings name="Atomic Process" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicProcess" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" childrenPresentation="List">
+          <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
             <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -200,7 +866,7 @@
           </conditionnalStyles>
         </containerMappings>
         <toolSections name="Process Creation">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Process" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Atomic Process" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -220,7 +886,7 @@
         </toolSections>
       </additionalLayers>
       <additionalLayers name="Reference Layer" activeByDefault="true">
-        <edgeMappings name="Input" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Input" useDomainElement="true">
+        <edgeMappings name="Input" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20InPort']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Input" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
             <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc">
@@ -231,7 +897,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Output" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Output" useDomainElement="true">
+        <edgeMappings name="Output" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20OutPort']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Output" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc">
@@ -242,7 +908,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Association" useDomainElement="true">
+        <edgeMappings name="Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Association" useDomainElement="true">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <beginLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtSrc + '   ' + self.labelAtSrc">
@@ -253,7 +919,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Composition" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Composition" useDomainElement="true">
+        <edgeMappings name="Composition" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Composition" useDomainElement="true">
           <style sourceArrow="FillDiamond" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt + '   ' + self.labelAtTgt">
@@ -261,7 +927,7 @@
             </endLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Inheritance" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Inheritance" useDomainElement="true">
+        <edgeMappings name="Inheritance" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::Inheritance" useDomainElement="true">
           <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -269,7 +935,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Reified Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::ReifyAssociation" useDomainElement="true">
+        <edgeMappings name="Reified Association" semanticCandidatesExpression="feature:reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" targetFinderExpression="feature:tgt" sourceFinderExpression="feature:src" domainClass="wfp::ReifyAssociation" useDomainElement="true">
           <style targetArrow="NoDecoration" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <endLabelStyleDescription labelSize="12" labelExpression="aql: self.multAtTgt + '   ' + self.labelAtTgt">
@@ -278,13 +944,13 @@
           </style>
         </edgeMappings>
         <toolSections name="Reference Creation">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Input" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Input" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlowPlus)/]">
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source.eContainer(wfp::WorkFlow)/]">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::Input" referenceName="reference" variableName="reference">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="src" valueExpression="var:source"/>
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="tgt" valueExpression="var:target"/>
@@ -294,7 +960,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Output" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Output" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -310,7 +976,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -326,7 +992,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Composition" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Composition" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -341,7 +1007,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Inheritance" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Inheritance" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -355,7 +1021,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Reified Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Reified Association" precondition="aql: preSource.ancestors() ->excludes(preTarget)" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -401,7 +1067,7 @@
             </style>
           </conditionnalStyles>
         </nodeMappings>
-        <edgeMappings name="Constraint Reference to Data/Process" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:node">
+        <edgeMappings name="Constraint Reference to Data/Process" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@nodeMappings[name='Work%20Product'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" targetFinderExpression="feature:node">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -409,7 +1075,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Constraint Reference to Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" targetFinderExpression="feature:reference">
+        <edgeMappings name="Constraint Reference to Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Association'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Composition'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Inheritance'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Input'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Output'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Reference%20Layer']/@edgeMappings[name='Reified%20Association']" targetFinderExpression="feature:reference">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -417,7 +1083,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Argument to Constraint Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetFinderExpression="feature:constraint">
+        <edgeMappings name="Argument to Constraint Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']" targetFinderExpression="feature:constraint">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -425,7 +1091,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Argument Construction Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetFinderExpression="feature:constructedBy">
+        <edgeMappings name="Argument Construction Reference" sourceMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetMapping="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']" targetFinderExpression="feature:constructedBy">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -434,7 +1100,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Constraint &amp; Argument Creation">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Constraint" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Constraint" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Constraint']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -445,7 +1111,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Argument" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Argument" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@nodeMappings[name='Argument']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -458,7 +1124,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Constraint &amp; Argument Reference Creation">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Constraint Reference to Data/Process" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Data%2FProcess']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Constraint Reference to Data/Process" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Data%2FProcess']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -469,7 +1135,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Contraint Reference to Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Reference']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Contraint Reference to Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Constraint%20Reference%20to%20Reference']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -480,7 +1146,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument to Constraint Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20to%20Constraint%20Reference']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument to Constraint Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20to%20Constraint%20Reference']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -491,7 +1157,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument Construction Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20Construction%20Reference']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Argument Construction Reference" edgeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Constraint%20%26%20Argument%20Layer']/@edgeMappings[name='Argument%20Construction%20Reference']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -506,7 +1172,7 @@
       </additionalLayers>
       <additionalLayers name="Attribute Layer">
         <toolSections name="Create Attribute">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Attribute" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='WFP']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Attribute" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']/@subNodeMappings[name='Attribute'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']/@subNodeMappings[name='Attribute']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -518,6 +1184,163 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Sub Workflow Layer" activeByDefault="true">
+        <nodeMappings name="Workflow Node" semanticCandidatesExpression="feature:workflow" domainClass="wfp::WorkFlow">
+          <borderedNodeMappings name="External OutPort" semanticCandidatesExpression="feature:outPort" domainClass="wfp::OutPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="External InPort" semanticCandidatesExpression="feature:inPort" domainClass="wfp::InPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="7" verticalDiameterComputationExpression="20">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <containerMappings name="Workflow Conatiner" semanticCandidatesExpression="feature:workflow" domainClass="wfp::WorkFlow" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']">
+          <borderedNodeMappings name="External OutPort" semanticCandidatesExpression="feature:outPort" domainClass="wfp::OutPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            </style>
+          </borderedNodeMappings>
+          <borderedNodeMappings name="External InPort" semanticCandidatesExpression="feature:inPort" domainClass="wfp::InPort">
+            <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+            </style>
+          </borderedNodeMappings>
+          <subContainerMappings name="Atomic Data" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicData" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Data%20Layer']/@containerMappings[name='Atomic%20Data']" childrenPresentation="List">
+            <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Data%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="60" arcHeight="60" borderSizeComputationExpression="1" labelSize="12" roundedCorner="true" widthComputationExpression="20" heightComputationExpression="7">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+            <conditionnalStyles predicateExpression="feature:isNormative">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <subContainerMappings name="Atomic Process" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:node" domainClass="wfp::AtomicProcess" dropDescriptions="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Attributes']" reusedContainerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Process%20Layer']/@containerMappings[name='Atomic%20Process']" childrenPresentation="List">
+            <subNodeMappings name="Attribute" labelDirectEdit="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Root']/@additionalLayers[name='Process%20Layer']/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:attribute" domainClass="wfp::Attribute">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' : ' + self.description" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" widthComputationExpression="20" heightComputationExpression="7">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            </style>
+            <conditionnalStyles predicateExpression="feature:isQuery">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="feature:isReview">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Workflow Creation">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Workflow Container" forceRefresh="true" containerMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::WorkFlow" referenceName="workflow">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'WorkFlow'+container.node->filter(wfp::WorkFlow)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Workflow Node" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::WorkFlow" referenceName="workflow">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'WorkFlow' + container.node ->filter(wfp::WorkFlow) -> size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Border InPort" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20InPort'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']/@borderedNodeMappings[name='External%20InPort']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::InPort" referenceName="inPort"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Border OutPort" nodeMappings="//@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@nodeMappings[name='Workflow%20Node']/@borderedNodeMappings[name='External%20OutPort'] //@ownedViewpoints[name='WFP%20Viewpoint']/@ownedRepresentations[name='Workflow']/@additionalLayers[name='Sub%20Workflow%20Layer']/@containerMappings[name='Workflow%20Conatiner']/@borderedNodeMappings[name='External%20OutPort']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="wfp::OutPort" referenceName="outPort"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Port Layer">
+        <nodeMappings name="OutPort" semanticCandidatesExpression="feature:outPort" domainClass="wfp::OutPort">
+          <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="InPort" semanticCandidatesExpression="feature:inPort" domainClass="wfp::InPort">
+          <style xsi:type="style:DotDescription" labelSize="12" labelExpression="" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+          </style>
+        </nodeMappings>
       </additionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.mcmaster.workflowplus.wfp.design.Services"/>

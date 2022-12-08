@@ -28,4 +28,6 @@ public interface ConstraintValidator {
 	boolean validateReference(EList<Reference> value);
 
 	boolean validateNode(EList<Node> value);
+
+	boolean validateName(String value);
 }
