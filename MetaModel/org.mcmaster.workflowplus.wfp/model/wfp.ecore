@@ -62,22 +62,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Reference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//Data"
         eOpposite="#//Data/input"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" lowerBound="1" eType="#//Process"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" eType="#//Process"
         eOpposite="#//Process/input"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multAtSrc" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multAtTgt" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inportTgt" eType="#//InPort"
+        eOpposite="#//InPort/inputTgt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inportSrc" eType="#//InPort"
+        eOpposite="#//InPort/inputSrc"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Reference">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tgt" lowerBound="1" eType="#//Data"
         eOpposite="#//Data/output"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="src" lowerBound="1" eType="#//Process"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="src" eType="#//Process"
         eOpposite="#//Process/output"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multAtSrc" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="multAtTgt" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outportSrc" eType="#//OutPort"
+        eOpposite="#//OutPort/outputSrc"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outportTgt" eType="#//OutPort"
+        eOpposite="#//OutPort/outputTgt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorkProduct" eSuperTypes="#//Data">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
@@ -148,13 +156,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelAtTgt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorkFlow" eSuperTypes="#//WorkFlowPlusRoot">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inPort" upperBound="-1"
-        eType="#//InPort" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outPort" lowerBound="1"
-        upperBound="-1" eType="#//OutPort" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InPort" eSuperTypes="#//Node"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OutPort" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputTgt" eType="#//Input"
+        eOpposite="#//Input/inportTgt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputSrc" eType="#//Input"
+        eOpposite="#//Input/inportSrc"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutPort" eSuperTypes="#//Port">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputSrc" eType="#//Output"
+        eOpposite="#//Output/outportSrc"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputTgt" eType="#//Output"
+        eOpposite="#//Output/outportTgt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

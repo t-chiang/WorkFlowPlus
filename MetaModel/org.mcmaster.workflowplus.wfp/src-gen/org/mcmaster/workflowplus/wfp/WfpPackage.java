@@ -849,13 +849,31 @@ public interface WfpPackage extends EPackage {
 	int INPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Inport Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__INPORT_TGT = REFERENCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Inport Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__INPORT_SRC = REFERENCE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Input</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = REFERENCE_FEATURE_COUNT + 4;
+	int INPUT_FEATURE_COUNT = REFERENCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Input</em>' class.
@@ -922,13 +940,31 @@ public interface WfpPackage extends EPackage {
 	int OUTPUT__MULT_AT_TGT = REFERENCE_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Outport Src</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__OUTPORT_SRC = REFERENCE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Outport Tgt</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OUTPUT__OUTPORT_TGT = REFERENCE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Output</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_FEATURE_COUNT = REFERENCE_FEATURE_COUNT + 4;
+	int OUTPUT_FEATURE_COUNT = REFERENCE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Output</em>' class.
@@ -1750,31 +1786,22 @@ public interface WfpPackage extends EPackage {
 	int WORK_FLOW__WORKFLOW = WORK_FLOW_PLUS_ROOT__WORKFLOW;
 
 	/**
-	 * The feature id for the '<em><b>In Port</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK_FLOW__IN_PORT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Out Port</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK_FLOW__OUT_PORT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW__NAME = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 2;
+	int WORK_FLOW__NAME = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_FLOW__PORT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Work Flow</em>' class.
@@ -1783,7 +1810,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_FLOW_FEATURE_COUNT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 3;
+	int WORK_FLOW_FEATURE_COUNT = WORK_FLOW_PLUS_ROOT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Work Flow</em>' class.
@@ -1793,6 +1820,43 @@ public interface WfpPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORK_FLOW_OPERATION_COUNT = WORK_FLOW_PLUS_ROOT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.PortImpl <em>Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mcmaster.workflowplus.wfp.impl.PortImpl
+	 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getPort()
+	 * @generated
+	 */
+	int PORT = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.InPortImpl <em>In Port</em>}' class.
@@ -1805,67 +1869,31 @@ public interface WfpPackage extends EPackage {
 	int IN_PORT = 18;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IN_PORT__PARENT = NODE__PARENT;
+	int IN_PORT__NAME = PORT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Tgt</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IN_PORT__CHILD = NODE__CHILD;
+	int IN_PORT__INPUT_TGT = PORT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * The feature id for the '<em><b>Input Src</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IN_PORT__COMPOSED_OF = NODE__COMPOSED_OF;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IN_PORT__COMPOSITION = NODE__COMPOSITION;
-
-	/**
-	 * The feature id for the '<em><b>Association Tgt</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IN_PORT__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
-
-	/**
-	 * The feature id for the '<em><b>Association Src</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IN_PORT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
-
-	/**
-	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IN_PORT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+	int IN_PORT__INPUT_SRC = PORT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>In Port</em>' class.
@@ -1874,7 +1902,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IN_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int IN_PORT_FEATURE_COUNT = PORT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>In Port</em>' class.
@@ -1883,7 +1911,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IN_PORT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int IN_PORT_OPERATION_COUNT = PORT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mcmaster.workflowplus.wfp.impl.OutPortImpl <em>Out Port</em>}' class.
@@ -1896,67 +1924,31 @@ public interface WfpPackage extends EPackage {
 	int OUT_PORT = 19;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUT_PORT__PARENT = NODE__PARENT;
+	int OUT_PORT__NAME = PORT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Src</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUT_PORT__CHILD = NODE__CHILD;
+	int OUT_PORT__OUTPUT_SRC = PORT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Composed Of</b></em>' reference list.
+	 * The feature id for the '<em><b>Output Tgt</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUT_PORT__COMPOSED_OF = NODE__COMPOSED_OF;
-
-	/**
-	 * The feature id for the '<em><b>Composition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUT_PORT__COMPOSITION = NODE__COMPOSITION;
-
-	/**
-	 * The feature id for the '<em><b>Association Tgt</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUT_PORT__ASSOCIATION_TGT = NODE__ASSOCIATION_TGT;
-
-	/**
-	 * The feature id for the '<em><b>Association Src</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUT_PORT__ASSOCIATION_SRC = NODE__ASSOCIATION_SRC;
-
-	/**
-	 * The feature id for the '<em><b>Reify Association</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OUT_PORT__REIFY_ASSOCIATION = NODE__REIFY_ASSOCIATION;
+	int OUT_PORT__OUTPUT_TGT = PORT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Out Port</em>' class.
@@ -1965,7 +1957,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUT_PORT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+	int OUT_PORT_FEATURE_COUNT = PORT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Out Port</em>' class.
@@ -1974,7 +1966,7 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OUT_PORT_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int OUT_PORT_OPERATION_COUNT = PORT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.WorkFlowPlusRoot <em>Work Flow Plus Root</em>}'.
@@ -2363,6 +2355,28 @@ public interface WfpPackage extends EPackage {
 	EAttribute getInput_MultAtTgt();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Input#getInportTgt <em>Inport Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inport Tgt</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Input#getInportTgt()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_InportTgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Input#getInportSrc <em>Inport Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Inport Src</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Input#getInportSrc()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EReference getInput_InportSrc();
+
+	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Output <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2415,6 +2429,28 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getOutput_MultAtTgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Output#getOutportSrc <em>Outport Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outport Src</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Output#getOutportSrc()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_OutportSrc();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.Output#getOutportTgt <em>Outport Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Outport Tgt</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Output#getOutportTgt()
+	 * @see #getOutput()
+	 * @generated
+	 */
+	EReference getOutput_OutportTgt();
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.WorkProduct <em>Work Product</em>}'.
@@ -2848,28 +2884,6 @@ public interface WfpPackage extends EPackage {
 	EClass getWorkFlow();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getInPort <em>In Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>In Port</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getInPort()
-	 * @see #getWorkFlow()
-	 * @generated
-	 */
-	EReference getWorkFlow_InPort();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getOutPort <em>Out Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Out Port</em>'.
-	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getOutPort()
-	 * @see #getWorkFlow()
-	 * @generated
-	 */
-	EReference getWorkFlow_OutPort();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2879,6 +2893,17 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getWorkFlow_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mcmaster.workflowplus.wfp.WorkFlow#getPort <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.WorkFlow#getPort()
+	 * @see #getWorkFlow()
+	 * @generated
+	 */
+	EReference getWorkFlow_Port();
 
 	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.InPort <em>In Port</em>}'.
@@ -2891,6 +2916,28 @@ public interface WfpPackage extends EPackage {
 	EClass getInPort();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.InPort#getInputTgt <em>Input Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Input Tgt</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.InPort#getInputTgt()
+	 * @see #getInPort()
+	 * @generated
+	 */
+	EReference getInPort_InputTgt();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.InPort#getInputSrc <em>Input Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Input Src</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.InPort#getInputSrc()
+	 * @see #getInPort()
+	 * @generated
+	 */
+	EReference getInPort_InputSrc();
+
+	/**
 	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.OutPort <em>Out Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2899,6 +2946,49 @@ public interface WfpPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOutPort();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.OutPort#getOutputSrc <em>Output Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Output Src</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.OutPort#getOutputSrc()
+	 * @see #getOutPort()
+	 * @generated
+	 */
+	EReference getOutPort_OutputSrc();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mcmaster.workflowplus.wfp.OutPort#getOutputTgt <em>Output Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Output Tgt</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.OutPort#getOutputTgt()
+	 * @see #getOutPort()
+	 * @generated
+	 */
+	EReference getOutPort_OutputTgt();
+
+	/**
+	 * Returns the meta object for class '{@link org.mcmaster.workflowplus.wfp.Port <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Port</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Port
+	 * @generated
+	 */
+	EClass getPort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mcmaster.workflowplus.wfp.Port#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mcmaster.workflowplus.wfp.Port#getName()
+	 * @see #getPort()
+	 * @generated
+	 */
+	EAttribute getPort_Name();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3228,6 +3318,22 @@ public interface WfpPackage extends EPackage {
 		EAttribute INPUT__MULT_AT_TGT = eINSTANCE.getInput_MultAtTgt();
 
 		/**
+		 * The meta object literal for the '<em><b>Inport Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__INPORT_TGT = eINSTANCE.getInput_InportTgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Inport Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INPUT__INPORT_SRC = eINSTANCE.getInput_InportSrc();
+
+		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl <em>Output</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3268,6 +3374,22 @@ public interface WfpPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OUTPUT__MULT_AT_TGT = eINSTANCE.getOutput_MultAtTgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Outport Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__OUTPORT_SRC = eINSTANCE.getOutput_OutportSrc();
+
+		/**
+		 * The meta object literal for the '<em><b>Outport Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUTPUT__OUTPORT_TGT = eINSTANCE.getOutput_OutportTgt();
 
 		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.WorkProductImpl <em>Work Product</em>}' class.
@@ -3608,28 +3730,20 @@ public interface WfpPackage extends EPackage {
 		EClass WORK_FLOW = eINSTANCE.getWorkFlow();
 
 		/**
-		 * The meta object literal for the '<em><b>In Port</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORK_FLOW__IN_PORT = eINSTANCE.getWorkFlow_InPort();
-
-		/**
-		 * The meta object literal for the '<em><b>Out Port</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WORK_FLOW__OUT_PORT = eINSTANCE.getWorkFlow_OutPort();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute WORK_FLOW__NAME = eINSTANCE.getWorkFlow_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Port</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WORK_FLOW__PORT = eINSTANCE.getWorkFlow_Port();
 
 		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.InPortImpl <em>In Port</em>}' class.
@@ -3642,6 +3756,22 @@ public interface WfpPackage extends EPackage {
 		EClass IN_PORT = eINSTANCE.getInPort();
 
 		/**
+		 * The meta object literal for the '<em><b>Input Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IN_PORT__INPUT_TGT = eINSTANCE.getInPort_InputTgt();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IN_PORT__INPUT_SRC = eINSTANCE.getInPort_InputSrc();
+
+		/**
 		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.OutPortImpl <em>Out Port</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3650,6 +3780,40 @@ public interface WfpPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OUT_PORT = eINSTANCE.getOutPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Src</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUT_PORT__OUTPUT_SRC = eINSTANCE.getOutPort_OutputSrc();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Tgt</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OUT_PORT__OUTPUT_TGT = eINSTANCE.getOutPort_OutputTgt();
+
+		/**
+		 * The meta object literal for the '{@link org.mcmaster.workflowplus.wfp.impl.PortImpl <em>Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mcmaster.workflowplus.wfp.impl.PortImpl
+		 * @see org.mcmaster.workflowplus.wfp.impl.WfpPackageImpl#getPort()
+		 * @generated
+		 */
+		EClass PORT = eINSTANCE.getPort();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PORT__NAME = eINSTANCE.getPort_Name();
 
 	}
 

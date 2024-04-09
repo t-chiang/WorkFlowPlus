@@ -8,7 +8,10 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.mcmaster.workflowplus.wfp.InPort;
+import org.mcmaster.workflowplus.wfp.WfpPackage;
 
 /**
  * This is the item provider adapter for a {@link org.mcmaster.workflowplus.wfp.InPort} object.
@@ -16,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InPortItemProvider extends NodeItemProvider {
+public class InPortItemProvider extends PortItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -38,8 +41,40 @@ public class InPortItemProvider extends NodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addInputTgtPropertyDescriptor(object);
+			addInputSrcPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Tgt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputTgtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InPort_inputTgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_InPort_inputTgt_feature",
+								"_UI_InPort_type"),
+						WfpPackage.Literals.IN_PORT__INPUT_TGT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Input Src feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputSrcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_InPort_inputSrc_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_InPort_inputSrc_feature",
+								"_UI_InPort_type"),
+						WfpPackage.Literals.IN_PORT__INPUT_SRC, true, false, true, null, null, null));
 	}
 
 	/**
@@ -71,7 +106,9 @@ public class InPortItemProvider extends NodeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_InPort_type");
+		String label = ((InPort) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_InPort_type")
+				: getString("_UI_InPort_type") + " " + label;
 	}
 
 	/**

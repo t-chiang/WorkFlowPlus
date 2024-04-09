@@ -48,6 +48,8 @@ public class InputItemProvider extends ReferenceItemProvider {
 			addTgtPropertyDescriptor(object);
 			addMultAtSrcPropertyDescriptor(object);
 			addMultAtTgtPropertyDescriptor(object);
+			addInportTgtPropertyDescriptor(object);
+			addInportSrcPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -110,6 +112,36 @@ public class InputItemProvider extends ReferenceItemProvider {
 								"_UI_Input_type"),
 						WfpPackage.Literals.INPUT__MULT_AT_TGT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Inport Tgt feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInportTgtPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Input_inportTgt_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Input_inportTgt_feature",
+								"_UI_Input_type"),
+						WfpPackage.Literals.INPUT__INPORT_TGT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Inport Src feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInportSrcPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Input_inportSrc_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Input_inportSrc_feature",
+								"_UI_Input_type"),
+						WfpPackage.Literals.INPUT__INPORT_SRC, true, false, true, null, null, null));
 	}
 
 	/**

@@ -24,6 +24,7 @@ import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
 import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
+import org.mcmaster.workflowplus.wfp.Port;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpFactory;
@@ -178,6 +179,13 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * @generated
 	 */
 	private EClass outPortEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass portEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -572,6 +580,24 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInput_InportTgt() {
+		return (EReference) inputEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInput_InportSrc() {
+		return (EReference) inputEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutput() {
 		return outputEClass;
 	}
@@ -610,6 +636,24 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 */
 	public EAttribute getOutput_MultAtTgt() {
 		return (EAttribute) outputEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutput_OutportSrc() {
+		return (EReference) outputEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutput_OutportTgt() {
+		return (EReference) outputEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -977,26 +1021,17 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWorkFlow_InPort() {
-		return (EReference) workFlowEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getWorkFlow_OutPort() {
-		return (EReference) workFlowEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getWorkFlow_Name() {
-		return (EAttribute) workFlowEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) workFlowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWorkFlow_Port() {
+		return (EReference) workFlowEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1013,8 +1048,62 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInPort_InputTgt() {
+		return (EReference) inPortEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInPort_InputSrc() {
+		return (EReference) inPortEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOutPort() {
 		return outPortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutPort_OutputSrc() {
+		return (EReference) outPortEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOutPort_OutputTgt() {
+		return (EReference) outPortEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPort() {
+		return portEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPort_Name() {
+		return (EAttribute) portEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1089,12 +1178,16 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		createEReference(inputEClass, INPUT__TGT);
 		createEAttribute(inputEClass, INPUT__MULT_AT_SRC);
 		createEAttribute(inputEClass, INPUT__MULT_AT_TGT);
+		createEReference(inputEClass, INPUT__INPORT_TGT);
+		createEReference(inputEClass, INPUT__INPORT_SRC);
 
 		outputEClass = createEClass(OUTPUT);
 		createEReference(outputEClass, OUTPUT__TGT);
 		createEReference(outputEClass, OUTPUT__SRC);
 		createEAttribute(outputEClass, OUTPUT__MULT_AT_SRC);
 		createEAttribute(outputEClass, OUTPUT__MULT_AT_TGT);
+		createEReference(outputEClass, OUTPUT__OUTPORT_SRC);
+		createEReference(outputEClass, OUTPUT__OUTPORT_TGT);
 
 		workProductEClass = createEClass(WORK_PRODUCT);
 		createEReference(workProductEClass, WORK_PRODUCT__ATTRIBUTE);
@@ -1144,13 +1237,19 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		createEAttribute(reifyAssociationEClass, REIFY_ASSOCIATION__LABEL_AT_TGT);
 
 		workFlowEClass = createEClass(WORK_FLOW);
-		createEReference(workFlowEClass, WORK_FLOW__IN_PORT);
-		createEReference(workFlowEClass, WORK_FLOW__OUT_PORT);
 		createEAttribute(workFlowEClass, WORK_FLOW__NAME);
+		createEReference(workFlowEClass, WORK_FLOW__PORT);
 
 		inPortEClass = createEClass(IN_PORT);
+		createEReference(inPortEClass, IN_PORT__INPUT_TGT);
+		createEReference(inPortEClass, IN_PORT__INPUT_SRC);
 
 		outPortEClass = createEClass(OUT_PORT);
+		createEReference(outPortEClass, OUT_PORT__OUTPUT_SRC);
+		createEReference(outPortEClass, OUT_PORT__OUTPUT_TGT);
+
+		portEClass = createEClass(PORT);
+		createEAttribute(portEClass, PORT__NAME);
 	}
 
 	/**
@@ -1196,8 +1295,8 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		associationEClass.getESuperTypes().add(this.getReference());
 		reifyAssociationEClass.getESuperTypes().add(this.getReference());
 		workFlowEClass.getESuperTypes().add(this.getWorkFlowPlusRoot());
-		inPortEClass.getESuperTypes().add(this.getNode());
-		outPortEClass.getESuperTypes().add(this.getNode());
+		inPortEClass.getESuperTypes().add(this.getPort());
+		outPortEClass.getESuperTypes().add(this.getPort());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(workFlowPlusRootEClass, WorkFlowPlusRoot.class, "WorkFlowPlusRoot", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1292,25 +1391,37 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 		initEReference(getInput_Src(), this.getData(), this.getData_Input(), "src", null, 1, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getInput_Tgt(), this.getProcess(), this.getProcess_Input(), "tgt", null, 1, 1, Input.class,
+		initEReference(getInput_Tgt(), this.getProcess(), this.getProcess_Input(), "tgt", null, 0, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_MultAtSrc(), ecorePackage.getEString(), "multAtSrc", null, 1, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_MultAtTgt(), ecorePackage.getEString(), "multAtTgt", null, 1, 1, Input.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_InportTgt(), this.getInPort(), this.getInPort_InputTgt(), "inportTgt", null, 0, 1,
+				Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInput_InportSrc(), this.getInPort(), this.getInPort_InputSrc(), "inportSrc", null, 0, 1,
+				Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outputEClass, Output.class, "Output", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOutput_Tgt(), this.getData(), this.getData_Output(), "tgt", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getOutput_Src(), this.getProcess(), this.getProcess_Output(), "src", null, 1, 1, Output.class,
+		initEReference(getOutput_Src(), this.getProcess(), this.getProcess_Output(), "src", null, 0, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_MultAtSrc(), ecorePackage.getEString(), "multAtSrc", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOutput_MultAtTgt(), ecorePackage.getEString(), "multAtTgt", null, 1, 1, Output.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutput_OutportSrc(), this.getOutPort(), this.getOutPort_OutputSrc(), "outportSrc", null, 0, 1,
+				Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutput_OutportTgt(), this.getOutPort(), this.getOutPort_OutputTgt(), "outportTgt", null, 0, 1,
+				Output.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(workProductEClass, WorkProduct.class, "WorkProduct", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1424,18 +1535,31 @@ public class WfpPackageImpl extends EPackageImpl implements WfpPackage {
 
 		initEClass(workFlowEClass, WorkFlow.class, "WorkFlow", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWorkFlow_InPort(), this.getInPort(), null, "inPort", null, 0, -1, WorkFlow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWorkFlow_OutPort(), this.getOutPort(), null, "outPort", null, 1, -1, WorkFlow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkFlow_Name(), ecorePackage.getEString(), "name", "", 1, 1, WorkFlow.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWorkFlow_Port(), this.getPort(), null, "port", null, 0, -1, WorkFlow.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(inPortEClass, InPort.class, "InPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInPort_InputTgt(), this.getInput(), this.getInput_InportTgt(), "inputTgt", null, 0, 1,
+				InPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInPort_InputSrc(), this.getInput(), this.getInput_InportSrc(), "inputSrc", null, 0, 1,
+				InPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(outPortEClass, OutPort.class, "OutPort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOutPort_OutputSrc(), this.getOutput(), this.getOutput_OutportSrc(), "outputSrc", null, 0, 1,
+				OutPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOutPort_OutputTgt(), this.getOutput(), this.getOutput_OutportTgt(), "outputTgt", null, 0, 1,
+				OutPort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(portEClass, Port.class, "Port", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPort_Name(), ecorePackage.getEString(), "name", null, 1, 1, Port.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

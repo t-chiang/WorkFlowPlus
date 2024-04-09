@@ -15,6 +15,8 @@ package org.mcmaster.workflowplus.wfp;
  *   <li>{@link org.mcmaster.workflowplus.wfp.Input#getTgt <em>Tgt</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Input#getMultAtSrc <em>Mult At Src</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.Input#getMultAtTgt <em>Mult At Tgt</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.Input#getInportTgt <em>Inport Tgt</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.Input#getInportSrc <em>Inport Src</em>}</li>
  * </ul>
  *
  * @see org.mcmaster.workflowplus.wfp.WfpPackage#getInput()
@@ -55,7 +57,7 @@ public interface Input extends Reference {
 	 * @see #setTgt(org.mcmaster.workflowplus.wfp.Process)
 	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getInput_Tgt()
 	 * @see org.mcmaster.workflowplus.wfp.Process#getInput
-	 * @model opposite="input" required="true"
+	 * @model opposite="input"
 	 * @generated
 	 */
 	org.mcmaster.workflowplus.wfp.Process getTgt();
@@ -113,5 +115,53 @@ public interface Input extends Reference {
 	 * @generated
 	 */
 	void setMultAtTgt(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Inport Tgt</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.InPort#getInputTgt <em>Input Tgt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inport Tgt</em>' reference.
+	 * @see #setInportTgt(InPort)
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getInput_InportTgt()
+	 * @see org.mcmaster.workflowplus.wfp.InPort#getInputTgt
+	 * @model opposite="inputTgt"
+	 * @generated
+	 */
+	InPort getInportTgt();
+
+	/**
+	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Input#getInportTgt <em>Inport Tgt</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inport Tgt</em>' reference.
+	 * @see #getInportTgt()
+	 * @generated
+	 */
+	void setInportTgt(InPort value);
+
+	/**
+	 * Returns the value of the '<em><b>Inport Src</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.mcmaster.workflowplus.wfp.InPort#getInputSrc <em>Input Src</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Inport Src</em>' reference.
+	 * @see #setInportSrc(InPort)
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getInput_InportSrc()
+	 * @see org.mcmaster.workflowplus.wfp.InPort#getInputSrc
+	 * @model opposite="inputSrc"
+	 * @generated
+	 */
+	InPort getInportSrc();
+
+	/**
+	 * Sets the value of the '{@link org.mcmaster.workflowplus.wfp.Input#getInportSrc <em>Inport Src</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inport Src</em>' reference.
+	 * @see #getInportSrc()
+	 * @generated
+	 */
+	void setInportSrc(InPort value);
 
 } // Input

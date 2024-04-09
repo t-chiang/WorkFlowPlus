@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mcmaster.workflowplus.wfp.Data;
+import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
 
@@ -26,6 +27,8 @@ import org.mcmaster.workflowplus.wfp.WfpPackage;
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl#getSrc <em>Src</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl#getMultAtSrc <em>Mult At Src</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl#getMultAtTgt <em>Mult At Tgt</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl#getOutportSrc <em>Outport Src</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.impl.OutputImpl#getOutportTgt <em>Outport Tgt</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +93,26 @@ public class OutputImpl extends ReferenceImpl implements Output {
 	 * @ordered
 	 */
 	protected String multAtTgt = MULT_AT_TGT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOutportSrc() <em>Outport Src</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutportSrc()
+	 * @generated
+	 * @ordered
+	 */
+	protected OutPort outportSrc;
+
+	/**
+	 * The cached value of the '{@link #getOutportTgt() <em>Outport Tgt</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutportTgt()
+	 * @generated
+	 * @ordered
+	 */
+	protected OutPort outportTgt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,6 +312,142 @@ public class OutputImpl extends ReferenceImpl implements Output {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OutPort getOutportSrc() {
+		if (outportSrc != null && outportSrc.eIsProxy()) {
+			InternalEObject oldOutportSrc = (InternalEObject) outportSrc;
+			outportSrc = (OutPort) eResolveProxy(oldOutportSrc);
+			if (outportSrc != oldOutportSrc) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WfpPackage.OUTPUT__OUTPORT_SRC,
+							oldOutportSrc, outportSrc));
+			}
+		}
+		return outportSrc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutPort basicGetOutportSrc() {
+		return outportSrc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOutportSrc(OutPort newOutportSrc, NotificationChain msgs) {
+		OutPort oldOutportSrc = outportSrc;
+		outportSrc = newOutportSrc;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WfpPackage.OUTPUT__OUTPORT_SRC, oldOutportSrc, newOutportSrc);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutportSrc(OutPort newOutportSrc) {
+		if (newOutportSrc != outportSrc) {
+			NotificationChain msgs = null;
+			if (outportSrc != null)
+				msgs = ((InternalEObject) outportSrc).eInverseRemove(this, WfpPackage.OUT_PORT__OUTPUT_SRC,
+						OutPort.class, msgs);
+			if (newOutportSrc != null)
+				msgs = ((InternalEObject) newOutportSrc).eInverseAdd(this, WfpPackage.OUT_PORT__OUTPUT_SRC,
+						OutPort.class, msgs);
+			msgs = basicSetOutportSrc(newOutportSrc, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.OUTPUT__OUTPORT_SRC, newOutportSrc,
+					newOutportSrc));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutPort getOutportTgt() {
+		if (outportTgt != null && outportTgt.eIsProxy()) {
+			InternalEObject oldOutportTgt = (InternalEObject) outportTgt;
+			outportTgt = (OutPort) eResolveProxy(oldOutportTgt);
+			if (outportTgt != oldOutportTgt) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WfpPackage.OUTPUT__OUTPORT_TGT,
+							oldOutportTgt, outportTgt));
+			}
+		}
+		return outportTgt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutPort basicGetOutportTgt() {
+		return outportTgt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOutportTgt(OutPort newOutportTgt, NotificationChain msgs) {
+		OutPort oldOutportTgt = outportTgt;
+		outportTgt = newOutportTgt;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WfpPackage.OUTPUT__OUTPORT_TGT, oldOutportTgt, newOutportTgt);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutportTgt(OutPort newOutportTgt) {
+		if (newOutportTgt != outportTgt) {
+			NotificationChain msgs = null;
+			if (outportTgt != null)
+				msgs = ((InternalEObject) outportTgt).eInverseRemove(this, WfpPackage.OUT_PORT__OUTPUT_TGT,
+						OutPort.class, msgs);
+			if (newOutportTgt != null)
+				msgs = ((InternalEObject) newOutportTgt).eInverseAdd(this, WfpPackage.OUT_PORT__OUTPUT_TGT,
+						OutPort.class, msgs);
+			msgs = basicSetOutportTgt(newOutportTgt, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WfpPackage.OUTPUT__OUTPORT_TGT, newOutportTgt,
+					newOutportTgt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -301,6 +460,16 @@ public class OutputImpl extends ReferenceImpl implements Output {
 				msgs = ((InternalEObject) src).eInverseRemove(this, WfpPackage.PROCESS__OUTPUT,
 						org.mcmaster.workflowplus.wfp.Process.class, msgs);
 			return basicSetSrc((org.mcmaster.workflowplus.wfp.Process) otherEnd, msgs);
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			if (outportSrc != null)
+				msgs = ((InternalEObject) outportSrc).eInverseRemove(this, WfpPackage.OUT_PORT__OUTPUT_SRC,
+						OutPort.class, msgs);
+			return basicSetOutportSrc((OutPort) otherEnd, msgs);
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			if (outportTgt != null)
+				msgs = ((InternalEObject) outportTgt).eInverseRemove(this, WfpPackage.OUT_PORT__OUTPUT_TGT,
+						OutPort.class, msgs);
+			return basicSetOutportTgt((OutPort) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -317,6 +486,10 @@ public class OutputImpl extends ReferenceImpl implements Output {
 			return basicSetTgt(null, msgs);
 		case WfpPackage.OUTPUT__SRC:
 			return basicSetSrc(null, msgs);
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			return basicSetOutportSrc(null, msgs);
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			return basicSetOutportTgt(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -341,6 +514,14 @@ public class OutputImpl extends ReferenceImpl implements Output {
 			return getMultAtSrc();
 		case WfpPackage.OUTPUT__MULT_AT_TGT:
 			return getMultAtTgt();
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			if (resolve)
+				return getOutportSrc();
+			return basicGetOutportSrc();
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			if (resolve)
+				return getOutportTgt();
+			return basicGetOutportTgt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -364,6 +545,12 @@ public class OutputImpl extends ReferenceImpl implements Output {
 			return;
 		case WfpPackage.OUTPUT__MULT_AT_TGT:
 			setMultAtTgt((String) newValue);
+			return;
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			setOutportSrc((OutPort) newValue);
+			return;
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			setOutportTgt((OutPort) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -389,6 +576,12 @@ public class OutputImpl extends ReferenceImpl implements Output {
 		case WfpPackage.OUTPUT__MULT_AT_TGT:
 			setMultAtTgt(MULT_AT_TGT_EDEFAULT);
 			return;
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			setOutportSrc((OutPort) null);
+			return;
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			setOutportTgt((OutPort) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -409,6 +602,10 @@ public class OutputImpl extends ReferenceImpl implements Output {
 			return MULT_AT_SRC_EDEFAULT == null ? multAtSrc != null : !MULT_AT_SRC_EDEFAULT.equals(multAtSrc);
 		case WfpPackage.OUTPUT__MULT_AT_TGT:
 			return MULT_AT_TGT_EDEFAULT == null ? multAtTgt != null : !MULT_AT_TGT_EDEFAULT.equals(multAtTgt);
+		case WfpPackage.OUTPUT__OUTPORT_SRC:
+			return outportSrc != null;
+		case WfpPackage.OUTPUT__OUTPORT_TGT:
+			return outportTgt != null;
 		}
 		return super.eIsSet(featureID);
 	}

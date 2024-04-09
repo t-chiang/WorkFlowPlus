@@ -171,6 +171,7 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			while (itOutput.hasNext()) {
 				Data dataOutput = (Data) itOutput.next().getTgt();
 				//This line will return the same element that is put in, but instead of as an ecore class it will be of a sirius class that will allow for the manipulation of the concrete syntax in the model instance.
+				@SuppressWarnings("unchecked")
 				Set<? extends DSemanticDecorator> result = (Set<? extends DSemanticDecorator>) new EObjectQuery(
 						dataOutput).getInverseReferences(ViewpointPackage.Literals.DSEMANTIC_DECORATOR__TARGET);
 				DDiagramElementContainer myContainer = (DDiagramElementContainer) result.iterator().next();
@@ -201,6 +202,7 @@ public abstract class DataImpl extends NodeImpl implements Data {
 			Iterator<? extends Input> itInputs = inputs.iterator();
 			while (itInputs.hasNext()) {
 				Data dataInput = (Data) itInputs.next().getSrc();
+				@SuppressWarnings("unchecked")
 				Set<? extends DSemanticDecorator> result = (Set<? extends DSemanticDecorator>) new EObjectQuery(
 						dataInput).getInverseReferences(ViewpointPackage.Literals.DSEMANTIC_DECORATOR__TARGET);
 				DDiagramElementContainer myContainer = (DDiagramElementContainer) result.iterator().next();

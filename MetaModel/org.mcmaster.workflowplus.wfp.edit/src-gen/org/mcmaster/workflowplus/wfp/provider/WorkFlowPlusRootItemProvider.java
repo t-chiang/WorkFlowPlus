@@ -169,12 +169,6 @@ public class WorkFlowPlusRootItemProvider extends ItemProviderAdapter implements
 		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__NODE,
 				WfpFactory.eINSTANCE.createArgument()));
 
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__NODE,
-				WfpFactory.eINSTANCE.createInPort()));
-
-		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__NODE,
-				WfpFactory.eINSTANCE.createOutPort()));
-
 		newChildDescriptors.add(createChildParameter(WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__REFERENCE,
 				WfpFactory.eINSTANCE.createInput()));
 

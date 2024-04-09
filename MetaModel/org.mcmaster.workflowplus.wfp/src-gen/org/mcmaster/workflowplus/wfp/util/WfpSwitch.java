@@ -21,6 +21,7 @@ import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
 import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
+import org.mcmaster.workflowplus.wfp.Port;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
@@ -249,7 +250,7 @@ public class WfpSwitch<T> extends Switch<T> {
 			InPort inPort = (InPort) theEObject;
 			T result = caseInPort(inPort);
 			if (result == null)
-				result = caseNode(inPort);
+				result = casePort(inPort);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -258,7 +259,14 @@ public class WfpSwitch<T> extends Switch<T> {
 			OutPort outPort = (OutPort) theEObject;
 			T result = caseOutPort(outPort);
 			if (result == null)
-				result = caseNode(outPort);
+				result = casePort(outPort);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WfpPackage.PORT: {
+			Port port = (Port) theEObject;
+			T result = casePort(port);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -565,6 +573,21 @@ public class WfpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOutPort(OutPort object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePort(Port object) {
 		return null;
 	}
 

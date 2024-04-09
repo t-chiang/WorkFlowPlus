@@ -13,9 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mcmaster.workflowplus.wfp.WorkFlow#getInPort <em>In Port</em>}</li>
- *   <li>{@link org.mcmaster.workflowplus.wfp.WorkFlow#getOutPort <em>Out Port</em>}</li>
  *   <li>{@link org.mcmaster.workflowplus.wfp.WorkFlow#getName <em>Name</em>}</li>
+ *   <li>{@link org.mcmaster.workflowplus.wfp.WorkFlow#getPort <em>Port</em>}</li>
  * </ul>
  *
  * @see org.mcmaster.workflowplus.wfp.WfpPackage#getWorkFlow()
@@ -23,30 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface WorkFlow extends WorkFlowPlusRoot {
-	/**
-	 * Returns the value of the '<em><b>In Port</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mcmaster.workflowplus.wfp.InPort}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>In Port</em>' containment reference list.
-	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getWorkFlow_InPort()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<InPort> getInPort();
-
-	/**
-	 * Returns the value of the '<em><b>Out Port</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mcmaster.workflowplus.wfp.OutPort}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Out Port</em>' containment reference list.
-	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getWorkFlow_OutPort()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<OutPort> getOutPort();
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
@@ -69,5 +44,17 @@ public interface WorkFlow extends WorkFlowPlusRoot {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Port</b></em>' containment reference list.
+	 * The list contents are of type {@link org.mcmaster.workflowplus.wfp.Port}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Port</em>' containment reference list.
+	 * @see org.mcmaster.workflowplus.wfp.WfpPackage#getWorkFlow_Port()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Port> getPort();
 
 } // WorkFlow

@@ -80,8 +80,7 @@ public class WorkFlowItemProvider extends WorkFlowPlusRootItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW__IN_PORT);
-			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW__OUT_PORT);
+			childrenFeatures.add(WfpPackage.Literals.WORK_FLOW__PORT);
 		}
 		return childrenFeatures;
 	}
@@ -148,8 +147,7 @@ public class WorkFlowItemProvider extends WorkFlowPlusRootItemProvider {
 		case WfpPackage.WORK_FLOW__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case WfpPackage.WORK_FLOW__IN_PORT:
-		case WfpPackage.WORK_FLOW__OUT_PORT:
+		case WfpPackage.WORK_FLOW__PORT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -168,32 +166,10 @@ public class WorkFlowItemProvider extends WorkFlowPlusRootItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(WfpPackage.Literals.WORK_FLOW__IN_PORT, WfpFactory.eINSTANCE.createInPort()));
+				.add(createChildParameter(WfpPackage.Literals.WORK_FLOW__PORT, WfpFactory.eINSTANCE.createInPort()));
 
-		newChildDescriptors.add(
-				createChildParameter(WfpPackage.Literals.WORK_FLOW__OUT_PORT, WfpFactory.eINSTANCE.createOutPort()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify = childFeature == WfpPackage.Literals.WORK_FLOW_PLUS_ROOT__NODE
-				|| childFeature == WfpPackage.Literals.WORK_FLOW__IN_PORT
-				|| childFeature == WfpPackage.Literals.WORK_FLOW__OUT_PORT;
-
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+		newChildDescriptors
+				.add(createChildParameter(WfpPackage.Literals.WORK_FLOW__PORT, WfpFactory.eINSTANCE.createOutPort()));
 	}
 
 }

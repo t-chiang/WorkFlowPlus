@@ -8,25 +8,37 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.mcmaster.workflowplus.wfp.OutPort;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.mcmaster.workflowplus.wfp.Port;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
 
 /**
- * This is the item provider adapter for a {@link org.mcmaster.workflowplus.wfp.OutPort} object.
+ * This is the item provider adapter for a {@link org.mcmaster.workflowplus.wfp.Port} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class OutPortItemProvider extends PortItemProvider {
+public class PortItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutPortItemProvider(AdapterFactory adapterFactory) {
+	public PortItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -41,51 +53,24 @@ public class OutPortItemProvider extends PortItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addOutputSrcPropertyDescriptor(object);
-			addOutputTgtPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Output Src feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addOutputSrcPropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_OutPort_outputSrc_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OutPort_outputSrc_feature",
-								"_UI_OutPort_type"),
-						WfpPackage.Literals.OUT_PORT__OUTPUT_SRC, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Output Tgt feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOutputTgtPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_OutPort_outputTgt_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_OutPort_outputTgt_feature",
-								"_UI_OutPort_type"),
-						WfpPackage.Literals.OUT_PORT__OUTPUT_TGT, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This returns OutPort.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/OutPort"));
+						getResourceLocator(), getString("_UI_Port_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Port_name_feature", "_UI_Port_type"),
+						WfpPackage.Literals.PORT__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
 	}
 
 	/**
@@ -106,9 +91,9 @@ public class OutPortItemProvider extends PortItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OutPort) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_OutPort_type")
-				: getString("_UI_OutPort_type") + " " + label;
+		String label = ((Port) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Port_type")
+				: getString("_UI_Port_type") + " " + label;
 	}
 
 	/**
@@ -121,6 +106,12 @@ public class OutPortItemProvider extends PortItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Port.class)) {
+		case WfpPackage.PORT__NAME:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -134,6 +125,17 @@ public class OutPortItemProvider extends PortItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return WfpEditPlugin.INSTANCE;
 	}
 
 }

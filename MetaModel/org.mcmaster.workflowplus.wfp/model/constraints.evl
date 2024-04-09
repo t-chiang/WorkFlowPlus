@@ -1,4 +1,4 @@
-context Reference {
+context Association {
 	constraint HasTarget{
 		check : self.tgt.isDefined()
 		message : self.type().name + ' edge does not have target node set'
@@ -12,7 +12,7 @@ context Reference {
 	}
 	constraint HasSource{
 		check : self.src.isDefined()
-		message : self.type().name + ' edge does not have target node set'
+		message : self.type().name + ' edge does not have source node set'
 		fix{
 			title: 'Delete Reference edge'
 			
@@ -23,3 +23,127 @@ context Reference {
 	}
 }
 
+context Composition {
+	constraint HasTarget{
+		check : self.tgt.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined()
+		message : self.type().name + ' edge does not have source node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}
+
+context Inheritance {
+	constraint HasTarget{
+		check : self.tgt.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined()
+		message : self.type().name + ' edge does not have source node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}
+
+context ReifyAssociation {
+	constraint HasTarget{
+		check : self.tgt.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined()
+		message : self.type().name + ' edge does not have source node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}
+
+context Input {
+	constraint HasTarget{
+		check : self.tgt.isDefined() xor self.inport.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined()
+		message : self.type().name + ' edge does not have source node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}
+
+context Output {
+	constraint HasTarget{
+		check : self.tgt.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Output edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined() xor self.outport.isDefined()
+		message : self.type().name + ' edge does not have source node set'
+		fix{
+			title: 'Delete Output edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}

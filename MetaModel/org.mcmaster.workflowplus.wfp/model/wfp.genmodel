@@ -53,12 +53,16 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Input/tgt"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//Input/multAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//Input/multAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Input/inportTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Input/inportSrc"/>
     </genClasses>
     <genClasses ecoreClass="wfp.ecore#//Output">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Output/tgt"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Output/src"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//Output/multAtSrc"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//Output/multAtTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Output/outportSrc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//Output/outportTgt"/>
     </genClasses>
     <genClasses ecoreClass="wfp.ecore#//WorkProduct">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wfp.ecore#//WorkProduct/attribute"/>
@@ -108,11 +112,19 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//ReifyAssociation/labelAtTgt"/>
     </genClasses>
     <genClasses ecoreClass="wfp.ecore#//WorkFlow">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wfp.ecore#//WorkFlow/inPort"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wfp.ecore#//WorkFlow/outPort"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//WorkFlow/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wfp.ecore#//WorkFlow/port"/>
     </genClasses>
-    <genClasses ecoreClass="wfp.ecore#//InPort"/>
-    <genClasses ecoreClass="wfp.ecore#//OutPort"/>
+    <genClasses ecoreClass="wfp.ecore#//InPort">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//InPort/inputTgt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//InPort/inputSrc"/>
+    </genClasses>
+    <genClasses ecoreClass="wfp.ecore#//OutPort">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//OutPort/outputSrc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wfp.ecore#//OutPort/outputTgt"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="wfp.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wfp.ecore#//Port/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -23,6 +23,7 @@ import org.mcmaster.workflowplus.wfp.Input;
 import org.mcmaster.workflowplus.wfp.Node;
 import org.mcmaster.workflowplus.wfp.OutPort;
 import org.mcmaster.workflowplus.wfp.Output;
+import org.mcmaster.workflowplus.wfp.Port;
 import org.mcmaster.workflowplus.wfp.Reference;
 import org.mcmaster.workflowplus.wfp.ReifyAssociation;
 import org.mcmaster.workflowplus.wfp.WfpPackage;
@@ -183,6 +184,11 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseOutPort(OutPort object) {
 			return createOutPortAdapter();
+		}
+
+		@Override
+		public Adapter casePort(Port object) {
+			return createPortAdapter();
 		}
 
 		@Override
@@ -481,6 +487,20 @@ public class WfpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOutPortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mcmaster.workflowplus.wfp.Port <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mcmaster.workflowplus.wfp.Port
+	 * @generated
+	 */
+	public Adapter createPortAdapter() {
 		return null;
 	}
 
