@@ -24,7 +24,7 @@ public class ClearImpact extends AbstractExternalJavaAction{
 				//System.out.println("Object name is " + next.eClass().getName());
 				return false;
 			}
-			var modelObj = ((DSemanticDecorator) next).getTarget();
+			EObject modelObj = ((DSemanticDecorator) next).getTarget();
 			//System.out.println(modelObj instanceof Data);
 			if (modelObj instanceof Process){
 				return false;
@@ -42,8 +42,8 @@ public class ClearImpact extends AbstractExternalJavaAction{
 		// TODO Auto-generated method stub
 		Iterator<? extends EObject> iter = selections.iterator();
 		while(iter.hasNext()) {
-			var modelObj = (DDiagramElementContainer)((DSemanticDecorator) iter.next());
-			ContainerStyle containerStyle = modelObj.getOwnedStyle();
+			EObject modelObj = (DDiagramElementContainer)((DSemanticDecorator) iter.next());
+			ContainerStyle containerStyle = ((DDiagramElementContainer) modelObj).getOwnedStyle();
 			RGBValues newBorderColor = RGBValues.create(0, 0, 0);
 			containerStyle.setBorderColor(newBorderColor);
 			containerStyle.getCustomFeatures().add(DiagramPackage.Literals.BORDERED_STYLE__BORDER_COLOR.getName());
