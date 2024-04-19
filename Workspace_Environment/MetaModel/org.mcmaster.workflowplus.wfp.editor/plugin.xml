@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated wfp -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.mcmaster.workflowplus.wfp.presentation.WfpModelWizardID"
+            name="%_UI_WfpModelWizard_label"
+            class="org.mcmaster.workflowplus.wfp.presentation.WfpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WfpModelFile.gif">
+         <description>%_UI_WfpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated wfp -->
+      <editor
+            id="org.mcmaster.workflowplus.wfp.presentation.WfpEditorID"
+            name="%_UI_WfpEditor_label"
+            icon="icons/full/obj16/WfpModelFile.gif"
+            extensions="wfp"
+            class="org.mcmaster.workflowplus.wfp.presentation.WfpEditor"
+            contributorClass="org.mcmaster.workflowplus.wfp.presentation.WfpActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="org.mcmaster.workflowplus.wfp.design.Activator"
+               id="org.mcmaster.workflowplus.wfp.design"
+	       name="wfp">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.sirius.externalJavaAction">
+     <javaActions
+           actionClass="org.mcmaster.workflowplus.wfp.design.CallBackwardImpactAnalysis"
+           id="org.mcmaster.workflowplus.wfp.design.CallBackwardImpactAnalysis">
+     </javaActions>
+     <javaActions
+           actionClass="org.mcmaster.workflowplus.wfp.design.CallForwardImpactAnalysis"
+           id="org.mcmaster.workflowplus.wfp.design.CallForwardImpactAnalysis">
+     </javaActions>
+     <javaActions
+           actionClass="org.mcmaster.workflowplus.wfp.design.ClearImpact"
+           id="org.mcmaster.workflowplus.wfp.design.ClearImpact">
+     </javaActions>
+  </extension>
+</plugin>

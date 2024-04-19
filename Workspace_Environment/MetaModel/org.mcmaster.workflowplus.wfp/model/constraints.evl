@@ -1,0 +1,25 @@
+context Reference {
+	constraint HasTarget{
+		check : self.tgt.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+	constraint HasSource{
+		check : self.src.isDefined()
+		message : self.type().name + ' edge does not have target node set'
+		fix{
+			title: 'Delete Reference edge'
+			
+			do{
+				delete self;
+			}
+		}
+	}
+}
+
